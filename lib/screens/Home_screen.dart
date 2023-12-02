@@ -132,7 +132,22 @@ class _Home_PageState extends State<Home_Page> {
                       iconData: "images/statistic.jpeg",
                       title: "Statistic",
                       subTitle: "Payment & Income"
-                  )
+                  ),
+                  MyList(
+                      iconData: "images/transection.jpeg",
+                      title: "Transection",
+                      subTitle: "Payment & Income"
+                  ),
+                  MyList(
+                      iconData: "images/bill.png",
+                      title: "Bills History",
+                      subTitle: "Payment & Income"
+                  ),
+                  MyList(
+                      iconData: "images/card.jpeg",
+                      title: "Payment History",
+                      subTitle: "Payment & Income"
+                  ),
                 ],
               ),
               )

@@ -44,7 +44,7 @@ class MyList extends StatelessWidget {
                   children: [
                     Text(subTitle,style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 4,
+                        fontSize: 8,
                         color: Colors.grey.shade500
                     ),),
 
