@@ -1,4 +1,6 @@
+import 'package:degital_wallet_app_ui/widgets/my_button.dart';
 import 'package:degital_wallet_app_ui/widgets/my_cards.dart';
+import 'package:degital_wallet_app_ui/widgets/my_lists.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -11,6 +13,7 @@ class Home_Page extends StatefulWidget {
 
 class _Home_PageState extends State<Home_Page> {
   final pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,14 +57,14 @@ class _Home_PageState extends State<Home_Page> {
                         color: Colors.grey.shade400,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
-                        Icons.notifications
-                      ),
+                      child: Icon(Icons.notifications),
                     )
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 height: 200,
                 child: PageView(
@@ -73,40 +76,66 @@ class _Home_PageState extends State<Home_Page> {
                         cardnumber: 1234567890763,
                         expiredMonth: 10,
                         expiredYear: 2025,
-                        cardType: "images/visa.jpeg"
-                    ),
+                        cardType: "images/visa.jpeg"),
                     My_Cards(
                         balance: 6500,
                         cardnumber: 9876789543,
                         expiredMonth: 7,
                         expiredYear: 2028,
-                        cardType: "images/master_card.jpeg"
-                    ),
+                        cardType: "images/master_card.jpeg"),
                     My_Cards(
                         balance: 6757,
                         cardnumber: 645454494376473,
                         expiredMonth: 6,
                         expiredYear: 2029,
-                        cardType: "images/visa.jpeg"
-                    ),
+                        cardType: "images/visa.jpeg"),
                     My_Cards(
                         balance: 44334,
                         cardnumber: 46537653484375,
                         expiredMonth: 4,
                         expiredYear: 2026,
-                        cardType: "images/master_card.jpeg"
-                    ),
+                        cardType: "images/master_card.jpeg"),
                   ],
                 ),
-
               ),
-              SizedBox(height: 15,),
-              SmoothPageIndicator(controller: pageController, count: 4,effect: ExpandingDotsEffect(
-                activeDotColor: Colors.white,
-                dotWidth: 14,
-                dotHeight: 14
+              SizedBox(
+                height: 15,
               ),
+              SmoothPageIndicator(
+                controller: pageController,
+                count: 4,
+                effect: ExpandingDotsEffect(
+                    activeDotColor: Colors.white, dotWidth: 10, dotHeight: 10),
               ),
+              SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    MyButton(
+                        iconPath: "images/send_money.jpeg", textButton: "Send"),
+                    MyButton(
+                        iconPath: "images/bill.png", textButton: "Receive"),
+                    MyButton(iconPath: "images/card.jpeg", textButton: "Pay"),
+                    MyButton(iconPath: "images/bill.png", textButton: "Bills"),
+                  ],
+                ),
+              ),
+              SizedBox(height: 50,),
+              Padding(padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Column(
+                children: [
+                  MyList(
+                      iconData: "images/statistic.jpeg",
+                      title: "Statistic",
+                      subTitle: "Payment & Income"
+                  )
+                ],
+              ),
+              )
 
             ],
           ),
@@ -115,5 +144,3 @@ class _Home_PageState extends State<Home_Page> {
     );
   }
 }
-
-
