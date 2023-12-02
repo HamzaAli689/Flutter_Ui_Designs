@@ -1,3 +1,4 @@
+import 'package:degital_wallet_app_ui/widgets/my_cards.dart';
 import 'package:flutter/material.dart';
 
 class Home_Page extends StatefulWidget {
@@ -8,6 +9,7 @@ class Home_Page extends StatefulWidget {
 }
 
 class _Home_PageState extends State<Home_Page> {
+  final pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,8 +62,46 @@ class _Home_PageState extends State<Home_Page> {
               ),
               SizedBox(height: 10,),
               Container(
-                
-              )
+                height: 200,
+                child: PageView(
+                  controller: pageController,
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    My_Cards(
+                        balance: 78900,
+                        cardnumber: 1234567890763,
+                        expiredMonth: 10,
+                        expiredYear: 2025,
+                        cardType: "images/visa.jpeg"
+                    ),
+                    My_Cards(
+                        balance: 6500,
+                        cardnumber: 9876789543,
+                        expiredMonth: 7,
+                        expiredYear: 2028,
+                        cardType: "images/master_card.jpeg"
+                    ),
+                    My_Cards(
+                        balance: 6757,
+                        cardnumber: 645454494376473,
+                        expiredMonth: 6,
+                        expiredYear: 2029,
+                        cardType: "images/visa.jpeg"
+                    ),
+                    My_Cards(
+                        balance: 44334,
+                        cardnumber: 46537653484375,
+                        expiredMonth: 4,
+                        expiredYear: 2026,
+                        cardType: "images/master_card.jpeg"
+                    ),
+                  ],
+                ),
+
+              ),
+              SizedBox(height: 15,),
+
+
             ],
           ),
         ),
@@ -69,3 +109,5 @@ class _Home_PageState extends State<Home_Page> {
     );
   }
 }
+
+

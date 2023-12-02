@@ -72,7 +72,11 @@ class My_Cards extends StatelessWidget {
                 color: Colors.white,
               ),
               ),
-              Text(expiredMonth.toString() + "/" + expiredYear.toString())
+              Text(expiredMonth.toString() + "/" + expiredYear.toString(),
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              )
             ],
             )
           ],
