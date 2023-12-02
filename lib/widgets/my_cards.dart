@@ -28,8 +28,8 @@ class My_Cards extends StatelessWidget {
                 begin: AlignmentDirectional.topStart,
                 end: AlignmentDirectional.bottomEnd,
                 colors: [
-                  Colors.white.withOpacity(0.03),
-                  Colors.white.withOpacity(0.03),
+                  Colors.white12,
+                  Colors.redAccent,
                 ])),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

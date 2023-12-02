@@ -1,5 +1,6 @@
 import 'package:degital_wallet_app_ui/widgets/my_cards.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({super.key});
@@ -13,7 +14,7 @@ class _Home_PageState extends State<Home_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.black.withOpacity(0.03),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -42,7 +43,7 @@ class _Home_PageState extends State<Home_Page> {
                           style: TextStyle(
                             fontSize: 28,
                             //fontWeight: FontWeight.bold,
-                            color: Colors.grey.shade400,
+                            color: Colors.white,
                           ),
                         ),
                       ],
@@ -100,7 +101,12 @@ class _Home_PageState extends State<Home_Page> {
 
               ),
               SizedBox(height: 15,),
-
+              SmoothPageIndicator(controller: pageController, count: 4,effect: ExpandingDotsEffect(
+                activeDotColor: Colors.white,
+                dotWidth: 14,
+                dotHeight: 14
+              ),
+              ),
 
             ],
           ),
