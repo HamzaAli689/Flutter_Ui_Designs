@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import '../widgets/circle_avatar.dart';
+import '../widgets/text_feild.dart';
+import 'edit_profile.dart';
 
 class Profile_Screen extends StatefulWidget {
   const Profile_Screen({super.key});
@@ -28,7 +30,9 @@ class _Profile_ScreenState extends State<Profile_Screen> {
           centerTitle: true,
           automaticallyImplyLeading: true,
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.shield_moon_outlined))
+            IconButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile_Screen_Black()));
+            }, icon: Icon(Icons.shield_moon_outlined))
           ],
         ),
         body: SingleChildScrollView(
@@ -82,7 +86,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.yellowAccent),
                       onPressed: () {
-                        Navigator
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Edit_Profile_screen()));
                       },
                       child: Text(
                         "Edit Profile",
@@ -135,50 +139,4 @@ class _Profile_ScreenState extends State<Profile_Screen> {
   }
 }
 
-class ProfileMenuWidget extends StatelessWidget {
-  const ProfileMenuWidget({
-    super.key,
-    required this.title,
-    required this.icon,
-    required this.onpress,
-    required this.textColor,
-  });
 
-  final String title;
-  final IconData icon;
-  final VoidCallback onpress;
-  final Color textColor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: ListTile(
-        leading: Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100), color: Colors.black12),
-          child: Icon(icon, color: Colors.blue),
-        ),
-        title: Text(title,
-            style: TextStyle(
-                color: textColor,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.normal,
-                fontSize: 18)),
-        trailing: Container(
-          height: 40,
-          width: 40,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100), color: Colors.black12),
-          child: Icon(
-            Icons.arrow_forward_ios,
-            color: Colors.grey,
-            size: 18.0,
-          ),
-        ),
-      ),
-    );
-  }
-}
