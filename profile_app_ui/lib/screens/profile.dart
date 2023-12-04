@@ -81,7 +81,9 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.yellowAccent),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator
+                      },
                       child: Text(
                         "Edit Profile",
                         style: TextStyle(
