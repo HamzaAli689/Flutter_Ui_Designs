@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets.dart';
+
 class Dashboard_Screen extends StatefulWidget {
   const Dashboard_Screen({super.key});
 
@@ -26,43 +28,133 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
             icon: Icon(Icons.grid_view_sharp, color: Colors.white),
           ),
         ),
-        body: Column(children: [
-          Container(
-            height: 150,
-            width: 500,
-            decoration: BoxDecoration(
-                color: Colors.indigo,
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30))),
+        body: SingleChildScrollView(
+          child: Column(children: [
+            Container(
+              height: 150,
+              width: 500,
+              decoration: BoxDecoration(
+                  color: Colors.indigo,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30))),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 18),
+                    child: Text("Hi, Programmers",style: TextStyle(
+                      color: Colors.white,fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                  SizedBox(height: 30,),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: TextFormField(style: TextStyle(
+                      color: Colors.black,
+                    ),
+                      decoration: InputDecoration(
+                        filled: true,
+                      fillColor: Colors.white,
+                      prefixIcon: Icon(Icons.search,color: Colors.grey),
+                      hintText: "Search Here ......",
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(20),),
+                    ),),
+                  )
+                ],
+              ),
+            ),
+            Container(height: 240,
+            width: 500,decoration: BoxDecoration(
+                color: Colors.white
+              ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    SizedBox(width: 30,),
+                    GrideContainer(title: 'Category', iconcolor: Colors.orange, icon: Icons.category,),
+                    SizedBox(width: 52,),
+                    GrideContainer(title: 'Classes', iconcolor: Colors.green, icon: Icons.video_collection,),
+                    SizedBox(width: 44,),
+                    GrideContainer(title: 'Free Courses', iconcolor: Colors.blue, icon: Icons.assignment,),
+                  ],
+                ),
+                Row(children: [
+                  SizedBox(width: 26,),
+                  GrideContainer(title: 'Book Store', iconcolor: Colors.red, icon: Icons.store,),
+                  SizedBox(width: 35,),
+                  GrideContainer(title: 'Live Course', iconcolor: Colors.purple, icon: Icons.play_circle,),
+                  SizedBox(width: 30,),
+                  GrideContainer(title: 'Leaderboard', iconcolor: Colors.brown, icon: Icons.leaderboard,),
+                ],)
+              ],
+            ),),
+            Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 18),
-                  child: Text("Hi, Programmers",style: TextStyle(
-                    color: Colors.white,fontSize: 25,
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Text("Courses",style: TextStyle(
+                    fontSize: 25,
                     fontWeight: FontWeight.bold,
+                    color: Colors.black,
                   ),),
                 ),
-                SizedBox(height: 30,),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: TextFormField(style: TextStyle(
-                    color: Colors.black,
-                  ),
-                    decoration: InputDecoration(
-                      filled: true,
-                    fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.search,color: Colors.grey),
-                    hintText: "Search Here ......",
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(20),),
-                  ),),
-                )
+                SizedBox(width: 170,),
+                Text("See All",style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black54,
+                ),),
               ],
             ),
-          )
-        ]),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 159,
+                        height: 200,decoration: BoxDecoration(
+                        color: Colors.amberAccent
+                      ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        width: 159,
+                        height: 200,decoration: BoxDecoration(
+                          color: Colors.amberAccent
+                      ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 8),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 159,
+                        height: 200,decoration: BoxDecoration(
+                          color: Colors.amberAccent
+                      ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        width: 159,
+                        height: 200,decoration: BoxDecoration(
+                          color: Colors.amberAccent
+                      ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            )
+          ]),
+        ),
       ),
     );
   }
