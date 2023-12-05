@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dashboard_screen.dart';
+
 class Get_Started extends StatefulWidget {
   const Get_Started({super.key});
 
@@ -59,13 +61,33 @@ class _Get_StartedState extends State<Get_Started> {
                         fontSize: 25,
                         fontWeight: FontWeight.bold
                     )),
-                    SizedBox(height: 30),
-                    Text("Learning with Pleasure with Dear"
-                        "Programmer,Wherever you Are. ",style: TextStyle(
-                        color: Colors.black,
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 70),
+                      child: Text("Learning with Pleasure with Dear"
+                          " Programmer,Wherever you Are.",style: TextStyle(
+                      ),),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    SizedBox(width: 250,
+                      height: 50,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.indigo
+                          ),
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard_Screen()));
+                          }, child: Text("Get Start",style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                         fontSize: 18,
+                      ),)),
+                    )
 
-                    )),
                   ],
                 ),
               ),
