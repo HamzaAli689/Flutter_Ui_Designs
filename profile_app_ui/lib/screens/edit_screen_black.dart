@@ -1,30 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
+import 'package:profile_app_ui/screens/profile_screen_balck.dart';
 
 import '../widgets/circle_avatar.dart';
 import '../widgets/profile_menu.dart';
 
-class Edit_Profile_screen extends StatefulWidget {
-  const Edit_Profile_screen({super.key});
+class Edit_Profile_black_screen extends StatefulWidget {
+  const Edit_Profile_black_screen({super.key});
 
   @override
-  State<Edit_Profile_screen> createState() => _Edit_Profile_screenState();
+  State<Edit_Profile_black_screen> createState() => _Edit_Profile_black_screenState();
 }
 
-class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
+class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios_new),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Profile_Screen_Black()));
+          },
+          icon: Icon(Icons.arrow_back_ios_new,color: Colors.white),
         ),
         title: Text("Edit Profile",
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.black)),
+                color: Colors.white)),
         centerTitle: true,
         automaticallyImplyLeading: true,
       ),
@@ -62,8 +67,8 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                        label: Text("Full Name"),
-                        prefixIconColor: Colors.black,
+                        label: Text("Full Name",style: TextStyle(color: Colors.yellowAccent)),
+                        prefixIconColor: Colors.yellowAccent,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
                         prefixIcon:Icon(Icons.person_outline_rounded)
                     ),
@@ -73,10 +78,10 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                   ),
                   TextFormField(
                     decoration: InputDecoration(
-                        label: Text("E-Mail"),
-                        prefixIconColor: Colors.black,
+                        label: Text("E-Mail",style: TextStyle(color: Colors.yellowAccent)),
+                        prefixIconColor: Colors.yellowAccent,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.person_outline_rounded)
+                        prefixIcon:Icon(LineAwesomeIcons.envelope_1,)
                     ),
                   ),
                   SizedBox(
@@ -84,10 +89,10 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                   ),
                   TextFormField(
                     decoration: InputDecoration(
-                        label: Text("Phone Number"),
-                        prefixIconColor: Colors.black,
+                        label: Text("Phone Number",style: TextStyle(color: Colors.yellowAccent)),
+                        prefixIconColor: Colors.yellowAccent,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.person_outline_rounded)
+                        prefixIcon:Icon(Icons.phone)
                     ),
                   ),
                   SizedBox(
@@ -95,10 +100,11 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                   ),
                   TextFormField(
                     decoration: InputDecoration(
-                        label: Text("Password"),
-                        prefixIconColor: Colors.black,
+
+                        label: Text("Password",style: TextStyle(color: Colors.yellowAccent)),
+                        prefixIconColor: Colors.yellowAccent,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.person_outline_rounded)
+                        prefixIcon:Icon(LineAwesomeIcons.fingerprint)
                     ),
                   ),
                   SizedBox(
@@ -110,22 +116,24 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.yellowAccent),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Edit_Profile_screen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Edit_Profile_black_screen()));
                         },
                         child: Text(
                           "Edit Profile",
                           style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.w300),
+                              color: Colors.black, fontWeight: FontWeight.w700),
                         )),
                   ),
                   SizedBox(height: 30,),
                   Row(
                     children: [
-                      Text('Joined 5 December 2023'),
+                      Text('Joined 5 December 2023',style: TextStyle(
+                        color: Colors.white
+                      )),
                       SizedBox(width: 50,),
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.grey
+                              backgroundColor: Colors.white24
                           ),
                           onPressed: (){}, child: Text("Delete",style: TextStyle(color: Colors.red),))
                     ],

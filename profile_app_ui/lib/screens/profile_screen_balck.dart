@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
+import 'package:profile_app_ui/screens/profile.dart';
 import '../widgets/circle_avatar.dart';
+import '../widgets/profile_menu.dart';
+import 'edit_screen_black.dart';
 
 class Profile_Screen_Black extends StatefulWidget {
   const Profile_Screen_Black({super.key});
@@ -20,8 +23,7 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
           backgroundColor: Colors.black,
           leading: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.arrow_back_ios_new,
-                color: Colors.white),
+            icon: Icon(Icons.arrow_back_ios_new, color: Colors.white),
           ),
           title: Text("Profile",
               style: TextStyle(
@@ -31,7 +33,17 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
           centerTitle: true,
           automaticallyImplyLeading: true,
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.shield_moon,color: Colors.white,))
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Profile_Screen()));
+                },
+                icon: Icon(
+                  Icons.shield_moon,
+                  color: Colors.white,
+                ))
           ],
         ),
         body: SingleChildScrollView(
@@ -39,7 +51,8 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 30),
-              Center(child: Stack(
+              Center(
+                  child: Stack(
                 children: [
                   Circle_Avatar(),
                   Positioned(
@@ -50,11 +63,8 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                       height: 35,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: Colors.yellowAccent
-                      ),
-                      child: Icon(
-                          LineAwesomeIcons.alternate_pencil
-                      ),
+                          color: Colors.yellowAccent),
+                      child: Icon(LineAwesomeIcons.alternate_pencil),
                     ),
                   )
                 ],
@@ -84,11 +94,17 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.yellowAccent),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    Edit_Profile_black_screen()));
+                      },
                       child: Text(
                         "Edit Profile",
                         style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.w300),
+                            color: Colors.black, fontWeight: FontWeight.w700),
                       ))),
               SizedBox(
                 height: 40,
@@ -98,6 +114,7 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                 icon: LineAwesomeIcons.cog,
                 onpress: () {},
                 textColor: Colors.white,
+                iconcolor: Colors.yellowAccent, containerColor: Colors.white24, arrowColor: Colors.white10,
               ),
               SizedBox(height: 7),
               ProfileMenuWidget(
@@ -105,6 +122,7 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                 icon: LineAwesomeIcons.wallet,
                 onpress: () {},
                 textColor: Colors.white,
+                iconcolor: Colors.yellowAccent, containerColor: Colors.white24, arrowColor: Colors.white10,
               ),
               SizedBox(height: 7),
               ProfileMenuWidget(
@@ -112,6 +130,7 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                 icon: LineAwesomeIcons.user_check,
                 onpress: () {},
                 textColor: Colors.white,
+                iconcolor: Colors.yellowAccent, containerColor: Colors.white24, arrowColor: Colors.white10,
               ),
               Divider(),
               SizedBox(height: 15),
@@ -120,6 +139,7 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                 icon: LineAwesomeIcons.info,
                 onpress: () {},
                 textColor: Colors.white,
+                iconcolor: Colors.yellowAccent, containerColor: Colors.white24, arrowColor: Colors.white10,
               ),
               SizedBox(height: 7),
               ProfileMenuWidget(
@@ -127,56 +147,9 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                 icon: LineAwesomeIcons.alternate_sign_out,
                 onpress: () {},
                 textColor: Colors.red,
+                iconcolor: Colors.yellowAccent, containerColor: Colors.white24, arrowColor: Colors.white10,
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ProfileMenuWidget extends StatelessWidget {
-  const ProfileMenuWidget({
-    super.key,
-    required this.title,
-    required this.icon,
-    required this.onpress,
-    required this.textColor,
-  });
-
-  final String title;
-  final IconData icon;
-  final VoidCallback onpress;
-  final Color textColor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: ListTile(
-        leading: Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100), color: Colors.black12),
-          child: Icon(icon, color: Colors.blue),
-        ),
-        title: Text(title,
-            style: TextStyle(
-                color: textColor,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.normal,
-                fontSize: 18)),
-        trailing: Container(
-          height: 40,
-          width: 40,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100), color: Colors.black12),
-          child: Icon(
-            Icons.arrow_forward_ios,
-            color: Colors.grey,
-            size: 18.0,
           ),
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
+import 'package:profile_app_ui/screens/profile.dart';
 
 import '../widgets/circle_avatar.dart';
 import '../widgets/profile_menu.dart';
@@ -17,7 +18,9 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Profile_Screen()));
+          },
           icon: Icon(Icons.arrow_back_ios_new),
         ),
         title: Text("Edit Profile",
@@ -76,7 +79,7 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                         label: Text("E-Mail"),
                         prefixIconColor: Colors.black,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.person_outline_rounded)
+                        prefixIcon:Icon(LineAwesomeIcons.envelope_1)
                     ),
                   ),
                   SizedBox(
@@ -87,7 +90,7 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                         label: Text("Phone Number"),
                         prefixIconColor: Colors.black,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.person_outline_rounded)
+                        prefixIcon:Icon(Icons.phone)
                     ),
                   ),
                   SizedBox(
@@ -98,7 +101,7 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                         label: Text("Password"),
                         prefixIconColor: Colors.black,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.person_outline_rounded)
+                        prefixIcon:Icon(LineAwesomeIcons.fingerprint)
                     ),
                   ),
                   SizedBox(
@@ -115,7 +118,7 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                         child: Text(
                           "Edit Profile",
                           style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.w300),
+                              color: Colors.black, fontWeight: FontWeight.w700),
                         )),
                   ),
                   SizedBox(height: 30,),

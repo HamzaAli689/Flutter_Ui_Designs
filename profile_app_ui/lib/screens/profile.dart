@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import '../widgets/circle_avatar.dart';
-import '../widgets/text_feild.dart';
+import '../widgets/profile_menu.dart';
+import 'profile_screen_balck.dart';
 import 'edit_profile.dart';
 
 class Profile_Screen extends StatefulWidget {
@@ -30,9 +31,14 @@ class _Profile_ScreenState extends State<Profile_Screen> {
           centerTitle: true,
           automaticallyImplyLeading: true,
           actions: [
-            IconButton(onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Profile_Screen_Black()));
-            }, icon: Icon(Icons.shield_moon_outlined))
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Profile_Screen_Black()));
+                },
+                icon: Icon(Icons.shield_moon_outlined))
           ],
         ),
         body: SingleChildScrollView(
@@ -40,26 +46,24 @@ class _Profile_ScreenState extends State<Profile_Screen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 30),
-                  Center(child: Stack(
-                    children: [
-                      Circle_Avatar(),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Container(
-                          width: 35,
-                          height: 35,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              color: Colors.yellowAccent
-                          ),
-                          child: Icon(
-                              LineAwesomeIcons.alternate_pencil
-                          ),
-                        ),
-                      )
-                    ],
-                  )),
+              Center(
+                  child: Stack(
+                children: [
+                  Circle_Avatar(),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Colors.yellowAccent),
+                      child: Icon(LineAwesomeIcons.alternate_pencil),
+                    ),
+                  )
+                ],
+              )),
               SizedBox(
                 height: 10,
               ),
@@ -86,12 +90,15 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.yellowAccent),
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Edit_Profile_screen()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Edit_Profile_screen()));
                       },
                       child: Text(
                         "Edit Profile",
                         style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.w300),
+                            color: Colors.black, fontWeight: FontWeight.w700),
                       ))),
               SizedBox(
                 height: 40,
@@ -101,6 +108,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 icon: LineAwesomeIcons.cog,
                 onpress: () {},
                 textColor: Colors.black,
+                iconcolor: Colors.blue, containerColor: Colors.black12, arrowColor: Colors.black12,
               ),
               SizedBox(height: 7),
               ProfileMenuWidget(
@@ -108,6 +116,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 icon: LineAwesomeIcons.wallet,
                 onpress: () {},
                 textColor: Colors.black,
+                iconcolor: Colors.blue, containerColor: Colors.black12, arrowColor: Colors.black12,
               ),
               SizedBox(height: 7),
               ProfileMenuWidget(
@@ -115,6 +124,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 icon: LineAwesomeIcons.user_check,
                 onpress: () {},
                 textColor: Colors.black,
+                iconcolor: Colors.blue, containerColor: Colors.black12, arrowColor: Colors.black12,
               ),
               Divider(),
               SizedBox(height: 15),
@@ -123,6 +133,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 icon: LineAwesomeIcons.info,
                 onpress: () {},
                 textColor: Colors.black,
+                iconcolor: Colors.blue, containerColor: Colors.black12, arrowColor: Colors.black12,
               ),
               SizedBox(height: 7),
               ProfileMenuWidget(
@@ -130,6 +141,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 icon: LineAwesomeIcons.alternate_sign_out,
                 onpress: () {},
                 textColor: Colors.red,
+                iconcolor: Colors.blue, containerColor: Colors.black12, arrowColor: Colors.black12,
               ),
             ],
           ),
@@ -138,5 +150,3 @@ class _Profile_ScreenState extends State<Profile_Screen> {
     );
   }
 }
-
-

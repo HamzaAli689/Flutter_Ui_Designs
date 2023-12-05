@@ -8,12 +8,16 @@ class ProfileMenuWidget extends StatelessWidget {
     required this.icon,
     required this.onpress,
     required this.textColor,
+    required this.iconcolor, required this.containerColor, required this.arrowColor,
   });
 
   final String title;
+  final Color iconcolor;
   final IconData icon;
   final VoidCallback onpress;
   final Color textColor;
+  final Color containerColor;
+  final Color arrowColor;
 
   @override
   Widget build(BuildContext context) {
@@ -24,20 +28,21 @@ class ProfileMenuWidget extends StatelessWidget {
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100), color: Colors.black12),
-          child: Icon(icon, color: Colors.blue),
+              borderRadius: BorderRadius.circular(100), color: containerColor),
+          child: Icon(icon, color: iconcolor),
         ),
         title: Text(title,
             style: TextStyle(
                 color: textColor,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w600,
                 fontStyle: FontStyle.normal,
-                fontSize: 18)),
+                fontSize: 15)),
+
         trailing: Container(
           height: 40,
           width: 40,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100), color: Colors.black12),
+              borderRadius: BorderRadius.circular(100), color: arrowColor),
           child: Icon(
             Icons.arrow_forward_ios,
             color: Colors.grey,
