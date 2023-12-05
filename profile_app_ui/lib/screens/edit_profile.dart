@@ -66,7 +66,7 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                   TextFormField(
                     decoration: InputDecoration(
                       label: Text("Full Name"),
-                      prefixIconColor: Colors.black,
+                      prefixIconColor: Colors.blue,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
                       prefixIcon:Icon(Icons.person_outline_rounded)
                     ),
@@ -77,7 +77,7 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                   TextFormField(
                     decoration: InputDecoration(
                         label: Text("E-Mail"),
-                        prefixIconColor: Colors.black,
+                        prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
                         prefixIcon:Icon(LineAwesomeIcons.envelope_1)
                     ),
@@ -88,7 +88,7 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                   TextFormField(
                     decoration: InputDecoration(
                         label: Text("Phone Number"),
-                        prefixIconColor: Colors.black,
+                        prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
                         prefixIcon:Icon(Icons.phone)
                     ),
@@ -97,9 +97,10 @@ class _Edit_Profile_screenState extends State<Edit_Profile_screen> {
                     height: 8,
                   ),
                   TextFormField(
+                    obscureText: true,
                     decoration: InputDecoration(
                         label: Text("Password"),
-                        prefixIconColor: Colors.black,
+                        prefixIconColor: Colors.blue,
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
                         prefixIcon:Icon(LineAwesomeIcons.fingerprint)
                     ),

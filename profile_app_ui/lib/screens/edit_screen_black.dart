@@ -9,7 +9,8 @@ class Edit_Profile_black_screen extends StatefulWidget {
   const Edit_Profile_black_screen({super.key});
 
   @override
-  State<Edit_Profile_black_screen> createState() => _Edit_Profile_black_screenState();
+  State<Edit_Profile_black_screen> createState() =>
+      _Edit_Profile_black_screenState();
 }
 
 class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
@@ -21,9 +22,12 @@ class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
         backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Profile_Screen_Black()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Profile_Screen_Black()));
           },
-          icon: Icon(Icons.arrow_back_ios_new,color: Colors.white),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white),
         ),
         title: Text("Edit Profile",
             style: TextStyle(
@@ -38,7 +42,8 @@ class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 30),
-            Center(child: Stack(
+            Center(
+                child: Stack(
               children: [
                 Circle_Avatar(),
                 Positioned(
@@ -49,11 +54,8 @@ class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
                     height: 35,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: Colors.yellowAccent
-                    ),
-                    child: Icon(
-                        LineAwesomeIcons.camera
-                    ),
+                        color: Colors.yellowAccent),
+                    child: Icon(LineAwesomeIcons.camera),
                   ),
                 )
               ],
@@ -63,49 +65,59 @@ class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Form(child: Column(
+              child: Form(
+                  child: Column(
                 children: [
                   TextFormField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                        label: Text("Full Name",style: TextStyle(color: Colors.yellowAccent)),
+                        label: Text("Full Name",
+                            style: TextStyle(color: Colors.yellowAccent)),
                         prefixIconColor: Colors.yellowAccent,
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.person_outline_rounded)
-                    ),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(100)),
+                        prefixIcon: Icon(Icons.person_outline_rounded)),
                   ),
                   SizedBox(
                     height: 8,
                   ),
                   TextFormField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                        label: Text("E-Mail",style: TextStyle(color: Colors.yellowAccent)),
+                        label: Text("E-Mail",
+                            style: TextStyle(color: Colors.yellowAccent)),
                         prefixIconColor: Colors.yellowAccent,
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(LineAwesomeIcons.envelope_1,)
-                    ),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(100)),
+                        prefixIcon: Icon(
+                          LineAwesomeIcons.envelope_1,
+                        )),
                   ),
                   SizedBox(
                     height: 8,
                   ),
                   TextFormField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                        label: Text("Phone Number",style: TextStyle(color: Colors.yellowAccent)),
+                        label: Text("Phone Number",
+                            style: TextStyle(color: Colors.yellowAccent)),
                         prefixIconColor: Colors.yellowAccent,
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(Icons.phone)
-                    ),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(100)),
+                        prefixIcon: Icon(Icons.phone)),
                   ),
                   SizedBox(
                     height: 8,
                   ),
-                  TextFormField(
+                  TextFormField(obscureText: true,
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-
-                        label: Text("Password",style: TextStyle(color: Colors.yellowAccent)),
+                        label: Text("Password",
+                            style: TextStyle(color: Colors.yellowAccent)),
                         prefixIconColor: Colors.yellowAccent,
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
-                        prefixIcon:Icon(LineAwesomeIcons.fingerprint)
-                    ),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(100)),
+                        prefixIcon: Icon(LineAwesomeIcons.fingerprint)),
                   ),
                   SizedBox(
                     height: 30,
@@ -116,7 +128,11 @@ class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.yellowAccent),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Edit_Profile_black_screen()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      Edit_Profile_black_screen()));
                         },
                         child: Text(
                           "Edit Profile",
@@ -124,18 +140,24 @@ class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
                               color: Colors.black, fontWeight: FontWeight.w700),
                         )),
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Row(
                     children: [
-                      Text('Joined 5 December 2023',style: TextStyle(
-                        color: Colors.white
-                      )),
-                      SizedBox(width: 50,),
+                      Text('Joined 5 December 2023',
+                          style: TextStyle(color: Colors.white)),
+                      SizedBox(
+                        width: 50,
+                      ),
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white24
-                          ),
-                          onPressed: (){}, child: Text("Delete",style: TextStyle(color: Colors.red),))
+                              backgroundColor: Colors.white24),
+                          onPressed: () {},
+                          child: Text(
+                            "Delete",
+                            style: TextStyle(color: Colors.red),
+                          ))
                     ],
                   )
                 ],
@@ -143,9 +165,7 @@ class _Edit_Profile_black_screenState extends State<Edit_Profile_black_screen> {
             )
           ],
         ),
-
       ),
-
     );
   }
 }

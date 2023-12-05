@@ -142,13 +142,24 @@ class _Profile_Screen_BlackState extends State<Profile_Screen_Black> {
                 iconcolor: Colors.yellowAccent, containerColor: Colors.white24, arrowColor: Colors.white10,
               ),
               SizedBox(height: 7),
-              ProfileMenuWidget(
-                title: 'Logout',
-                icon: LineAwesomeIcons.alternate_sign_out,
-                onpress: () {},
-                textColor: Colors.red,
-                iconcolor: Colors.yellowAccent, containerColor: Colors.white24, arrowColor: Colors.white10,
-              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: ListTile(
+                  leading: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100), color: Colors.white10),
+                    child: Icon(LineAwesomeIcons.alternate_sign_out, color: Colors.yellowAccent),
+                  ),
+                  title: Text("Logout",
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 15)),
+                ),
+              )
             ],
           ),
         ),
