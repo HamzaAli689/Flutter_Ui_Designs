@@ -181,7 +181,7 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
                               MaterialPageRoute(
                                   builder: (context) => Courses_Screen(
                                         title: 'Flutter',
-                                        imagePath: 'images/flutter.png',
+                                        imagePath: 'images/flutter.png', videotitle: 'Flutter Complete Course',
                                       )));
                         },
                       ),
