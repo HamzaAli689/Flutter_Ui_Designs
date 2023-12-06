@@ -181,7 +181,7 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
                               MaterialPageRoute(
                                   builder: (context) => Courses_Screen(
                                         title: 'Flutter',
-                                        imagePath: 'images/flutter.png', videotitle: 'Flutter Complete Course',
+                                        imagePath: 'images/flutter.png', videotitle: 'Flutter Complete Course', subtitle: 'Introduction to Flutter',
                                       )));
                         },
                       ),
@@ -191,7 +191,15 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
                       Courses_Container(
                         title: 'Python',
                         imagePath: 'images/python.png',
-                        onpress: () {},
+                        onpress: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Courses_Screen(
+                                    title: 'Python',
+                                    imagePath: 'images/python.png', videotitle: 'Python Complete Course', subtitle: 'Inroduction to Python',
+                                  )));
+                        },
                       ),
                     ],
                   ),
@@ -204,15 +212,27 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
                       Courses_Container(
                         title: 'C#',
                         imagePath: 'images/c#.png',
-                        onpress: () {},
+                        onpress: () {Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Courses_Screen(
+                                  title: 'C#',
+                                  imagePath: 'images/c#.png', videotitle: 'C# Complete Course', subtitle: 'Inroduction to C#',
+                                )));},
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       Courses_Container(
-                        title: 'React Native',
+                        title: 'React.JS',
                         imagePath: 'images/react_native.png',
-                        onpress: () {},
+                        onpress: () {Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Courses_Screen(
+                                  title: 'React.JS',
+                                  imagePath: 'images/react_native.png', videotitle: 'React.JS Complete Course', subtitle: 'Inroduction to Reast.JS',
+                                )));},
                       ),
                     ],
                   ),
@@ -225,7 +245,13 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
                       Courses_Container(
                         title: 'C++',
                         imagePath: 'images/c++.png',
-                        onpress: () {},
+                        onpress: () {Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Courses_Screen(
+                                  title: 'C++',
+                                  imagePath: 'images/c++.png', videotitle: 'C++ Complete Course', subtitle: 'Inroduction to C++',
+                                )));},
                       ),
                       SizedBox(
                         width: 10,
@@ -233,7 +259,13 @@ class _Dashboard_ScreenState extends State<Dashboard_Screen> {
                       Courses_Container(
                         title: 'HTML',
                         imagePath: 'images/html.png',
-                        onpress: () {},
+                        onpress: () {Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Courses_Screen(
+                                  title: 'HTML',
+                                  imagePath: 'images/html.png', videotitle: 'HTML Complete Course', subtitle: 'Inroduction to HTML',
+                                )));},
                       ),
                     ],
                   ),

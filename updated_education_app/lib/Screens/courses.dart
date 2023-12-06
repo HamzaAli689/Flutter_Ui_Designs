@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class Courses_Screen extends StatelessWidget {
   const Courses_Screen(
-      {super.key, required this.title, required this.imagePath, required this.videotitle});
+      {super.key, required this.title, required this.imagePath, required this.videotitle, required this.subtitle});
 
   final String title;
+  final String subtitle;
   final String videotitle;
   final String imagePath;
 
@@ -140,7 +141,7 @@ class Courses_Screen extends StatelessWidget {
                         size: 33,
                         ),
                       ),
-                      title: Text("Introduction to Flutter"),
+                      title: Text(subtitle),
                       subtitle: Text("20 min 50 sec"),
         
                     ),
@@ -156,7 +157,7 @@ class Courses_Screen extends StatelessWidget {
                           size: 33,
                         ),
                       ),
-                      title: Text("Introduction to Flutter"),
+                      title: Text(subtitle),
                       subtitle: Text("20 min 50 sec"),
         
                     ),
@@ -172,7 +173,7 @@ class Courses_Screen extends StatelessWidget {
                           size: 33,
                         ),
                       ),
-                      title: Text("Introduction to Flutter"),
+                      title: Text(subtitle),
                       subtitle: Text("20 min 50 sec"),
         
                     ),
@@ -188,7 +189,7 @@ class Courses_Screen extends StatelessWidget {
                           size: 33,
                         ),
                       ),
-                      title: Text("Introduction to Flutter"),
+                      title: Text(subtitle),
                       subtitle: Text("20 min 50 sec"),
         
                     ),
