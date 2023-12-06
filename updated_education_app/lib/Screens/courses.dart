@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:updated_education_app/Screens/dashboard_screen.dart';
 
 class Courses_Screen extends StatelessWidget {
   const Courses_Screen(
@@ -25,7 +26,9 @@ class Courses_Screen extends StatelessWidget {
           ),
         ],
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard_Screen()));
+          },
           icon: Icon(Icons.arrow_back, color: Colors.black),
         ),
         backgroundColor: Colors.white,
