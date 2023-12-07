@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login_screen.dart';
+
 class GetStarted_Screen extends StatelessWidget {
   const GetStarted_Screen({super.key});
 
@@ -47,7 +49,7 @@ class GetStarted_Screen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 40,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -60,7 +62,9 @@ class GetStarted_Screen extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadiusDirectional.circular(10))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Login_Screen()));
+                        },
                         child: Text("Login",style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.black,fontSize: 15
