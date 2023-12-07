@@ -101,7 +101,71 @@ class Login_Screen extends StatelessWidget {
                     ),
                   ],
                 ),
-                
+                SizedBox(
+                  height: 20,
+                ),
+                SizedBox(width: 340,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.yellow,
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                              BorderRadiusDirectional.circular(30))),
+                      onPressed: () {},
+                      child: Text("Login",style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,fontSize: 18
+
+                      ),)),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("OR",style: TextStyle(fontSize: 18),),
+                Container(
+                  height: 40,
+                  width: 340,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.yellow
+                  ),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Image.asset("images/google.png",height: 30,
+                        width: 30),
+                        SizedBox(width: 50),
+                        Text("Sign-in with Google",style: TextStyle(
+                          color: Colors.black,fontWeight: FontWeight.w600,
+                          fontSize: 15
+                        )),
+
+                      ],
+                    ),
+                  ),
+
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 80,
+                    ),
+                    Text("Don't have Account ?"),
+                    TextButton(onPressed: (){}, child: Text("Sign-in",style: TextStyle(
+                      color: Colors.yellow,fontSize: 18
+                    ),))
+                  ],
+                ),
+                SizedBox(
+                  height: 100,
+                )
+
               ],
             ),
           ),
