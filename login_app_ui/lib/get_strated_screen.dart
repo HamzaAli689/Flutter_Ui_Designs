@@ -8,10 +8,24 @@ class GetStarted_Screen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.lightBlueAccent,
       body: Column(
         children: [
-          Image.asset("images/login.png")
+          SizedBox(height: 130,),
+          Image.asset("images/login.png"),
+          SizedBox(height: 70,),
+          Text("Build Awesome Apps",
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+          ),),
+          SizedBox(height: 10,),
+          Text("Build Awesome Apps",
+            style: TextStyle(
+              color: Colors.black54,
+              fontSize: 15,
+            ),),
 
         ],
       ),
