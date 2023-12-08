@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:login_app_ui/get_strated_screen.dart';
-import 'package:login_app_ui/signup_screen.dart';
 import 'package:login_app_ui/widgets/my_textformfeild.dart';
 
-class Login_Screen extends StatelessWidget {
-  const Login_Screen({super.key});
+import 'login_screen.dart';
+
+class SignUp_Screen extends StatelessWidget {
+  const SignUp_Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class Login_Screen extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text("Login",
+          title: Text("Sign Up",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -60,7 +61,11 @@ class Login_Screen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
+                My_TextFormFeild(title: 'Full Name', icon: Icons.account_box,),
+                SizedBox(height: 10),
                 My_TextFormFeild(title: 'E-mail', icon: Icons.email,),
+                SizedBox(height: 10),
+                My_TextFormFeild(title: 'Phone No', icon: Icons.phone,),
                 SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -78,17 +83,7 @@ class Login_Screen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 200),
-                      child: Text("Forget Password ?",style: TextStyle(
-                        color: Colors.yellowAccent,
-                        fontWeight: FontWeight.w400,
-                      ),),
-                    ),
-                  ],
-                ),
+
                 SizedBox(
                   height: 20,
                 ),
@@ -100,7 +95,7 @@ class Login_Screen extends StatelessWidget {
                               borderRadius:
                               BorderRadiusDirectional.circular(30))),
                       onPressed: () {},
-                      child: Text("Login",style: TextStyle(
+                      child: Text("Sign Up",style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.black,fontSize: 18
 
@@ -115,8 +110,8 @@ class Login_Screen extends StatelessWidget {
                   height: 40,
                   width: 340,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.yellow
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.yellow
                   ),
                   child: Center(
                     child: Row(
@@ -125,11 +120,11 @@ class Login_Screen extends StatelessWidget {
                           width: 10,
                         ),
                         Image.asset("images/google.png",height: 30,
-                        width: 30),
+                            width: 30),
                         SizedBox(width: 50),
                         Text("Sign-in with Google",style: TextStyle(
-                          color: Colors.black,fontWeight: FontWeight.w600,
-                          fontSize: 15
+                            color: Colors.black,fontWeight: FontWeight.w600,
+                            fontSize: 15
                         )),
 
                       ],
@@ -145,11 +140,11 @@ class Login_Screen extends StatelessWidget {
                     SizedBox(
                       width: 80,
                     ),
-                    Text("Don't have Account ?"),
+                    Text("Already have an Account ?"),
                     TextButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp_Screen()));
-                    }, child: Text("Sign-in",style: TextStyle(
-                      color: Colors.yellow,fontSize: 18
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Login_Screen()));
+                    }, child: Text("Login",style: TextStyle(
+                        color: Colors.yellow,fontSize: 18
                     ),))
                   ],
                 ),

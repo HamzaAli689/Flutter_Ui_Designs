@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app_ui/signup_screen.dart';
 
 import 'login_screen.dart';
 
@@ -81,7 +82,9 @@ class GetStarted_Screen extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius:
                                 BorderRadiusDirectional.circular(10))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp_Screen()));
+                        },
                         child: Text("Sign Up",style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,fontSize: 15
