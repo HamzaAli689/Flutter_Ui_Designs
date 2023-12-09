@@ -139,29 +139,31 @@ class _QuizPageState extends State<QuizPage> {
     }
   }
 
-  Future<bool?> _onWillPop() async {
+  Future<bool> _onWillPop() async {
     return await showDialog<bool>(
-        context: context,
-        builder: (_) {
-          return AlertDialog(
-            content: const Text(
-                "Are you sure you want to quit the quiz? All your progress will be lost."),
-            title: const Text("Warning!"),
-            actions: <Widget>[
-              TextButton(
-                child: const Text("Yes"),
-                onPressed: () {
-                  Navigator.pop(context, true);
-                },
-              ),
-              TextButton(
-                child: const Text("No"),
-                onPressed: () {
-                  Navigator.pop(context, false);
-                },
-              ),
-            ],
-          );
-        });
+      context: context,
+      builder: (_) {
+        return AlertDialog(
+          content: const Text(
+              "Are you sure you want to quit the quiz? All your progress will be lost."),
+          title: const Text("Warning!"),
+          actions: <Widget>[
+            TextButton(
+              child: const Text("Yes"),
+              onPressed: () {
+                Navigator.pop(context, true);
+              },
+            ),
+            TextButton(
+              child: const Text("No"),
+              onPressed: () {
+                Navigator.pop(context, false);
+              },
+            ),
+          ],
+        );
+      },
+    ) ?? false; // Default to false if the dialog is dismissed.
   }
+
 }

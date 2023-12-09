@@ -26,7 +26,9 @@ class QuizFinishedPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
-        title: const Text('Result'),
+        title: const Text('Result',style: TextStyle(
+            color: Colors.white
+        )),
         elevation: 0,
       ),
       body: Container(

@@ -19,7 +19,9 @@ class CheckAnswersPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
-        title: const Text('Check Answers'),
+        title: const Text('Check Answers',style: TextStyle(
+            color: Colors.white
+        )),
         elevation: 0,
       ),
       body: Stack(

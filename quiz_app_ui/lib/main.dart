@@ -6,6 +6,7 @@ import 'quiz_options.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: QuizHomePage(), // Your main widget
   ));
 }
@@ -32,7 +33,9 @@ class QuizHomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.deepPurple,
-          title: const Text('OpenTrivia'),
+          title: const Text('OpenTrivia',style: TextStyle(
+            color: Colors.white
+          )),
           elevation: 0,
         ),
         body: Stack(
