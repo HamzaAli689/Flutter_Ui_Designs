@@ -12,34 +12,16 @@ const Color profileItemColor = Color(0xFFC4C5C9);
 const String imagePath = 'assets/image';
 
 const String devMausam =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/mausam%2Fprofile.jpg?alt=media&token=83fa8b83-f53b-489c-a799-ca5d5aceae7b';
+    'images/profile.jpg';
 
 const Color furnitureCateDisableColor = Color(0xFF939BA9);
 const List lampsImage = [
-  {
-    'image':
-        'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/mausam%2Fa.jpg?alt=media&token=6af6cfed-84a6-4cf3-a5ce-875fe47f8c5b'
-  },
-  {
-    'image':
-        'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/mausam%2Fb.jpg?alt=media&token=801b2f22-94fd-419b-8b84-c9b4fbd45d4d'
-  },
-  {
-    'image':
-        'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/mausam%2Fc.jpg?alt=media&token=b4470e0b-411f-4925-acaf-d6cb9292a44e'
-  },
-  {
-    'image':
-        'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/mausam%2Fd.jpg?alt=media&token=01ed6f8d-8e1d-403a-a5a0-423b7aa958be'
-  },
-  {
-    'image':
-        'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/mausam%2Fe.jpg?alt=media&token=a9342ee6-9dc6-452d-ade7-4a1d7783e7fe'
-  },
-  {
-    'image':
-        'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/mausam%2Ff.jpg?alt=media&token=c65c13ad-5b2f-494e-82eb-13d730d823ce'
-  },
+  {'image': 'images/a.jpg'},
+  {'image': 'images/b.jpg'},
+  {'image': 'images/c.jpg'},
+  {'image': 'images/d.jpg'},
+  {'image': 'images/e.jpg'},
+  {'image': 'images/f.jpg'},
 ];
 List<ProfileMenu> lampList = [
   ProfileMenu(title: 'Landscape', subTitle: '384'),
@@ -57,18 +39,18 @@ const List profileItems = [
 ];
 
 List<Catg> listProfileCategories = [
-  Catg(name: 'Wallet', icon: CustomIcon.accountBalanceWallet, number: 0),
-  Catg(name: 'Delivery', icon: CustomIcon.truck, number: 0),
-  Catg(name: 'Message', icon: CustomIcon.chat, number: 2),
-  Catg(name: 'Service', icon: CustomIcon.money, number: 0),
+  Catg(name: 'Wallet', icon: Icons.wallet, number: 0),
+  Catg(name: 'Delivery', icon: Icons.delivery_dining, number: 0),
+  Catg(name: 'Message', icon: Icons.message, number: 2),
+  Catg(name: 'Service', icon: Icons.miscellaneous_services_sharp, number: 0),
 ];
 
 List<FurnitureCatg> furnitureCategoriesList = [
   FurnitureCatg(icon: Icons.desktop_windows, elivation: true),
-  FurnitureCatg(icon: CustomIcon.accountBalanceWallet, elivation: false),
+  FurnitureCatg(icon: Icons.account_balance_wallet, elivation: false),
   FurnitureCatg(icon: Icons.security, elivation: false),
-  FurnitureCatg(icon: CustomIcon.chat, elivation: false),
-  FurnitureCatg(icon: CustomIcon.money, elivation: false),
+  FurnitureCatg(icon: Icons.chat, elivation: false),
+  FurnitureCatg(icon: Icons.money, elivation: false),
 ];
 
 List<ProfileMenu> profileMenuList = [
@@ -103,6 +85,7 @@ class ProfileMenu {
   String? subTitle;
   IconData? icon;
   Color? iconColor;
+
   ProfileMenu({this.icon, this.title, this.iconColor, this.subTitle});
 }
 
@@ -110,11 +93,13 @@ class Catg {
   String? name;
   IconData? icon;
   int? number;
+
   Catg({this.icon, this.name, this.number});
 }
 
 class FurnitureCatg {
   IconData? icon;
   bool? elivation;
+
   FurnitureCatg({this.icon, this.elivation});
 }

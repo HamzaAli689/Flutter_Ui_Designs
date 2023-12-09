@@ -89,7 +89,7 @@ class Lamp extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    "Hamza Ali",
+                                    item.title!,
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: index == 0 ? 17.0 : 14,
@@ -116,7 +116,7 @@ class Lamp extends StatelessWidget {
                                 // crossAxisAlignment: CrossAxisAlignment.end,
                                 children: <Widget>[
                                   Text(
-                                    "Hamza Ali",
+                                    item.subTitle!,
                                     style: TextStyle(
                                       color: furnitureCateDisableColor,
                                       fontSize: index == 0 ? 30.0 : 20.0,
@@ -132,7 +132,7 @@ class Lamp extends StatelessWidget {
                                       'USD',
                                       style: TextStyle(
                                         color: furnitureCateDisableColor,
-                                        fontSize: index == 0 ? 15.0 : 10.0,
+                                        fontSize: index == 0 ? 7.4:7.4,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),

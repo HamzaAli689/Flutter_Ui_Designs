@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="furniture_app_ui"
+        android:label="Furniture App UI"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

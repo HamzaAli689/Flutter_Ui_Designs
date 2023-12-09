@@ -14,7 +14,7 @@ class BottomItem extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30.0),
           ),
-          height: 120.0,
+          height: 130.0,
           child: Center(
             child: Material(
               elevation: 10.0,
