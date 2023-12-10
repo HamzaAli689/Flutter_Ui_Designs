@@ -21,7 +21,11 @@ A new Flutter project.
 
    ![ps6](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/fc1f7d30-5ed9-4390-8400-fe1d246d645d)
 
-    
+    ## Screen Vedio
+
+https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/158816ac-f1c3-4b98-8797-413ffe8dbfc0
+
+
  
 
 
