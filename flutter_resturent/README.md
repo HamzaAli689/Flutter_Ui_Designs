@@ -5,10 +5,9 @@ A new Flutter project.
 ## Screen shots
 
 
-    ![ps1](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/b0c014b0-0d21-469a-b295-14f64a6f6ee4)
+    ![ps1](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/d696c183-f70d-4ae4-9256-9d5788c8c9e9)
 
-
-    ![ps2](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/c0be76fe-58da-4401-8057-b3d61d722152)
+![ps2](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/2f5f90a7-bdc7-4ea5-9102-81a802bf81e2)
 
   
  
