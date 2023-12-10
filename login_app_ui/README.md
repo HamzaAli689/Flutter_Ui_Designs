@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-## Getting Started
+## Screen shots
 
 ![ls2](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/de3a4d2c-6630-421a-94c4-b3fb8284d8b5)
 
@@ -15,4 +15,10 @@ A new Flutter project.
 
 
 ![ls4](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/8d5d7a5f-2759-4986-ab70-d65eb39e74dd)
+
+## Screen Vedio
+
+
+
+https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/cd1a9ad6-9a7b-4af2-a9e7-22b16612b7c4
 
