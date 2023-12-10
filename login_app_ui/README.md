@@ -2,15 +2,23 @@
 
 A new Flutter project.
 
-## Getting Started
+## Screen shots
 
-This project is a starting point for a Flutter application.
+![ls2](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/de3a4d2c-6630-421a-94c4-b3fb8284d8b5)
 
-A few resources to get you started if this is your first Flutter project:
+![ls1](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/b4cb957f-b90c-4ba1-8590-024721fc6e4f)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![ls3](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/b44d048a-81e7-4295-a74e-1890de2b6780)
+
+![s5](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/abb361e0-7a83-4816-bad0-d471139dddf3)
+
+
+![ls4](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/8d5d7a5f-2759-4986-ab70-d65eb39e74dd)
+
+## Screen Vedio
+
+
+
+https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/cd1a9ad6-9a7b-4af2-a9e7-22b16612b7c4
+
