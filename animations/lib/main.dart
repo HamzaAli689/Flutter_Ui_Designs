@@ -4,6 +4,7 @@ import 'animationtwopage.dart';
 import 'animi1.dart';
 import 'animi5.dart';
 import 'animi_four.dart';
+import 'home.dart';
 
 
 void main (){
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimationOnePage(),
+      home: HomePage(),
     );
   }
 }
