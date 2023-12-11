@@ -15,15 +15,18 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Home Page"),
+          title: Text("Home Page",style: TextStyle(
+            fontWeight: FontWeight.bold,
+          )),
           leading: IconButton(onPressed: (){}, icon: Icon(Icons.grid_view_sharp)),
         ),
         body: Center(
           child: Column(
             children: [
-              SizedBox(height: 70,),
+              SizedBox(height: 100,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: InkWell(
