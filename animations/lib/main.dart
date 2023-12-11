@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'animationtwopage.dart';
-import 'animithree.dart';
+import 'animi1.dart';
+import 'animi5.dart';
+import 'animi_four.dart';
+
 
 void main (){
   runApp(MyApp());
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FancyAppbarAnimation(),
+      home: AnimationOnePage(),
     );
   }
 }
