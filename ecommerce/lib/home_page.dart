@@ -156,11 +156,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Cart Screen 3",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Cart Screen 3",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -179,11 +182,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("CheckOut Page",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("CheckOut Page",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -205,12 +211,15 @@ class Home_Page extends StatelessWidget {
                               color: Colors.indigoAccent,
                               borderRadius: BorderRadius.circular(30),
                             ),
-                            child: Center(
-                              child: Text("Ecommerec Page 1",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20),
+                              child: Center(
+                                child: Text("Ecommerec Page 1",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -229,11 +238,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Ecommerec Page 2",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Ecommerec Page 2",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -256,11 +268,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Ecommerce Page 3",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Ecommerce Page 3",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -279,11 +294,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Ecommerec Page 4",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Ecommerec Page 4",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -306,11 +324,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Ecommerce Detail Page1",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Ecommerce Detail Page1",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -329,11 +350,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Ecommerce Detail Page2",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Ecommerce Detail Page2",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -356,11 +380,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Ecommerce Detail Page3",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Ecommerce Detail Page3",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
@@ -379,11 +406,14 @@ class Home_Page extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
-                              child: Text("Confirm order Page",style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600
-                              )),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text("Confirm order Page",style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                )),
+                              ),
                             ),
                           ),
                         ),
