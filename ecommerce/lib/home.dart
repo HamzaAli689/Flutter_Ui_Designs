@@ -4,10 +4,14 @@ import 'cart_screens/cart1.dart';
 import 'cart_screens/cart2.dart';
 import 'cart_screens/cart3.dart';
 import 'checkout/checkout1.dart';
+import 'confirm_order1.dart';
 import 'ecommerce/ecommerce1.dart';
 import 'ecommerce/ecommerce2.dart';
 import 'ecommerce/ecommerce4.dart';
 import 'ecommerce/ecommerce5.dart';
+import 'ecommerce_detail/ecommerce_detail1.dart';
+import 'ecommerce_detail/ecommerce_detail2.dart';
+import 'ecommerce_detail/ecommerce_detail3.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -224,7 +228,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => CheckoutOnePage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => EcommerceDetailOnePage()));
                   },
                   child: Container(
                     height: 70,
@@ -234,7 +238,7 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(30)
                     ),
                     child: Center(
-                      child: Text("CheckOut Screen",style: TextStyle(
+                      child: Text("Ecommerce Detail Page1",style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.w600
@@ -248,7 +252,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => EcommerceOnePage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => EcommerceDetailTwoPage()));
                   },
                   child: Container(
                     height: 70,
@@ -258,7 +262,7 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(30)
                     ),
                     child: Center(
-                      child: Text("Ecommerec Page 1",style: TextStyle(
+                      child: Text("Ecommerce Detail Page2",style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.w600
@@ -267,6 +271,55 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => EcommerceDetailThreePage()));
+                  },
+                  child: Container(
+                    height: 70,
+                    width: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.indigo,
+                        borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: Center(
+                      child: Text("Ecommerce Detail Page3",style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600
+                      )),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ConfirmOrderPage()));
+                  },
+                  child: Container(
+                    height: 70,
+                    width: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.indigo,
+                        borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: Center(
+                      child: Text("Confirm order Page",style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600
+                      )),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 100,)
             ],
           ),
         ),
