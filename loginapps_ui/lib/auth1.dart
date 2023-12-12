@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:loginapps_ui/widgets/assets.dart';
 
 class AuthOnePage extends StatelessWidget {
   static const String path = "lib/src/pages/login/auth1.dart";
