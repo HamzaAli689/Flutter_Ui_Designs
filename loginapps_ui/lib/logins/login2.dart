@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:loginapps_ui/widgets/assets.dart';
-
 import '../signups/signup1.dart';
 import '../widgets/network_image.dart';
-
 
 class LoginTwoPage extends StatelessWidget {
   static const String path = "lib/src/pages/login/login2.dart";
