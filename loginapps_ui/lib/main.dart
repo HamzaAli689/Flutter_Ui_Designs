@@ -5,6 +5,8 @@ import 'auth/auth2.dart';
 import 'auth/auth3.dart';
 import 'logins/login1.dart';
 import 'logins/login2.dart';
+import 'logins/login3.dart';
+import 'logins/login4.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginTwoPage(),
+      home: LoginFourPage(),
     );
   }
 }
