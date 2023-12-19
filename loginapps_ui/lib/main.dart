@@ -8,7 +8,7 @@ import 'logins/login2.dart';
 import 'logins/login3.dart';
 import 'logins/login4.dart';
 import 'logins/login5.dart';
-import 'logins/login7.dart';
+import 'logins/login8.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginSevenPage(),
+      home: LoginEightPage(),
     );
   }
 }
