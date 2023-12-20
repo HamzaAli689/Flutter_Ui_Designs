@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:loginapps_ui/signups/signup1.dart';
 import 'package:loginapps_ui/signups/signup2.dart';
 import 'package:loginapps_ui/signups/signup3.dart';
-
 import 'logins/login1.dart';
 import 'logins/login10.dart';
 import 'logins/login11.dart';
@@ -56,7 +55,7 @@ class Home_Page extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
-                        "Hi!",
+                        "Hi !",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -130,7 +129,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -157,7 +156,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -183,7 +182,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -213,7 +212,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Padding(
@@ -239,7 +238,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -269,7 +268,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -295,7 +294,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -325,7 +324,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -351,7 +350,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -381,7 +380,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -407,7 +406,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -437,7 +436,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -463,7 +462,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -493,7 +492,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -519,7 +518,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
@@ -549,7 +548,7 @@ class Home_Page extends StatelessWidget {
                             height: 150,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: Colors.indigoAccent,
+                              color: Colors.indigo,
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: Center(
