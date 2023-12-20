@@ -102,7 +102,7 @@ class HeaderContainer extends StatelessWidget {
               )),
           Center(
             child: Image.asset(
-              "assets/icon/app-store-logo.jpg",
+              "images/app-store-logo.jpg",
               height: 100,
               width: 100,
             ),
