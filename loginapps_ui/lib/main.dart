@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginapps_ui/signups/signup2.dart';
+import 'package:loginapps_ui/signups/signup3.dart';
 
 import 'auth/auth1.dart';
 import 'auth/auth2.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignupTwoPage(),
+      home: SignupThreePage(),
     );
   }
 }
