@@ -27,7 +27,7 @@ class LoginTenPage extends StatelessWidget {
                 SizedBox(
                   width: 100,
                   height: 60,
-                  child: Image.asset(appLogo),
+                  child: Image.asset("images/icon.png"),
                 ),
                 const SizedBox(height: 30.0),
                 Container(
