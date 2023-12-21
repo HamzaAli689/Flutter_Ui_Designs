@@ -58,13 +58,13 @@ class DashboardOnePage extends StatelessWidget {
                   "+500",
                   style: stats,
                 ),
-                const SizedBox(height: 5.0),
+                const SizedBox(height: 0.0),
                 Text("Leads".toUpperCase())
               ],
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               color: Colors.pink,
@@ -82,7 +82,7 @@ class DashboardOnePage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(4.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               color: Colors.green,
@@ -174,7 +174,7 @@ class DashboardOnePage extends StatelessWidget {
   Container _buildTitledContainer(String title,
       {required Widget child, double? height}) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(12.0),
       width: double.infinity,
       height: height,
       decoration: BoxDecoration(

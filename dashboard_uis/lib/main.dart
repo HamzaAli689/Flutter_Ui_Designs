@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'dash1.dart';
+import 'dash2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DashboardOnePage(),
+      home: DashboardTwoPage(),
     );
   }
 }
