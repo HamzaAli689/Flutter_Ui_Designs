@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:motorbike_uis/widgets/assets.dart';
+import 'package:motorbike_uis/widgets/network_image.dart';
 
 class BikeDetailsPage extends StatelessWidget {
   static const String path = "lib/src/pages/bike/bike_details.dart";

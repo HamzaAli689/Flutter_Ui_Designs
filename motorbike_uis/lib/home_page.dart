@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:motorbike_uis/widgets/assets.dart';
-
 import 'bike_details.dart';
 
 class BikeHomePage extends StatelessWidget {
@@ -106,7 +105,7 @@ class BikeHomePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: Column(
                 children: <Widget>[
                   BikeListItem(
@@ -189,7 +188,7 @@ class CategoryChooser extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                 ),
-                const SizedBox(height: 5.0),
+                const SizedBox(height: 4.0),
                 Text(
                   type,
                   style: const TextStyle(
