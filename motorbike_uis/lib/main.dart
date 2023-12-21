@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'bike_details.dart';
 import 'bikeshop_ui.dart';
 import 'home_page.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 debugShowCheckedModeBanner: false,
-      home: MoterBikeShopPage(),
+      home: BikeDetailsPage(),
     );
   }
 }

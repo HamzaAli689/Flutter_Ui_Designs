@@ -388,7 +388,7 @@ class _DetailsPageState extends State<DetailsPage> {
               ],
             ),
             const SizedBox(
-              height: 15,
+              height: 14,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
