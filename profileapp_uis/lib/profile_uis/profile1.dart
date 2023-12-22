@@ -61,7 +61,7 @@ class ProfileOnePage extends StatelessWidget {
                   height: 10,
                 ),
                 const Text(
-                  "Ram Kumar",
+                  "Hamza Ali",
                   style: TextStyle(fontSize: 22.0, color: Colors.white),
                 ),
                 Text(
