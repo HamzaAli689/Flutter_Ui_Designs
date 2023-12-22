@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+
 
 class ProfileTwoPage extends StatelessWidget {
   static const String path = "lib/src/pages/profile/profile2.dart";
