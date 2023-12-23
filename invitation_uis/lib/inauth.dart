@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../core/presentation/res/assets.dart';
+import 'package:invitation_uis/widgets/assets.dart';
+import 'package:invitation_uis/widgets/network_image.dart';
+
 
 const TextStyle boldText = TextStyle(
   fontWeight: FontWeight.bold,

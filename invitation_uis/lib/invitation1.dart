@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/colors.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:invitation_uis/widgets/assets.dart';
+import 'package:invitation_uis/widgets/colors.dart';
+
 
 class InvitationPageOne extends StatelessWidget {
   static const String path = "lib/src/pages/invitation/invitation1.dart";

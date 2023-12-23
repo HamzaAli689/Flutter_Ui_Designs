@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:invitation_uis/widgets/assets.dart';
+import 'package:invitation_uis/widgets/network_image.dart';
+
 
 const Color primary = Color(0xffE20056);
 const TextStyle whiteBoldText = TextStyle(
