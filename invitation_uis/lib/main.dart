@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'inauth.dart';
+import 'inlanding.dart';
+import 'invitation1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-      home: InvitationAuthPage(),
+      home: InvitationPageOne(),
     );
   }
 }
