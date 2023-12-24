@@ -1,8 +1,3 @@
-/**
- * Author: Ambika Dulal
- * profile: https://github.com/ambikadulal
- * images:pixabay.com
-  */
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
 
