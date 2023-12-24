@@ -98,7 +98,7 @@ class _SchoolListState extends State<SchoolList> {
                 height: 140,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: primary,
+                    color: Colors.amber,
                     borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30))),
