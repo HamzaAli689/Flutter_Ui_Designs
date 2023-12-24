@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
+import 'package:lists_uis/widgets/assets.dart';
+
 
 class GridViewAnimationPage extends StatefulWidget {
   static const String path = "lib/src/pages/lists/grid_view.dart";

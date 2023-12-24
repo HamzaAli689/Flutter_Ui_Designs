@@ -1,8 +1,3 @@
-/**
- * Author: Sudip Thapa  
- * profile: https://github.com/sudeepthapa
-  */
-
 import 'package:flutter/material.dart';
 
 class PlaceList1 extends StatelessWidget {
