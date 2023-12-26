@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:todo_ui/widgets/assets.dart';
 
 class TodoHomeThreePage extends StatelessWidget {
   static const String path = "lib/src/pages/todo/todo_home3.dart";
