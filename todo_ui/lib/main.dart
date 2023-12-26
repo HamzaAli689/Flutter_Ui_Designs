@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_ui/todo2.dart';
 import 'package:todo_ui/todo_home1.dart';
+import 'package:todo_ui/todo_home2.dart';
 import 'package:todo_ui/todo_home3.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TodoTwoPage(),
+      home: TodoHomeTwoPage(),
     );
   }
 }
