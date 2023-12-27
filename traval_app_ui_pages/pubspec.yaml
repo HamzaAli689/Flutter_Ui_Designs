@@ -38,6 +38,7 @@ dependencies:
   font_awesome_flutter:
   cached_network_image:
   flutter_custom_clippers:
+  flutter_swiper_null_safety: ^1.0.2
 
 dev_dependencies:
   flutter_test:
