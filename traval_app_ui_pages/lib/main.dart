@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:traval_app_ui_pages/thome.dart';
 import 'package:traval_app_ui_pages/travel_home.dart';
 import 'package:traval_app_ui_pages/travel_nepal.dart';
 import 'package:traval_app_ui_pages/travelstory.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TravelStoryPage(),
+      home: TravelHomePage(),
     );
   }
 }
