@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:traval_app_ui_pages/widgets/network_image.dart';
+
 
 class TravelHome extends StatelessWidget {
   static const String path = "lib/src/pages/travel/travel_home.dart";
