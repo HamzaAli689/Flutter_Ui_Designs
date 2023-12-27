@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/src/travelui_clone/widgets/destination_place.dart';
-import 'package:flutter_ui_challenges/src/travelui_clone/widgets/hotel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../widgets/destination_place.dart';
+import '../widgets/hotel.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
