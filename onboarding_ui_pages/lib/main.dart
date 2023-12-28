@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'intro2.dart';
+import 'intro3.dart';
+import 'intro4.dart';
+import 'intro5.dart';
+import 'intro6.dart';
 import 'landing1.dart';
 
 void main() {
@@ -14,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LandingOnePage(),
+      home: IntroSixPage(),
     );
   }
 }
