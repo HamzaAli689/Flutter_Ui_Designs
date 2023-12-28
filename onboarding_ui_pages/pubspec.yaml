@@ -39,6 +39,7 @@ dependencies:
   cached_network_image:
   flutter_custom_clippers:
   flutter_swiper_null_safety: ^1.0.2
+  flare_flutter: ^3.0.2
 
 dev_dependencies:
   flutter_test:

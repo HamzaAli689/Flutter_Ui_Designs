@@ -1,12 +1,8 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
-
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:onboarding_ui_pages/widgets/assets.dart';
+import 'package:onboarding_ui_pages/widgets/network_image.dart';
+
 
 class IntroSixPage extends StatefulWidget {
   static const String path = "lib/src/pages/onboarding/intro6.dart";
