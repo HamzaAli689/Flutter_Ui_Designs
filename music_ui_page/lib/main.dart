@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:music_ui_page/pages/gallery1.dart';
 import 'package:music_ui_page/pages/image_popup.dart';
 
+import 'chatui/chat2.dart';
+import 'chatui/chatui.dart';
 import 'music_page/musicplayer.dart';
 import 'music_page/musicplayer2.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GalleryPageOne(),
+      home: ChatTwoPage(),
     );
   }
 }
