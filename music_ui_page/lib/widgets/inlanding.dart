@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'assets.dart';
+import 'network_image.dart';
+
 
 const Color primary = Color(0xffE20056);
 const TextStyle whiteBoldText = TextStyle(
