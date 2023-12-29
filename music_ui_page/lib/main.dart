@@ -7,6 +7,10 @@ import 'package:music_ui_page/pages/gallery1.dart';
 import 'package:music_ui_page/pages/image_popup.dart';
 import 'package:music_ui_page/pages/loaders.dart';
 import 'package:music_ui_page/pages/navybar.dart';
+import 'package:music_ui_page/pages/otp.dart';
+import 'package:music_ui_page/pages/sliders.dart';
+import 'package:music_ui_page/pages/sliver_appbar.dart';
+import 'package:music_ui_page/pages/whatsapp.dart';
 
 import 'chatui/chat2.dart';
 import 'chatui/chatui.dart';
@@ -25,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FancyBottomBarPage(),
+      home: WhatsAppClone(),
     );
   }
 }
