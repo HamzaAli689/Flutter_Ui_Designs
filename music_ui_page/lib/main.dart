@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_ui_page/pages/bottomsheet.dart';
+import 'package:music_ui_page/pages/crop.dart';
+import 'package:music_ui_page/pages/form_elements.dart';
 import 'package:music_ui_page/pages/gallery1.dart';
 import 'package:music_ui_page/pages/image_popup.dart';
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomSheetAwesome(),
+      home: FormElementPage(),
     );
   }
 }
