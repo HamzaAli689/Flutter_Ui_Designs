@@ -6,6 +6,7 @@ import 'package:music_ui_page/pages/form_elements.dart';
 import 'package:music_ui_page/pages/gallery1.dart';
 import 'package:music_ui_page/pages/image_popup.dart';
 import 'package:music_ui_page/pages/loaders.dart';
+import 'package:music_ui_page/pages/navybar.dart';
 
 import 'chatui/chat2.dart';
 import 'chatui/chatui.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoadersPage(),
+      home: FancyBottomBarPage(),
     );
   }
 }
