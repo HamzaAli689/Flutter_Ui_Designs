@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_ui_page/pages/gallery1.dart';
 import 'package:music_ui_page/pages/image_popup.dart';
 
 import 'music_page/musicplayer.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ImagePopupPage(),
+      home: GalleryPageOne(),
     );
   }
 }
