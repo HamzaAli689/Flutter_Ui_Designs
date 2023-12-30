@@ -1,11 +1,8 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
-
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/gwidgets/gtypography.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+
+import '../widgets/network_image.dart';
+import 'gtypography.dart';
+
 
 class GroceryListItemOne extends StatelessWidget {
   final String image, title, subtitle;
