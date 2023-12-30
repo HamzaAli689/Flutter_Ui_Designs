@@ -1,12 +1,9 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
-
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/gwidgets/glistitem3.dart';
+
+import '../gwidgets/glistitem3.dart';
+import '../widgets/assets.dart';
+
 
 class GroceryCartTabView extends StatelessWidget {
   const GroceryCartTabView({super.key});
