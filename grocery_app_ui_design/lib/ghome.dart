@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/tabs/gcarttab.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/tabs/ghometab.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/tabs/gprofiletab.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/tabs/gwishlisttab.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:grocery_app_ui_design/tabs/gcarttab.dart';
+import 'package:grocery_app_ui_design/tabs/ghometab.dart';
+import 'package:grocery_app_ui_design/tabs/gprofiletab.dart';
+import 'package:grocery_app_ui_design/tabs/gwishlisttab.dart';
+import 'package:grocery_app_ui_design/widgets/assets.dart';
+import 'package:grocery_app_ui_design/widgets/network_image.dart';
+
 
 class GroceryHomePage extends StatefulWidget {
   static const String path = "lib/src/pages/grocery/ghome.dart";

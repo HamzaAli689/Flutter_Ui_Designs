@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/gwidgets/glistitem2.dart';
-import 'package:flutter_ui_challenges/src/pages/grocery/gwidgets/gtypography.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:grocery_app_ui_design/widgets/assets.dart';
+import 'package:grocery_app_ui_design/widgets/network_image.dart';
+
+import 'gwidgets/glistitem2.dart';
+import 'gwidgets/gtypography.dart';
+
 
 class GroceryDetailsPage extends StatelessWidget {
   static const String path = "lib/src/pages/grocery/gdetails.dart";
