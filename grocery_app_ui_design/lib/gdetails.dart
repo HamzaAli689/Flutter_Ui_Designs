@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app_ui_design/widgets/assets.dart';
 import 'package:grocery_app_ui_design/widgets/network_image.dart';
-
 import 'gwidgets/glistitem2.dart';
 import 'gwidgets/gtypography.dart';
 
