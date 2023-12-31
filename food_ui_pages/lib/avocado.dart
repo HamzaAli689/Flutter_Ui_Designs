@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_ui_pages/widgets/assets.dart';
 
 class AvocadoPage extends StatelessWidget {
   static const String path = "lib/src/pages/food/avocado.dart";
