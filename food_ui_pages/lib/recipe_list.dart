@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_ui_pages/recipe_single.dart';
 import 'dart:io';
-import 'package:flutter_ui_challenges/src/pages/food/recipe_single.dart';
 import 'package:food_ui_pages/widgets/assets.dart';
 
 class RecipeListPage extends StatelessWidget {
