@@ -45,7 +45,7 @@ class MyOrderScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                          padding: getPadding(left: 22, top: 27),
+                          padding: getPadding(left: 22, top: 25),
                           child: Text("My order",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,

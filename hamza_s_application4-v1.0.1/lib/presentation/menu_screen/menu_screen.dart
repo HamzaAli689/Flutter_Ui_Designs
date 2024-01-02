@@ -3,6 +3,8 @@ import 'package:hamza_s_application4/core/app_export.dart';
 import 'package:hamza_s_application4/widgets/app_bar/appbar_image.dart';
 import 'package:hamza_s_application4/widgets/app_bar/custom_app_bar.dart';
 
+import '../product_screen/product_screen.dart';
+
 class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,13 +90,19 @@ class MenuScreen extends StatelessWidget {
                                   textAlign: TextAlign.left,
                                   style: AppStyle
                                       .txtPlayfairDisplayItalicRegular22Bluegray900))),
-                      Padding(
-                          padding: getPadding(left: 1, top: 15),
-                          child: Text("Inbox",
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.left,
-                              style:
-                                  AppStyle.txtPlayfairDisplayItalicRegular22)),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ProductScreen()));
+                          print("Hamza");
+                        },
+                        child: Padding(
+                            padding: getPadding(left: 1, top: 15),
+                            child: Text("Inbox",
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.left,
+                                style:
+                                    AppStyle.txtPlayfairDisplayItalicRegular22)),
+                      ),
                       Padding(
                           padding: getPadding(top: 17),
                           child: Text("Ask an Expert",

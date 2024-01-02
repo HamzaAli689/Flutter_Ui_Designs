@@ -3,6 +3,8 @@ import 'package:hamza_s_application4/core/app_export.dart';
 import 'package:hamza_s_application4/widgets/app_bar/appbar_image.dart';
 import 'package:hamza_s_application4/widgets/app_bar/custom_app_bar.dart';
 
+import '../menu_screen/menu_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -121,19 +123,25 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Align(
                         alignment: Alignment.centerLeft,
-                        child: Container(
-                          width: getHorizontalSize(
-                            253,
-                          ),
-                          margin: getMargin(
-                            top: 36,
-                            right: 17,
-                          ),
-                          child: Text(
-                            "BIG\nSEASONAL \nSALE",
-                            maxLines: null,
-                            textAlign: TextAlign.center,
-                            style: AppStyle.txtPlayfairDisplayItalicRegular50,
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => MenuScreen()));
+                            print("Hamza ALi");
+                          },
+                          child: Container(
+                            width: getHorizontalSize(
+                              253,
+                            ),
+                            margin: getMargin(
+                              top: 36,
+                              right: 17,
+                            ),
+                            child: Text(
+                              "BIG\nSEASONAL \nSALE",
+                              maxLines: null,
+                              textAlign: TextAlign.center,
+                              style: AppStyle.txtPlayfairDisplayItalicRegular50,
+                            ),
                           ),
                         ),
                       ),
