@@ -1,8 +1,3 @@
-/**
- * Author: Mausam Rayamajhi
- * profile: https://github.com/mausamRayamajhi
-  */
-
 import 'package:flutter/material.dart';
 
 const Color primaryColor = Color(0xFFD20910);

@@ -1,8 +1,3 @@
-/**
- * Author: Mausam Rayamajhi
- * profile: https://github.com/mausamRayamajhi
-  */
-
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
