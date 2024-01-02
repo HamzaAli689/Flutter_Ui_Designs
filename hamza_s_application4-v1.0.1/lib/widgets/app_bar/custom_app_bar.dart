@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hamza_s_application4/core/app_export.dart';
 
-// ignore: must_be_immutable
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   CustomAppBar(
       {required this.height,
       this.leadingWidth,
@@ -11,17 +11,12 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       this.centerTitle,
       this.actions});
 
-  double height;
-
-  double? leadingWidth;
-
-  Widget? leading;
-
-  Widget? title;
-
-  bool? centerTitle;
-
-  List<Widget>? actions;
+  final double height;
+  final double? leadingWidth;
+  final Widget? leading;
+  final Widget? title;
+  final bool? centerTitle;
+  final List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
