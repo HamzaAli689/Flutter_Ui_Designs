@@ -1,13 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-
 import '../screens/home_screen.dart';
-
-
-void main (){
-  runApp(TravelUiClone());
-}
 
 class TravelUiClone extends StatelessWidget {
   static const String path = 'lib/src/travelui_clone/main.dart';

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/src/travelui_clone/models/hotel_model.dart';
+
+import '../models/hotel_model.dart';
+
 
 class HotelDestinationPage extends StatelessWidget {
   const HotelDestinationPage({super.key});

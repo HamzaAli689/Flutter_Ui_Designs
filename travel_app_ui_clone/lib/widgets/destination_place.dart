@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/src/travelui_clone/models/destination_model.dart';
-import 'package:flutter_ui_challenges/src/travelui_clone/screens/destinationa_screen.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../models/destination_model.dart';
+import '../screens/destinationa_screen.dart';
 
 class DestinationPlacePage extends StatelessWidget {
   const DestinationPlacePage({super.key});
