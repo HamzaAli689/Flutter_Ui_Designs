@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../widgets/destination_place.dart';
 import '../widgets/hotel.dart';
 
@@ -73,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   .entries
                   .map(
                     (MapEntry map) => _buildIcon(map.key),
-                  )
+              )
                   .toList(),
             ),
             const SizedBox(height: 20.0),
@@ -90,18 +89,20 @@ class _HomeScreenState extends State<HomeScreen> {
             _currentTab = value;
           });
         },
-        items: const [
+        items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.search,
               size: 30.0,
             ),
+            label: 'Search', // Add a non-null label for the first item
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.local_pizza,
               size: 30.0,
             ),
+            label: 'Pizza', // Add a non-null label for the second item
           ),
           BottomNavigationBarItem(
             icon: CircleAvatar(
@@ -109,6 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundImage: NetworkImage(
                   'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F1.jpg?alt=media'),
             ),
+            label: 'Profile', // Add a non-null label for the third item
           )
         ],
       ),
