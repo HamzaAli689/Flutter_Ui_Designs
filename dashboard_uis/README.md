@@ -2,15 +2,10 @@
 
 A new Flutter project.
 
-## Getting Started
+## pages of Dashboard
 
-This project is a starting point for a Flutter application.
+![dash1](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/141cd5fa-b778-4ca1-86c8-f77efea4f873)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![dash2](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/8abdd6bb-1b7c-4cd2-847b-b949c6df3245)
+![dash3](https://github.com/HamzaAli689/Flutter_Ui_Designs/assets/127171562/fc3c3533-39ca-43bb-a723-ec19c519e21a)
