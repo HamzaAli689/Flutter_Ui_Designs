@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/assets.dart';
+import '../widgets/network_image.dart';
+
 
 class ProfileThreePage extends StatelessWidget {
   static const String path = "lib/src/pages/profile/profile3.dart";

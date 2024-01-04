@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/assets.dart';
+
 
 class ProfileOnePage extends StatelessWidget {
   static const String path = "lib/src/pages/profile/profile1.dart";
