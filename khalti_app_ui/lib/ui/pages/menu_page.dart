@@ -1,7 +1,3 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../res/constants.dart';
@@ -41,14 +37,14 @@ class MenuPage extends StatelessWidget {
                     ],
                   ),
                   title: const Text(
-                    "Damodar Lohani",
+                    "Hamza Ali",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0),
                   ),
                   subtitle: const Text(
-                    "981151121",
+                    "03217653911",
                     style: TextStyle(fontSize: 16.0, color: Colors.white),
                   ),
                   trailing: const Icon(

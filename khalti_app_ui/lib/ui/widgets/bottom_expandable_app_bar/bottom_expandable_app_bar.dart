@@ -1,7 +1,3 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
 import './controller.dart';
 import 'package:flutter/material.dart';
 

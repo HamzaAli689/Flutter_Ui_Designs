@@ -1,7 +1,3 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
 class IntroItem {
   final String? title;
   final String? subtitle;

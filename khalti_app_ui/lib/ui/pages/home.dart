@@ -1,7 +1,3 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../model/home_menu_item.dart';
@@ -80,10 +76,10 @@ class _HomePageState extends State<HomePage>
 
   SliverPadding _buildUtilityPaymentsGrid() {
     return SliverPadding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(6.0),
       sliver: SliverGrid(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4, crossAxisSpacing: 16.0, mainAxisSpacing: 16.0),
+            crossAxisCount: 4, crossAxisSpacing: 16.0, mainAxisSpacing: 25.0),
         delegate: SliverChildBuilderDelegate((_, index) {
           HomeMenuItem item = homeMenuItems[index];
           return _buildMenuItem(
@@ -228,10 +224,10 @@ class _HomePageState extends State<HomePage>
         children: <Widget>[
           Icon(
             icon,
-            size: 28,
+            size: 27,
             color: Colors.purple.shade300,
           ),
-          const SizedBox(height: 10.0),
+          const SizedBox(height: 0.0),
           Text(
             label,
             style: smallText,
