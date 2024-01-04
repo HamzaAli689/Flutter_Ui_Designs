@@ -1,7 +1,3 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../model/home_menu_item.dart';
 import '../model/introitem.dart';
