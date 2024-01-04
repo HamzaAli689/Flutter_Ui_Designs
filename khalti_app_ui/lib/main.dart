@@ -1,11 +1,4 @@
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-
-import 'package:flutter/material.dart';
 import 'res/colors.dart';
 import 'ui/pages/auth/login.dart';
 import 'ui/pages/auth/recover.dart';
@@ -14,6 +7,11 @@ import 'ui/pages/home.dart';
 import 'ui/pages/intro.dart';
 import 'ui/pages/payment.dart';
 import 'ui/widgets/slide_right_route.dart';
+
+
+void main() {
+  runApp(KhaltiApp());
+}
 
 class KhaltiApp extends StatelessWidget {
   static const String path = 'lib/src/khalti_clone/main.dart';
