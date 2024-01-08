@@ -24,6 +24,7 @@ class DialogsPage extends StatelessWidget {
               child: const Text("Payment Success"),
               onPressed: () => _paymentSuccessDialog(context),
             ),
+            SizedBox(height: 10),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.lightGreen,
@@ -31,6 +32,7 @@ class DialogsPage extends StatelessWidget {
               child: const Text("Alert Dialog"),
               onPressed: () => _alertDialog(context),
             ),
+            SizedBox(height: 10),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.lightGreen,
@@ -39,6 +41,7 @@ class DialogsPage extends StatelessWidget {
               onPressed: () =>
                   _customAlertDialog(context, AlertDialogType.success),
             ),
+            SizedBox(height: 10),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.lightGreen,
@@ -47,6 +50,7 @@ class DialogsPage extends StatelessWidget {
               onPressed: () =>
                   _customAlertDialog(context, AlertDialogType.info),
             ),
+            SizedBox(height: 10),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.lightGreen,
@@ -55,6 +59,7 @@ class DialogsPage extends StatelessWidget {
               onPressed: () =>
                   _customAlertDialog(context, AlertDialogType.warning),
             ),
+            SizedBox(height: 10),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.lightGreen,
@@ -227,7 +232,7 @@ class PaymentSuccessDialog extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const <Widget>[Text("2, April 2019"), Text("9:10 AM")],
                 ),
-                const SizedBox(height: 20.0),
+                const SizedBox(height: 10.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -251,7 +256,7 @@ class PaymentSuccessDialog extends StatelessWidget {
                     )
                   ],
                 ),
-                const SizedBox(height: 20.0),
+                const SizedBox(height: 10.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -271,7 +276,7 @@ class PaymentSuccessDialog extends StatelessWidget {
                     )
                   ],
                 ),
-                const SizedBox(height: 20.0),
+                const SizedBox(height: 15.0),
                 Container(
                   padding: const EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
