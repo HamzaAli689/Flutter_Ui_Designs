@@ -1,11 +1,6 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
-  */
-
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
+import 'package:new_pages_uis/widgets/assets.dart';
+import 'package:new_pages_uis/widgets/network_image.dart';
 
 class DialogsPage extends StatelessWidget {
   static const String path = "lib/src/pages/dialogs/dialogs.dart";
