@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_pages_uis/quotes1.dart';
 import 'dialogs.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DialogsPage(),
+      home: QuotesOnePage(),
     );
   }
 }
