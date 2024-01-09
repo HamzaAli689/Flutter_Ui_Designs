@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/src/pages/animations/animation1/animation1.dart';
-import 'package:flutter_ui_challenges/src/utils/oval_right_clipper.dart';
+import 'package:untitled1/widgets/animation1.dart';
+import 'package:untitled1/widgets/oval_right_clipper.dart';
+
 
 class LightDrawerPage extends StatelessWidget {
   static const String path = "lib/src/pages/navigation/drawer2.dart";
