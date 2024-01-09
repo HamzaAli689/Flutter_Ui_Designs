@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Author: Ambika Dulal
-/// profile: https://github.com/ambikadulal
 
 class HiddenDrawerNav extends StatefulWidget {
   static const String path = "lib/src/pages/navigation/hidden_drawer_nav.dart";

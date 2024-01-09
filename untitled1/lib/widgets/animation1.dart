@@ -4,6 +4,7 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'assets.dart'
     as assets;
 import './details.dart';
+import 'network_image.dart';
 
 
 List<String> images = [
