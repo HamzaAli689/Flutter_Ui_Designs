@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:login_dribble_challenge/screens/login/login_page.dart';
-import 'package:login_dribble_challenge/screens/onboarding/onboarding_animation.dart';
-import 'package:login_dribble_challenge/screens/welcome/welcome_page.dart';
-import 'package:login_dribble_challenge/utility/app_constant.dart';
-import 'package:login_dribble_challenge/utility/color_utility.dart';
+
+import '../login/login_page.dart';
+import '../welcome/welcome_page.dart';
+import 'onboarding_animation.dart';
+
 
 class OnBoardingPage extends StatefulWidget {
   @override
@@ -12,12 +12,12 @@ class OnBoardingPage extends StatefulWidget {
 
 class _OnBoardingPageState extends State<OnBoardingPage> with TickerProviderStateMixin implements GoToLoginListener, GoToWelcomeListener{
 
-  AnimationController animationControllerWelcome;
-  AnimationController animationControllerLogin;
+  late AnimationController animationControllerWelcome;
+  late AnimationController animationControllerLogin;
 
-  OnBoardingEnterAnimation onBoardingEnterAnimation;
+  late OnBoardingEnterAnimation onBoardingEnterAnimation;
   
-  int _contentScreenState;
+  late int _contentScreenState;
 
   @override
   void initState() {

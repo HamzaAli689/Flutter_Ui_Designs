@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_dribble_challenge/utility/app_constant.dart';
-import 'package:login_dribble_challenge/utility/color_utility.dart';
+
 
 class OnBoardingEnterAnimation {
   OnBoardingEnterAnimation(this.controller)

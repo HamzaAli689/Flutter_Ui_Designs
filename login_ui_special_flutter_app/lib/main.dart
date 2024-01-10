@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:login_dribble_challenge/screens/onboarding/onboarding_page.dart';
+
 import 'package:login_ui_special_flutter_app/screens/onboarding/onboarding_page.dart';
 
 void main() => run();

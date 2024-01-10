@@ -63,9 +63,9 @@ class LoginForm extends StatelessWidget {
       ),
       keyboardType: TextInputType.text,
       controller: userNameController,
-      validator: (val) => val.length == 0
+      validator: (val) => val?.length == 0
           ? PHONE_AUTH_VALIDATION_EMPTY
-          : val.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
+          : val!.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
     );
   }
 
@@ -85,9 +85,9 @@ class LoginForm extends StatelessWidget {
       keyboardType: TextInputType.text,
       controller: passwordController,
       obscureText: true,
-      validator: (val) => val.length == 0
+      validator: (val) => val?.length == 0
           ? PHONE_AUTH_VALIDATION_EMPTY
-          : val.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
+          : val!.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
     );
   }
 }

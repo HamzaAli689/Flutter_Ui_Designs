@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HeaderText extends StatelessWidget {
 
-  HeaderText({@required this.text, @required this.imagePath});
+  HeaderText({required this.text, required this.imagePath});
 
   final String text;
   final String imagePath;
@@ -31,8 +31,8 @@ class HeaderText extends StatelessWidget {
         ),
         Text(
           text,
-          style: textTheme.headline
-              .copyWith(color: Colors.black87, fontWeight: FontWeight.bold),
+          style: textTheme.headline1
+              ?.copyWith(color: Colors.black87, fontWeight: FontWeight.bold),
         )
       ],
     );

@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:login_dribble_challenge/utility/color_utility.dart';
+
+import '../utility/color_utility.dart';
+
 
 class ForwardButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String label;
 
   ForwardButton(
-      {this.onPressed, this.label});
+      {required this.onPressed, required this.label});
 
   @override
   Widget build(BuildContext context) {
-    return new ClipRRect(
+    return ClipRRect(
       borderRadius: new BorderRadius.only(
         topLeft: new Radius.circular(30.0),
         bottomLeft: new Radius.circular(30.0),

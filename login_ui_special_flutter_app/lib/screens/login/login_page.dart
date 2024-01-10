@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:login_dribble_challenge/components/forward_button.dart';
-import 'package:login_dribble_challenge/components/header_text.dart';
-import 'package:login_dribble_challenge/components/trapozoid_cut_colored_image.dart';
-import 'package:login_dribble_challenge/screens/login/login_animation.dart';
-import 'package:login_dribble_challenge/utility/app_constant.dart';
-import 'package:login_dribble_challenge/utility/color_utility.dart';
+
+import '../../components/forward_button.dart';
+import '../../components/header_text.dart';
+import '../../components/login_form.dart';
+import '../../components/trapozoid_cut_colored_image.dart';
+import '../../utility/app_constant.dart';
+import '../../utility/color_utility.dart';
+import 'login_animation.dart';
+
 
 abstract class GoToWelcomeListener {
   void onGoToWelcomeTap();
@@ -12,8 +15,8 @@ abstract class GoToWelcomeListener {
 
 class LoginPage extends StatelessWidget {
   LoginPage(
-      {@required AnimationController controller,
-      @required this.goToWelcomeListener})
+      {required AnimationController controller,
+      required this.goToWelcomeListener})
       : enterAnimation = new LoginEnterAnimation(controller);
 
   final GoToWelcomeListener goToWelcomeListener;
@@ -110,9 +113,9 @@ class LoginPage extends StatelessWidget {
         ),
         keyboardType: TextInputType.text,
         controller: userNameController,
-        validator: (val) => val.length == 0
+        validator: (val) => val?.length == 0
             ? PHONE_AUTH_VALIDATION_EMPTY
-            : val.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
+            : val!.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
       ),
     );
   }
@@ -135,9 +138,9 @@ class LoginPage extends StatelessWidget {
         keyboardType: TextInputType.text,
         controller: passwordController,
         obscureText: true,
-        validator: (val) => val.length == 0
+        validator: (val) => val?.length == 0
             ? PHONE_AUTH_VALIDATION_EMPTY
-            : val.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
+            : val!.length < 10 ? PHONE_AUTH_VALIDATION_INVALID : null,
       ),
     );
   }

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:login_dribble_challenge/components/forward_button.dart';
-import 'package:login_dribble_challenge/components/header_text.dart';
-import 'package:login_dribble_challenge/components/trapozoid_cut_colored_image.dart';
-import 'package:login_dribble_challenge/screens/welcome/welcome_animation.dart';
-import 'package:login_dribble_challenge/utility/app_constant.dart';
-import 'package:login_dribble_challenge/utility/color_utility.dart';
+import 'package:login_ui_special_flutter_app/screens/welcome/welcome_animation.dart';
+
+import '../../components/forward_button.dart';
+import '../../components/header_text.dart';
+import '../../components/trapozoid_cut_colored_image.dart';
+import '../../utility/app_constant.dart';
+import '../../utility/color_utility.dart';
+
 
 abstract class GoToLoginListener {
   void onGoAheadTap();
@@ -12,8 +14,8 @@ abstract class GoToLoginListener {
 
 class WelcomePage extends StatelessWidget {
   WelcomePage(
-      {@required AnimationController controller,
-      @required this.goTOLoginListener})
+      {required AnimationController controller,
+      required this.goTOLoginListener})
       : welcomeEnterAnimation = new WelcomeEnterAnimation(controller);
 
   final WelcomeEnterAnimation welcomeEnterAnimation;
