@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+
 
 class TrapozoidTopBar extends StatelessWidget {
   TrapozoidTopBar({required this.child});

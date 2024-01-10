@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utility/app_constant.dart';
 
 const PHONE_AUTH_HINT = "My mobile is ...";
 const PHONE_AUTH_HELPER = "Your mobile";
@@ -48,13 +49,13 @@ class LoginForm extends StatelessWidget {
     return TextFormField(
       style: Theme.of(context)
           .textTheme
-          .title
-          .copyWith(color: Colors.black87, letterSpacing: 1.2),
+          .titleLarge
+          ?.copyWith(color: Colors.black87, letterSpacing: 1.2),
       decoration: new InputDecoration(
         border: InputBorder.none,
         hintText: "User Name",
         hintStyle:
-            Theme.of(context).textTheme.subhead.copyWith(color: Colors.grey),
+            Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey),
         icon: Icon(
           Icons.person,
           color: Colors.black87,
@@ -73,13 +74,13 @@ class LoginForm extends StatelessWidget {
     return TextFormField(
       style: Theme.of(context)
           .textTheme
-          .title
-          .copyWith(color: Colors.black87, letterSpacing: 1.2),
+          .titleLarge
+          ?.copyWith(color: Colors.black87, letterSpacing: 1.2),
       decoration: new InputDecoration(
           border: InputBorder.none,
           hintText: "Password",
           hintStyle:
-              Theme.of(context).textTheme.subhead.copyWith(color: Colors.grey),
+              Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey),
           contentPadding: EdgeInsets.zero,
           icon: Icon(Icons.lock, color: Colors.black87)),
       keyboardType: TextInputType.text,

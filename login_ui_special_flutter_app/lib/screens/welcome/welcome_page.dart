@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:login_ui_special_flutter_app/screens/welcome/welcome_animation.dart';
-
 import '../../components/forward_button.dart';
 import '../../components/header_text.dart';
 import '../../components/trapozoid_cut_colored_image.dart';
@@ -109,10 +108,11 @@ class WelcomePage extends StatelessWidget {
           width: double.infinity,
           child: Text(
             TEXT_WELCOME_LABEL,
-            style: textTheme.title.copyWith(
-                color: Colors.black87,
-                fontWeight: FontWeight.normal,
-                wordSpacing: 1.2),
+            style: textTheme.titleLarge?.copyWith( // Use headline6 or another appropriate style
+              color: Colors.black87,
+              fontWeight: FontWeight.normal,
+              wordSpacing: 1.2,
+            ),
             textAlign: TextAlign.center,
           ),
         ),

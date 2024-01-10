@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
+import '../../utility/app_constant.dart';
 import '../../components/forward_button.dart';
 import '../../components/header_text.dart';
 import '../../components/login_form.dart';
 import '../../components/trapozoid_cut_colored_image.dart';
-import '../../utility/app_constant.dart';
 import '../../utility/color_utility.dart';
 import 'login_animation.dart';
 
@@ -98,13 +97,13 @@ class LoginPage extends StatelessWidget {
       opacity: enterAnimation.userNameOpacity,
       child: TextFormField(
         style: textTheme
-            .title
-            .copyWith(color: Colors.black87, letterSpacing: 1.2),
+            .titleLarge
+            ?.copyWith(color: Colors.black87, letterSpacing: 1.2),
         decoration: new InputDecoration(
           border: InputBorder.none,
           hintText: PHONE_AUTH_HINT,
           hintStyle:
-              textTheme.subhead.copyWith(color: Colors.grey),
+              textTheme.bodyMedium?.copyWith(color: Colors.grey),
           icon: Icon(
             Icons.person,
             color: Colors.black87,
@@ -125,14 +124,14 @@ class LoginPage extends StatelessWidget {
       opacity: enterAnimation.passowrdOpacity,
       child: TextFormField(
         style:textTheme
-            .title
-            .copyWith(color: Colors.black87, letterSpacing: 1.2),
+            .titleLarge
+            ?.copyWith(color: Colors.black87, letterSpacing: 1.2),
         decoration: new InputDecoration(
             border: InputBorder.none,
             hintText: PASSWORD_AUTH_HINT,
             hintStyle:textTheme
-                .subhead
-                .copyWith(color: Colors.grey),
+                .bodyMedium
+                ?.copyWith(color: Colors.grey),
             contentPadding: EdgeInsets.zero,
             icon: Icon(Icons.lock, color: Colors.black87)),
         keyboardType: TextInputType.text,

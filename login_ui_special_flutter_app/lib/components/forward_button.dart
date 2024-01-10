@@ -24,7 +24,7 @@ class ForwardButton extends StatelessWidget {
           onPressed: onPressed,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8),
-            child: Text(label, style: Theme.of(context).textTheme.title.copyWith(color: Colors.white),),
+            child: Text(label, style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white),),
           )),
     );
   }

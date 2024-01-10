@@ -1,7 +1,5 @@
-
-
-const PHONE_AUTH_HINT = "User Name";
-const PHONE_AUTH_VALIDATION_EMPTY = "Your phone number can\'t be empty!";
+const PHONE_AUTH_HINT = "My mobile is ...";
+const PHONE_AUTH_VALIDATION_EMPTY = "Your phone number can't be empty!";
 const PHONE_AUTH_VALIDATION_INVALID = 'This phone number is invalid!';
 
 const PASSWORD_AUTH_HINT = "Password";
