@@ -2,8 +2,8 @@ const PHONE_AUTH_HINT = "My mobile is ...";
 const PHONE_AUTH_VALIDATION_EMPTY = "Your phone number can't be empty!";
 const PHONE_AUTH_VALIDATION_INVALID = 'This phone number is invalid!';
 
-const PASSWORD_AUTH_HINT = "Password";
-const PASSWORD_AUTH_VALIDATION_EMPTY = "Your password number can\'t be empty!";
+const PASSWORD_AUTH_HINT = "Your password";
+const PASSWORD_AUTH_VALIDATION_EMPTY = "Your password number can't be empty!";
 const PASSWORD_AUTH_VALIDATION_INVALID = 'This password number is invalid!';
 
 const COLOR_WELCOME = "#FFD201";

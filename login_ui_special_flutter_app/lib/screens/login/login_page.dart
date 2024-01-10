@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../utility/app_constant.dart';
 import '../../components/forward_button.dart';
 import '../../components/header_text.dart';
-import '../../components/login_form.dart';
 import '../../components/trapozoid_cut_colored_image.dart';
 import '../../utility/color_utility.dart';
 import 'login_animation.dart';

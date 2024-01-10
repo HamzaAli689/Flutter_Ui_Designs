@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../utility/app_constant.dart';
+import '../utility/app_constant.dart';
 
-const PHONE_AUTH_HINT = "My mobile is ...";
 const PHONE_AUTH_HELPER = "Your mobile";
-const PHONE_AUTH_VALIDATION_EMPTY = "Your phone number can\'t be empty!";
-const PHONE_AUTH_VALIDATION_INVALID = 'This phone number is invalid!';
+
 
 class LoginForm extends StatelessWidget {
   final userNameController = TextEditingController();
@@ -51,12 +49,12 @@ class LoginForm extends StatelessWidget {
           .textTheme
           .titleLarge
           ?.copyWith(color: Colors.black87, letterSpacing: 1.2),
-      decoration: new InputDecoration(
+      decoration:  InputDecoration(
         border: InputBorder.none,
         hintText: "User Name",
         hintStyle:
             Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey),
-        icon: Icon(
+        icon: const Icon(
           Icons.person,
           color: Colors.black87,
         ),
@@ -76,13 +74,13 @@ class LoginForm extends StatelessWidget {
           .textTheme
           .titleLarge
           ?.copyWith(color: Colors.black87, letterSpacing: 1.2),
-      decoration: new InputDecoration(
+      decoration: InputDecoration(
           border: InputBorder.none,
           hintText: "Password",
           hintStyle:
               Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey),
           contentPadding: EdgeInsets.zero,
-          icon: Icon(Icons.lock, color: Colors.black87)),
+          icon: const Icon(Icons.lock, color: Colors.black87)),
       keyboardType: TextInputType.text,
       controller: passwordController,
       obscureText: true,
