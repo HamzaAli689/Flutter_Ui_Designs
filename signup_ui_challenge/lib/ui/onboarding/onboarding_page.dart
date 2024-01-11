@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signup_ui_challenge/ui/onboarding/tabs/signin_tab.dart';
 import 'package:signup_ui_challenge/ui/onboarding/tabs/signup_tab.dart';
-
 import '../../utility/app_constant.dart';
 import '../../utility/color_utility.dart';
 import 'onboarding_animation.dart';

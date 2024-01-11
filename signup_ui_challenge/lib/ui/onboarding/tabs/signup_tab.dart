@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../component/logo_text.dart';
 import '../../../component/rounded_button.dart';
+
 import '../../../component/trapezoid_up_cut.dart';
 import '../../../utility/app_constant.dart';
 import '../../../utility/color_utility.dart';
