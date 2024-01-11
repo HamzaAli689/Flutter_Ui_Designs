@@ -6,9 +6,9 @@ class RoundedButton extends StatelessWidget {
   final LinearGradient linearGradient;
 
   RoundedButton(
-      {@required this.onPressed,
-      @required this.text,
-      @required this.linearGradient});
+      {required this.onPressed,
+      required this.text,
+      required this.linearGradient});
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +24,13 @@ class RoundedButton extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-              onTap: onPressed,
+              onTap: (){onPressed();},
               child: Center(
                 child: Text(text,
                     style: Theme.of(context)
                         .textTheme
-                        .title
-                        .copyWith(color: Colors.white)),
+                        .titleLarge
+                        ?.copyWith(color: Colors.white)),
               )),
         ),
       ),

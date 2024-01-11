@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../../component/logo_text.dart';
+import '../../../component/rounded_button.dart';
 import '../../../component/trapezoid_down_cut.dart';
+import '../../../utility/app_constant.dart';
+import '../../../utility/color_utility.dart';
 
 
 class SignInTab extends StatelessWidget {
@@ -123,11 +127,11 @@ class SignInTab extends StatelessWidget {
   Widget _buildTextFormEmail(TextTheme textTheme) {
     return TextFormField(
       style:
-          textTheme.title.copyWith(color: Colors.black87, letterSpacing: 1.2),
+          textTheme.titleLarge?.copyWith(color: Colors.black87, letterSpacing: 1.2),
       decoration: new InputDecoration(
         hintText: EMAIL_AUTH_HINT,
         hintStyle:
-            textTheme.subhead.copyWith(color: Colors.black.withOpacity(0.6)),
+            textTheme.bodyMedium?.copyWith(color: Colors.black.withOpacity(0.6)),
         suffixIcon: Icon(
           Icons.email,
           color: Colors.grey,
@@ -135,27 +139,27 @@ class SignInTab extends StatelessWidget {
       ),
       keyboardType: TextInputType.emailAddress,
       controller: userNameController,
-      validator: (val) => val.length == 0
+      validator: (val) => val?.length == 0
           ? EMAIL_AUTH_VALIDATION_EMPTY
-          : val.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
+          : val!.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
     );
   }
 
   Widget _buildTextFormPassword(TextTheme textTheme) {
     return TextFormField(
       style:
-          textTheme.title.copyWith(color: Colors.black87, letterSpacing: 1.2),
+          textTheme.titleLarge?.copyWith(color: Colors.black87, letterSpacing: 1.2),
       decoration: new InputDecoration(
           hintText: PASSWORD_AUTH_HINT,
           hintStyle:
-              textTheme.subhead.copyWith(color: Colors.black.withOpacity(0.6)),
+              textTheme.bodyMedium?.copyWith(color: Colors.black.withOpacity(0.6)),
           suffixIcon: Icon(Icons.lock, color: Colors.grey)),
       keyboardType: TextInputType.text,
       controller: passwordController,
       obscureText: true,
-      validator: (val) => val.length == 0
+      validator: (val) => val?.length == 0
           ? EMAIL_AUTH_VALIDATION_EMPTY
-          : val.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
+          : val!.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
     );
   }
 }

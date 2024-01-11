@@ -7,7 +7,7 @@ class LogoText extends StatelessWidget {
 
     return Text(
       "LOGO",
-      style: textTheme.display1.copyWith(color: Colors.black.withOpacity(0.6)),
+      style: textTheme.headlineMedium?.copyWith(color: Colors.black.withOpacity(0.6)),
     );
   }
 }
