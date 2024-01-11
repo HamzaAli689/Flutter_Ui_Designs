@@ -1,11 +1,11 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_challenge_login/ui/onboarding/onboarding_animation.dart';
-import 'package:flutter_challenge_login/ui/onboarding/tabs/signin_tab.dart';
-import 'package:flutter_challenge_login/ui/onboarding/tabs/signup_tab.dart';
-import 'package:flutter_challenge_login/utility/app_constant.dart';
-import 'package:flutter_challenge_login/utility/color_utility.dart';
+import 'package:signup_ui_challenge/ui/onboarding/tabs/signin_tab.dart';
+import 'package:signup_ui_challenge/ui/onboarding/tabs/signup_tab.dart';
+
+import '../../utility/app_constant.dart';
+import '../../utility/color_utility.dart';
+import 'onboarding_animation.dart';
+
 
 class OnboardingPage extends StatefulWidget {
   @override
@@ -13,9 +13,9 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderStateMixin {
-  PageController _pageController;
-  AnimationController animationController;
-  OnBoardingEnterAnimation onBoardingEnterAnimation;
+  late PageController _pageController;
+  late AnimationController animationController;
+  late OnBoardingEnterAnimation onBoardingEnterAnimation;
   ValueNotifier<double> selectedIndex = ValueNotifier<double>(0.0);
 
   @override
@@ -43,7 +43,7 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
 
   @override
   Widget build(BuildContext context) => Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       body: _buildContent()
   );
 
@@ -51,10 +51,9 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
     final Size size = MediaQuery.of(context).size;
     return AnimatedBuilder(
         animation: animationController,
-        builder: (BuildContext context, Widget child) {
+        builder: (BuildContext context, Widget? child) {
           return Stack(
             children: <Widget>[
-
               _buildTopBubble(size.height, - size.height * 0.5, - size.width * 0.1, LinearGradient(
                 begin: FractionalOffset.bottomLeft,
                 end: FractionalOffset.topRight,
@@ -63,8 +62,6 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                   Color(getColorHexFromStr("#DD6F85")),
                 ],
               )),
-
-
               _buildTopBubble(size.width, - size.width * 0.5, size.width * 0.5, LinearGradient(
                 begin: FractionalOffset.bottomLeft,
                 end: FractionalOffset.topRight,
@@ -121,7 +118,7 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                   onNotification: (ScrollNotification notification) {
                     if (notification.depth == 0 &&
                         notification is ScrollUpdateNotification) {
-                      selectedIndex.value = _pageController.page;
+                      selectedIndex.value = _pageController.page!;
                       setState(() {});
                     }
                     return false;
@@ -148,7 +145,7 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                 top: size.height* 0.75,
                 left: size.width* 0.1,
                 child: InkWell(onTap: () {
-                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('Google')));
+                  ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text('Google')));
                 },child: _buildSocialMediaAppButton(COLOR_GOOGLE, IMAGE_PATH_GOOGLE, 48, - selectedIndex.value)),
               ),
 
@@ -156,7 +153,7 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                 top: size.height* 0.8,
                 left: size.width* 0.3,
                 child: InkWell(onTap: () {
-                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('Facebook')));
+                  ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text('Facebook')));
                 },child: _buildSocialMediaAppButton(COLOR_FACEBOOK, IMAGE_PATH_FACEBOOK, 48, - selectedIndex.value)),
               ),
 
@@ -164,7 +161,7 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                 top: size.height* 0.85,
                 left: size.width* 0.5,
                 child: InkWell(onTap: () {
-                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('Twitter')));
+                  ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text('Twitter')));
                 },child: _buildSocialMediaAppButton(COLOR_TWITTER, IMAGE_PATH_TWITTER, 48, - selectedIndex.value)),
               ),
 
@@ -172,7 +169,7 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                 top: size.height* 0.05,
                 left: size.width* 0.3,
                 child: InkWell(onTap: () {
-                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('Google')));
+                  ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text('Google')));
                 },child: _buildSocialMediaAppButton(COLOR_GOOGLE, IMAGE_PATH_GOOGLE, 48,1 - selectedIndex.value )),
               ),
 
@@ -180,7 +177,7 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                 top: size.height* 0.1,
                 left: size.width* 0.5,
                 child: InkWell(onTap: () {
-                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('Facebook')));
+                  ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text('Facebook')));
                 },child: _buildSocialMediaAppButton(COLOR_FACEBOOK, IMAGE_PATH_FACEBOOK, 48,1 - selectedIndex.value )),
               ),
 
@@ -188,11 +185,9 @@ class _OnboardingPageState extends State<OnboardingPage>  with TickerProviderSta
                 top: size.height* 0.15,
                 left: size.width* 0.7,
                 child: InkWell(onTap: () {
-                  Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('Twitter')));
+                  ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text('Twitter')));
                 },child: _buildSocialMediaAppButton(COLOR_TWITTER, IMAGE_PATH_TWITTER, 48, 1 - selectedIndex.value )),
               ),
-
-
             ],
           );
         });

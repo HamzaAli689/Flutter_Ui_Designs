@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenge_login/component/logo_text.dart';
-import 'package:flutter_challenge_login/component/rounded_button.dart';
-import 'package:flutter_challenge_login/component/trapezoid_up_cut.dart';
-import 'package:flutter_challenge_login/utility/app_constant.dart';
-import 'package:flutter_challenge_login/utility/color_utility.dart';
+
+import '../../../component/logo_text.dart';
+import '../../../component/rounded_button.dart';
+import '../../../component/trapezoid_up_cut.dart';
+import '../../../utility/app_constant.dart';
+import '../../../utility/color_utility.dart';
+
 
 class SignUpTab extends StatelessWidget {
   final Function onPressed;
 
-  SignUpTab({@required this.onPressed});
+  SignUpTab({required this.onPressed});
 
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
@@ -44,7 +46,7 @@ class SignUpTab extends StatelessWidget {
             top: 24,
             left: 12,
             child: InkWell(
-              onTap: onPressed,
+              onTap: (){onPressed();},
               child: Material(
                   elevation: 0.0,
                   shape: CircleBorder(),
@@ -131,10 +133,10 @@ class SignUpTab extends StatelessWidget {
   Widget _buildTextFormUsername(TextTheme textTheme) {
     return TextFormField(
       style:
-          textTheme.title.copyWith(color: Colors.black87, letterSpacing: 1.2),
+          textTheme.titleLarge?.copyWith(color: Colors.black87, letterSpacing: 1.2),
       decoration: new InputDecoration(
         hintText: EMAIL_AUTH_HINT,
-        hintStyle: textTheme.subhead.copyWith(color: Colors.grey),
+        hintStyle: textTheme.bodyMedium?.copyWith(color: Colors.grey),
         suffixIcon: Icon(
           Icons.person,
           color: Colors.grey,
@@ -142,27 +144,27 @@ class SignUpTab extends StatelessWidget {
       ),
       keyboardType: TextInputType.text,
       controller: userNameController,
-      validator: (val) => val.length == 0
+      validator: (val) => val?.length == 0
           ? EMAIL_AUTH_VALIDATION_EMPTY
-          : val.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
+          : val!.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
     );
   }
 
   Widget _buildTextFormPassword(TextTheme textTheme) {
     return TextFormField(
       style:
-          textTheme.title.copyWith(color: Colors.black87, letterSpacing: 1.2),
+          textTheme.titleLarge?.copyWith(color: Colors.black87, letterSpacing: 1.2),
       decoration: new InputDecoration(
           hintText: PASSWORD_AUTH_HINT,
           fillColor: Colors.grey,
-          hintStyle: textTheme.subhead.copyWith(color: Colors.grey),
+          hintStyle: textTheme.bodyMedium?.copyWith(color: Colors.grey),
           suffixIcon: Icon(Icons.lock, color: Colors.grey)),
       keyboardType: TextInputType.text,
       controller: passwordController,
       obscureText: true,
-      validator: (val) => val.length == 0
+      validator: (val) => val?.length == 0
           ? EMAIL_AUTH_VALIDATION_EMPTY
-          : val.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
+          : val!.length < 10 ? EMAIL_AUTH_VALIDATION_INVALID : null,
     );
   }
 }

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenge_login/component/logo_text.dart';
-import 'package:flutter_challenge_login/component/rounded_button.dart';
-import 'package:flutter_challenge_login/component/trapezoid_down_cut.dart';
-import 'package:flutter_challenge_login/utility/app_constant.dart';
-import 'package:flutter_challenge_login/utility/color_utility.dart';
+
+import '../../../component/trapezoid_down_cut.dart';
+
 
 class SignInTab extends StatelessWidget {
   final Function onPressed;
 
-  SignInTab({@required this.onPressed});
+  SignInTab({required this.onPressed});
 
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
@@ -44,7 +42,7 @@ class SignInTab extends StatelessWidget {
             bottom: 24,
             right: 12,
             child: InkWell(
-              onTap: onPressed,
+              onTap: (){onPressed();},
               child: Material(
                   elevation: 0.0,
                   color: Colors.pinkAccent,
