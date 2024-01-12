@@ -1,4 +1,4 @@
-import 'package:farming_app/pages/signup_page.dart';
+import 'package:farming_app_ui_challenge/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -141,7 +141,7 @@ class _SignInPageState extends State<SignInPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const SignUpPage(),
+                        builder: (context) => SignUpPage(),
                       ),
                     );
                   },

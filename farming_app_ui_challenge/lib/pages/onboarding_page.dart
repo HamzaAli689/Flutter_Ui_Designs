@@ -1,4 +1,4 @@
-import 'package:farming_app/pages/signin_page.dart';
+import 'package:farming_app_ui_challenge/pages/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,7 +16,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
 
   void _onIntroEnd(context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => const SignInPage()),
+      MaterialPageRoute(builder: (_) => SignInPage()),
     );
   }
 
