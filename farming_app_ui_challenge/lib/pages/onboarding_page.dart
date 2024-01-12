@@ -67,7 +67,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
       key: introKey,
       globalBackgroundColor: const Color(0xFFCCE59D),
       controlsPosition: Position(
-        bottom: 266.h,
+        bottom: 50.h,
         right: 0,
         left: 0,
       ),
@@ -97,7 +97,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
           // reverse: true,
           footer: Column(
             children: [
-              SizedBox(height: 150.h),
+              SizedBox(height: 43.h),
               InkWell(
                 onTap: () {
                   _onIntroEnd(context);
@@ -139,7 +139,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
             },
             child: Column(
               children: [
-                SizedBox(height: 150.h),
+                SizedBox(height: 43.h),
                 Container(
                   height: 50.h,
                   decoration: BoxDecoration(
@@ -178,7 +178,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
             },
             child: Column(
               children: [
-                SizedBox(height: 150.h),
+                SizedBox(height: 43.h),
                 Container(
                   height: 50.h,
                   decoration: BoxDecoration(
