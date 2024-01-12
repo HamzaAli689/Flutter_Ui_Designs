@@ -37,7 +37,7 @@ class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
       ),
       child: TextFormField(
         style: GoogleFonts.poppins(
-          fontSize: 14.sp,
+          fontSize: 10.sp,
           fontWeight: FontWeight.w400,
         ),
         obscureText: hidePassword,
@@ -45,7 +45,7 @@ class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
         decoration: InputDecoration(
           hintText: widget.hintText,
           hintStyle: GoogleFonts.poppins(
-            fontSize: 14.sp,
+            fontSize: 10.sp,
             fontWeight: FontWeight.w400,
             color: Theme.of(context).textTheme.headline6!.color,
           ),
