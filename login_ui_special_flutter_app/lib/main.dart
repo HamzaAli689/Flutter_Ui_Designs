@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import 'package:login_ui_special_flutter_app/screens/onboarding/onboarding_page.dart';
 
-void main() => run();
-
-Future run() async {
-  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  WidgetsFlutterBinding.ensureInitialized();
+void main()
+ {
   runApp(MyApp());
 }
 
