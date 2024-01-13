@@ -1,6 +1,7 @@
-import 'package:flightapp/custom_shape_clipper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
+import 'custom_shape_clipper.dart';
 
 Color firstColor = Color(0xFFFF6900); // #FF6900
 Color secondColor = Color(0xFFFF6500); // #FF6500
@@ -17,11 +18,11 @@ ThemeData(primaryColor: Color(0xFFF3791A), fontFamily: 'Oxygen');
 void main() => runApp(MaterialApp(
   title: "Flight App",
   debugShowCheckedModeBanner: false,
-  home: HomeScreen(),
+  home: HomeScreen(key: null,),
 ));
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  const HomeScreen({required Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -191,7 +192,7 @@ class ChoiceChips extends StatefulWidget {
   final String name;
   final bool isSelected;
 
-  ChoiceChips({this.icon, this.name, this.isSelected});
+  ChoiceChips({required this.icon, required this.name, required this.isSelected});
 
   _ChoiceChipsState createState() => _ChoiceChipsState();
 }
@@ -228,7 +229,7 @@ class _ChoiceChipsState extends State<ChoiceChips> {
 }
 
 class HomeScreenBottomPart extends StatefulWidget {
-  HomeScreenBottomPart({Key key}) : super(key: key);
+  HomeScreenBottomPart({required Key key}) : super(key: key);
 
   _HomeScreenBottomPartState createState() => _HomeScreenBottomPartState();
 }
