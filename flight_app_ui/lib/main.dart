@@ -18,12 +18,10 @@ ThemeData(primaryColor: Color(0xFFF3791A), fontFamily: 'Oxygen');
 void main() => runApp(MaterialApp(
   title: "Flight App",
   debugShowCheckedModeBanner: false,
-  home: HomeScreen(key: null,),
+  home: HomeScreen(),
 ));
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({required Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,16 +32,18 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          HomeScreenBottomPart()
+          HomeScreenBottomPart(),
         ],
       ),
     );
   }
 }
 
-class HomeScreenTopPart extends StatefulWidget {
-  HomeScreenTopPart({Key key}) : super(key: key);
 
+class HomeScreenTopPart extends StatefulWidget {
+  HomeScreenTopPart({Key? key}) : super(key: key);
+
+  @override
   _HomeScreenTopPartState createState() => _HomeScreenTopPartState();
 }
 
@@ -133,18 +133,18 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                       style: dropDownMenuStyle,
                       cursorColor: appTheme.primaryColor,
                       decoration: InputDecoration(
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(
-                              horizontal: 16.0, vertical: 15.0),
-                          suffixIcon: Material(
-                            elevation: 2.0,
-                            borderRadius:
-                            BorderRadius.all(Radius.circular(30.0)),
-                            child: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                            ),
-                          )),
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.symmetric(
+                            horizontal: 16.0, vertical: 15.0),
+                        suffixIcon: Material(
+                          elevation: 2.0,
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -155,33 +155,35 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     InkWell(
-                        onTap: () {
-                          setState(() {
-                            isFlightSelected = true;
-                          });
-                        },
-                        child: ChoiceChips(
-                          icon: Icons.airplanemode_active,
-                          name: "Flights",
-                          isSelected: isFlightSelected,
-                        )),
+                      onTap: () {
+                        setState(() {
+                          isFlightSelected = true;
+                        });
+                      },
+                      child: ChoiceChips(
+                        icon: Icons.airplanemode_active,
+                        name: "Flights",
+                        isSelected: isFlightSelected,
+                      ),
+                    ),
                     InkWell(
-                        onTap: () {
-                          setState(() {
-                            isFlightSelected = false;
-                          });
-                        },
-                        child: ChoiceChips(
-                          icon: Icons.hotel,
-                          name: "Hotels",
-                          isSelected: !isFlightSelected,
-                        )),
+                      onTap: () {
+                        setState(() {
+                          isFlightSelected = false;
+                        });
+                      },
+                      child: ChoiceChips(
+                        icon: Icons.hotel,
+                        name: "Hotels",
+                        isSelected: !isFlightSelected,
+                      ),
+                    ),
                   ],
                 )
               ],
             ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -192,8 +194,13 @@ class ChoiceChips extends StatefulWidget {
   final String name;
   final bool isSelected;
 
-  ChoiceChips({required this.icon, required this.name, required this.isSelected});
+  ChoiceChips({
+    required this.icon,
+    required this.name,
+    required this.isSelected,
+  });
 
+  @override
   _ChoiceChipsState createState() => _ChoiceChipsState();
 }
 
@@ -220,7 +227,7 @@ class _ChoiceChipsState extends State<ChoiceChips> {
             Text(
               widget.name,
               style: TextStyle(color: Colors.white, fontSize: 14.0),
-            )
+            ),
           ],
         ),
       ),
@@ -231,6 +238,7 @@ class _ChoiceChipsState extends State<ChoiceChips> {
 class HomeScreenBottomPart extends StatefulWidget {
   HomeScreenBottomPart({required Key key}) : super(key: key);
 
+  @override
   _HomeScreenBottomPartState createState() => _HomeScreenBottomPartState();
 }
 
@@ -241,8 +249,7 @@ class _HomeScreenBottomPartState extends State<HomeScreenBottomPart> {
       child: Column(
         children: <Widget>[
           Padding(
-            padding:
-            const EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
             child: Row(
               children: <Widget>[
                 SizedBox(
@@ -268,9 +275,8 @@ class _HomeScreenBottomPartState extends State<HomeScreenBottomPart> {
           ),
           Container(
             height: 240.0,
-            child:
-            ListView(scrollDirection: Axis.horizontal, children: cityCards),
-          )
+            child: ListView(scrollDirection: Axis.horizontal, children: cityCards),
+          ),
         ],
       ),
     );
@@ -301,18 +307,19 @@ List<CityCard> cityCards = [
     discount: "45",
     oldPrice: "1000",
     newPrice: "399",
-  )
+  ),
 ];
 
 class CityCard extends StatelessWidget {
   final String imagePath, cityName, monthYear, discount, oldPrice, newPrice;
-  const CityCard(
-      {required this.imagePath,
-        required this.cityName,
-        required this.monthYear,
-        required this.discount,
-        required this.oldPrice,
-        required this.newPrice});
+  const CityCard({
+    required this.imagePath,
+    required this.cityName,
+    required this.monthYear,
+    required this.discount,
+    required this.oldPrice,
+    required this.newPrice,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -375,10 +382,10 @@ class CityCard extends StatelessWidget {
                             ),
                           ),
                         ],
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -406,10 +413,10 @@ class CityCard extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                       decoration: TextDecoration.lineThrough,
                       color: Colors.grey[400]),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
