@@ -236,7 +236,7 @@ class _ChoiceChipsState extends State<ChoiceChips> {
 }
 
 class HomeScreenBottomPart extends StatefulWidget {
-  HomeScreenBottomPart({required Key key}) : super(key: key);
+  HomeScreenBottomPart({ Key ?key}) : super(key: key);
 
   @override
   _HomeScreenBottomPartState createState() => _HomeScreenBottomPartState();
