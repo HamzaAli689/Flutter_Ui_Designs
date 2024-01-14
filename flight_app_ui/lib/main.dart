@@ -26,14 +26,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //bottomNavigationBar: CustomAppBar(),
-      body: Column(
-        children: <Widget>[
-          HomeScreenTopPart(),
-          SizedBox(
-            height: 20.0,
-          ),
-          HomeScreenBottomPart(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            HomeScreenTopPart(),
+            SizedBox(
+              height: 20.0,
+            ),
+            HomeScreenBottomPart(),
+          ],
+        ),
       ),
     );
   }
@@ -390,7 +392,7 @@ class CityCard extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 10.0,
+            height: 6.0,
           ),
           Padding(
             padding: const EdgeInsets.only(right: 50.0),
