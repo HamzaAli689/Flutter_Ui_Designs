@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './colors.dart';
 
 class ExploreScreen extends StatefulWidget {
-  ExploreScreen({Key key}) : super(key: key);
+
 
   _ExploreScreenState createState() => _ExploreScreenState();
 }

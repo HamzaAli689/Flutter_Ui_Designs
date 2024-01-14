@@ -3,7 +3,7 @@ import './colors.dart';
 import './browse_screens.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key key}) : super(key: key);
+
 
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -66,10 +66,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
+                const TextField(
+                  obscureText: true,
                   cursorColor: Color(0xFF979797),
                   decoration: InputDecoration(
-                      obscureText: true,
                       labelText: "Password",
                       labelStyle: TextStyle(color: lightGrey),
                       focusColor: Colors.black,

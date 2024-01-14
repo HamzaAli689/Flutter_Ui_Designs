@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './colors.dart';
 
 class SettingsScreen extends StatefulWidget {
-  SettingsScreen({Key key}) : super(key: key);
+
 
   _SettingsScreenState createState() => _SettingsScreenState();
 }
@@ -90,8 +90,7 @@ class Field extends StatelessWidget {
   final String fieldName;
   final bool editable;
 
-  const Field({Key key, this.username, this.fieldName, this.editable})
-      : super(key: key);
+  const Field({ required this.username, required this.fieldName, required this.editable});
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +127,7 @@ class Field extends StatelessWidget {
 }
 
 class BudgetSlider extends StatefulWidget {
-  BudgetSlider({Key key}) : super(key: key);
+
 
   _BudgetSliderState createState() => _BudgetSliderState();
 }
@@ -173,7 +172,7 @@ class _BudgetSliderState extends State<BudgetSlider> {
 }
 
 class MonthlyCapSlider extends StatefulWidget {
-  MonthlyCapSlider({Key key}) : super(key: key);
+
 
   _MonthlyCapSliderState createState() => _MonthlyCapSliderState();
 }
@@ -221,13 +220,13 @@ class Switcher extends StatefulWidget {
   final String title;
   final bool defVal;
 
-  Switcher({Key key, this.title, this.defVal}) : super(key: key);
+  Switcher({ required this.title, required this.defVal});
 
   _SwitcherState createState() => _SwitcherState();
 }
 
 class _SwitcherState extends State<Switcher> {
-  bool value;
+  late bool value;
 
   @override
   void initState() {

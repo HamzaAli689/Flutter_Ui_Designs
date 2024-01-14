@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './explore_screen.dart';
 
 class DetailScreen extends StatefulWidget {
-  DetailScreen({Key key}) : super(key: key);
+
 
   _DetailScreenState createState() => _DetailScreenState();
 }

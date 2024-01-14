@@ -25,7 +25,6 @@ const shop = [
 ];
 
 class BrowseScreen extends StatefulWidget {
-  const BrowseScreen({Key key}) : super(key: key);
 
   @override
   _BrowseScreenState createState() => _BrowseScreenState();
@@ -33,7 +32,7 @@ class BrowseScreen extends StatefulWidget {
 
 class _BrowseScreenState extends State<BrowseScreen>
     with SingleTickerProviderStateMixin {
-  TabController controller;
+  late TabController controller;
 
   final Shader linearGradient = LinearGradient(
     colors: <Color>[primaryColor1, secondaryColorGreen],
@@ -116,7 +115,7 @@ class _BrowseScreenState extends State<BrowseScreen>
 }
 
 class ProductsTab extends StatelessWidget {
-  const ProductsTab({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -156,12 +155,12 @@ class ProductsTab extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Image(
-                          image: AssetImage(producsts[index]['image']),
+                          image: AssetImage(producsts[index]['image']!),
                           width: 60.0,
                           height: 60.0,
                         ),
                         Text(
-                          producsts[index]['name'],
+                          producsts[index]['name']!,
                           style: TextStyle(
                               color: Color(0xFF444444),
                               fontSize: 16,
@@ -188,7 +187,7 @@ class ProductsTab extends StatelessWidget {
 }
 
 class InspirationsTab extends StatelessWidget {
-  const InspirationsTab({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -221,12 +220,12 @@ class InspirationsTab extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Image(
-                        image: AssetImage(inspirations[index]['image']),
+                        image: AssetImage(inspirations[index]['image']!),
                         width: 60.0,
                         height: 60.0,
                       ),
                       Text(
-                        inspirations[index]['name'],
+                        inspirations[index]['name']!,
                         style: TextStyle(
                             color: Color(0xFF444444),
                             fontSize: 16,
@@ -252,7 +251,7 @@ class InspirationsTab extends StatelessWidget {
 }
 
 class ShopTab extends StatelessWidget {
-  const ShopTab({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -285,12 +284,12 @@ class ShopTab extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Image(
-                        image: AssetImage(shop[index]['image']),
+                        image: AssetImage(shop[index]['image']!),
                         width: 60.0,
                         height: 60.0,
                       ),
                       Text(
-                        shop[index]['name'],
+                        shop[index]['name']!,
                         style: TextStyle(
                             color: Color(0xFF444444),
                             fontSize: 16,

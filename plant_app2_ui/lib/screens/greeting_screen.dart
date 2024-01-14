@@ -3,9 +3,10 @@ import './colors.dart';
 import './login_screen.dart';
 
 class GreetingScreen extends StatefulWidget {
-  GreetingScreen({Key key}) : super(key: key);
 
-  _GreetingScreenState createState() => _GreetingScreenState();
+
+  @override
+  State<GreetingScreen> createState() => _GreetingScreenState();
 }
 
 class _GreetingScreenState extends State<GreetingScreen> {
