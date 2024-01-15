@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:magazine_app/mock.dart';
-import 'package:magazine_app/widgets/custom_appbar.dart';
+
+import '../mock.dart';
+import '../widgets/custom_appbar.dart';
+
 
 class SingleArticle extends StatefulWidget {
   final String image;
@@ -9,12 +11,11 @@ class SingleArticle extends StatefulWidget {
   final String date;
   final Color verticalBorderColor;
   SingleArticle(
-      {Key key,
-      @required this.image,
-      this.title,
-      this.date,
-      this.verticalBorderColor = Colors.blue})
-      : super(key: key);
+      {
+      required this.image,
+      required this.title,
+      required this.date,
+      this.verticalBorderColor = Colors.blue});
 
   @override
   _SingleArticleState createState() => _SingleArticleState();
@@ -22,11 +23,11 @@ class SingleArticle extends StatefulWidget {
 
 class _SingleArticleState extends State<SingleArticle>
     with SingleTickerProviderStateMixin {
-  Animation opacityContainer;
-  Animation translateDownContainer;
-  Animation translateUpText;
-  Animation opacityText;
-  AnimationController animationController;
+  late Animation opacityContainer;
+  late Animation translateDownContainer;
+  late Animation translateUpText;
+  late Animation opacityText;
+  late AnimationController animationController;
 
   @override
   void initState() {

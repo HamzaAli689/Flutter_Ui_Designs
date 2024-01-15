@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:feather_icons_flutter/feather_icons_flutter.dart';
-import 'package:magazine_app/pages/list_articles.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:route_transitions/route_transitions.dart';
 import 'package:rect_getter/rect_getter.dart';
+
+import '../pages/list_articles.dart';
 
 class CustomAppBar extends StatefulWidget {
   final bool inverted;
   final bool popBack;
-  const CustomAppBar({Key key, this.inverted = false, this.popBack = false})
-      : super(key: key);
+  const CustomAppBar({ this.inverted = false, this.popBack = false});
 
   @override
   _CustomAppBarState createState() => _CustomAppBarState();
@@ -16,7 +16,7 @@ class CustomAppBar extends StatefulWidget {
 
 class _CustomAppBarState extends State<CustomAppBar> {
   GlobalKey rectGetterKey = RectGetter.createGlobalKey();
-  Rect rect;
+  late Rect rect;
   final Duration animationDuration = Duration(milliseconds: 300);
   final Duration delay = Duration(milliseconds: 300);
 
@@ -40,7 +40,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
   }
 
   void _onTap() async {
-    setState(() => rect = RectGetter.getRectFromKey(rectGetterKey));
+    setState(() => rect = RectGetter.getRectFromKey(rectGetterKey)!);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() =>
           rect = rect.inflate(1.3 * MediaQuery.of(context).size.longestSide));

@@ -6,8 +6,7 @@ class ListCard extends StatelessWidget {
   final String date;
   final bool inverted;
   const ListCard(
-      {Key key, this.image, this.title, this.date, this.inverted = false})
-      : super(key: key);
+      {required this.image, required this.title, required this.date, this.inverted = false});
 
   @override
   Widget build(BuildContext context) {

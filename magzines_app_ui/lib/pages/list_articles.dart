@@ -1,9 +1,12 @@
-import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:magazine_app/widgets/list_card.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+
+import '../widgets/list_card.dart';
+
 
 class ListArticles extends StatefulWidget {
-  ListArticles({Key key}) : super(key: key);
+
 
   @override
   _ListArticlesState createState() => _ListArticlesState();
@@ -15,7 +18,6 @@ class _ListArticlesState extends State<ListArticles> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        brightness: Brightness.dark,
         elevation: 0.0,
         backgroundColor: Colors.white,
         leading: IconButton(
@@ -35,7 +37,7 @@ class _ListArticlesState extends State<ListArticles> {
             ),
             onPressed: () {},
           ),
-        ],
+        ], systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 20),

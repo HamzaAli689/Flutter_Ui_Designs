@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:magazine_app/widgets/single_page.dart';
+import 'package:magzines_app_ui/widgets/single_page.dart';
+
 
 class MainSlider extends StatefulWidget {
-  MainSlider({Key key}) : super(key: key);
+
 
   @override
   _MainSliderState createState() => _MainSliderState();
@@ -10,14 +11,14 @@ class MainSlider extends StatefulWidget {
 
 class _MainSliderState extends State<MainSlider> {
   double pageOffset = 0.0;
-  PageController pageController;
+  late PageController pageController;
 
   @override
   void initState() {
     super.initState();
     pageController = PageController();
     pageController.addListener(() {
-      setState(() => pageOffset = pageController.page);
+      setState(() => pageOffset = pageController.page!);
     });
   }
 

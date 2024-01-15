@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:magazine_app/pages/single_article.dart';
 import 'package:route_transitions/route_transitions.dart';
+
+import '../pages/single_article.dart';
 
 class SinglePage extends StatefulWidget {
   final String image;
@@ -9,8 +10,7 @@ class SinglePage extends StatefulWidget {
   final String date;
   final double offset;
   SinglePage(
-      {Key key, @required this.image, this.title, this.date, this.offset})
-      : super(key: key);
+      { required this.image, required this.title, required this.date, required this.offset});
 
   @override
   _SinglePageState createState() => _SinglePageState();
@@ -18,10 +18,10 @@ class SinglePage extends StatefulWidget {
 
 class _SinglePageState extends State<SinglePage>
     with SingleTickerProviderStateMixin {
-  List<String> title;
-  Animation opacity;
-  Animation scaleUp;
-  AnimationController animationController;
+  late List<String> title;
+  late Animation opacity;
+  late Animation scaleUp;
+  late AnimationController animationController;
   Color verticalBorderColor = Colors.blue;
 
   @override

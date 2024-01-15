@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:magazine_app/pages/home.dart';
 import 'package:magzines_app_ui/pages/home.dart';
 
 void main() => runApp(MyApp());

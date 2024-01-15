@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:magazine_app/widgets/custom_appbar.dart';
-import 'package:magazine_app/widgets/slider.dart';
+import '../widgets/custom_appbar.dart';
+import '../widgets/slider.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+
 
   @override
   _HomePageState createState() => _HomePageState();
