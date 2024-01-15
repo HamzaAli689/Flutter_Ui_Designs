@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:route_transitions/route_transitions.dart';
 import 'package:rect_getter/rect_getter.dart';
+import 'package:route_transitions/route_transitions.dart';
+
 
 import '../pages/list_articles.dart';
 
@@ -40,7 +41,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
   }
 
   void _onTap() async {
-    setState(() => rect = RectGetter.getRectFromKey(rectGetterKey)!);
+    GlobalKey<RectGetterState> rectGetterKey = RectGetter.createGlobalKey();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() =>
           rect = rect.inflate(1.3 * MediaQuery.of(context).size.longestSide));
@@ -53,7 +54,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
         .push(PageRouteTransition(
             animationType: AnimationType.FADE,
             builder: (BuildContext context) => ListArticles()))
-        .then((_) => setState(() => rect = null));
+        .then((_) => setState(() => rect = RectGetter.getRectFromKey(rectGetterKey)!));
   }
 
   @override
