@@ -62,6 +62,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_feather_icons:
+    dependency: "direct main"
+    description:
+      name: flutter_feather_icons
+      sha256: b33b9c276fc8108254632da6644cf01f71af6c17fbfb26e136a86945f5ff9b67
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0+1"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -115,6 +123,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  rect_getter:
+    dependency: "direct main"
+    description:
+      name: rect_getter
+      sha256: "1c71e4ab5fb7d83d2b14a8338f979bc9ae57eefba786e7fbc91f6746dac2193d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
+  route_transitions:
+    dependency: "direct main"
+    description:
+      name: route_transitions
+      sha256: "42f89f161b6c8ab4b497f23af3d684985b2bfd5c73e1a0240e8b5a2aca7b3812"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
