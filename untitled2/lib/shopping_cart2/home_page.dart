@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_cart2/details_page.dart';
 import './custom_icons.dart';
+import 'details_page.dart';
 
 const TextStyle dropDownTextStyle =
     TextStyle(color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.w400);
@@ -9,7 +9,7 @@ const TextStyle dropDownMenuStyle =
 const lightGrey = Color(0xFFF3F3F3);
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+
 
   _HomePageState createState() => _HomePageState();
 }
@@ -283,8 +283,7 @@ class ItemCard extends StatelessWidget {
   final String image;
   final String price;
 
-  const ItemCard({Key key, this.title, this.image, this.price})
-      : super(key: key);
+  const ItemCard({ required this.title, required this.image, required this.price});
 
   @override
   Widget build(BuildContext context) {

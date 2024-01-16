@@ -8,7 +8,7 @@ const TextStyle dropDownMenuStyle =
     TextStyle(color: Colors.black, fontSize: 16.0);
 
 class ConfirmPage extends StatefulWidget {
-  ConfirmPage({Key key}) : super(key: key);
+
 
   _ConfirmPageState createState() => _ConfirmPageState();
 }
@@ -51,7 +51,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
 }
 
 class ShoppingBag extends StatelessWidget {
-  const ShoppingBag({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +123,7 @@ class ShoppingBag extends StatelessWidget {
 }
 
 class PaymentInfo extends StatelessWidget {
-  const PaymentInfo({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -312,7 +312,7 @@ class PaymentInfo extends StatelessWidget {
 }
 
 class PriceSection extends StatelessWidget {
-  const PriceSection({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {

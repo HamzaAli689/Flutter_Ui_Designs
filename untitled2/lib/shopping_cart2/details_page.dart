@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './custom_icons.dart';
-import './confirm_page.dart';
+import 'confirm_page.dart';
+
 
 const String message =
     "On a warm day or layering under knitwear , this top is necessary piece for wardrobe";
@@ -14,14 +15,14 @@ class DetailsPage extends StatefulWidget {
   final String image;
   final String title;
 
-  DetailsPage({Key key, this.image, this.title}) : super(key: key);
+  DetailsPage({ required this.image, required this.title});
 
   _DetailsPageState createState() => _DetailsPageState();
 }
 
 class _DetailsPageState extends State<DetailsPage>
     with SingleTickerProviderStateMixin {
-  TabController controller;
+  late TabController controller;
 
   @override
   void initState() {
@@ -93,7 +94,7 @@ class MainDetailsTab extends StatefulWidget {
   final String image;
   final String title;
 
-  MainDetailsTab({Key key, this.image, this.title}) : super(key: key);
+  MainDetailsTab({ required this.image, required this.title});
 
   _MainDetailsTabState createState() => _MainDetailsTabState();
 }
@@ -348,7 +349,7 @@ class _MainDetailsTabState extends State<MainDetailsTab> {
 
 class OtherTabPage extends StatelessWidget {
   final String title;
-  const OtherTabPage({Key key, this.title}) : super(key: key);
+  const OtherTabPage({ required this.title}) ;
 
   @override
   Widget build(BuildContext context) {
