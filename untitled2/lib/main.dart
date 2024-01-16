@@ -40,45 +40,47 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           backgroundColor: Colors.black,
         ),
-        body: Container(
-          margin: EdgeInsets.only(left: 20.0, right: 20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              WhiteText(
-                text: "Shopping Cart",
-                size: 24.0,
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              CartItems(
-                price: "3,499.99",
-                itemName: "PC - Custom Build",
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              CartItems(
-                price: "3,499.99",
-                itemName: "PC - Custom Build",
-              ),
-              SizedBox(
-                height: 30.0,
-              ),
-              WhiteText(
-                text: "Protection Plans",
-                size: 24.0,
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              ProtectionSection(),
-              SizedBox(
-                height: 40.0,
-              ),
-              BottomPart(),
-            ],
+        body: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.only(left: 20.0, right: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                WhiteText(
+                  text: "Shopping Cart",
+                  size: 24.0,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                CartItems(
+                  price: "3,499.99",
+                  itemName: "PC - Custom Build",
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                CartItems(
+                  price: "3,499.99",
+                  itemName: "PC - Custom Build",
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                WhiteText(
+                  text: "Protection Plans",
+                  size: 24.0,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                ProtectionSection(),
+                SizedBox(
+                  height: 40.0,
+                ),
+                BottomPart(),
+              ],
+            ),
           ),
         ));
   }
