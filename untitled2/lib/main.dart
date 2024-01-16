@@ -24,7 +24,6 @@ class MainApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key}) : super(key: key);
 
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -89,7 +88,7 @@ class WhiteText extends StatelessWidget {
   final String text;
   final double size;
 
-  const WhiteText({Key key, this.text, this.size}) : super(key: key);
+  const WhiteText({required this.text, required this.size});
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +100,7 @@ class CartItems extends StatelessWidget {
   final String price;
   final String itemName;
 
-  const CartItems({Key key, this.price, this.itemName}) : super(key: key);
+  const CartItems({required this.price, required this.itemName});
 
   @override
   Widget build(BuildContext context) {
@@ -153,7 +152,6 @@ class CartItems extends StatelessWidget {
 }
 
 class ProtectionSection extends StatelessWidget {
-  const ProtectionSection({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +170,7 @@ class ProtectionSection extends StatelessWidget {
 }
 
 class PlanCard extends StatelessWidget {
-  const PlanCard({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -210,7 +208,7 @@ class PlanCard extends StatelessWidget {
 }
 
 class PlanCardGrey extends StatelessWidget {
-  const PlanCardGrey({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -245,7 +243,7 @@ class PlanCardGrey extends StatelessWidget {
 }
 
 class LinearButton extends StatelessWidget {
-  const LinearButton({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -255,14 +253,14 @@ class LinearButton extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: linearColor, borderRadius: BorderRadius.circular(10.0)),
       child: Center(
-        child: WhiteText(text: "Next"),
+        child: WhiteText(text: "Next", size: 10,),
       ),
     );
   }
 }
 
 class BottomPart extends StatelessWidget {
-  const BottomPart({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
