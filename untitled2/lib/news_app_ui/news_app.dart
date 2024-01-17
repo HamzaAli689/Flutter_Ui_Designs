@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 
 // Color 1 #5B44DA
@@ -86,10 +85,8 @@ class _HomePageState extends State<HomePage>
               blurRadius: 20.0,
             )
           ]),
-          child: GradientAppBar(
+          child: AppBar(
             title: Text("Home"),
-            backgroundColorStart: pink,
-            backgroundColorEnd: lightPink,
             centerTitle: false,
             elevation: 0.0,
             actions: <Widget>[
@@ -186,7 +183,7 @@ class MainPage extends StatelessWidget {
                               CircleAvatar(
                                 backgroundColor: Colors.black,
                                 backgroundImage:
-                                AssetImage(posts[index]['userImage']),
+                                AssetImage(posts[index]['userImage'] as String),
                               ),
                               SizedBox(
                                 width: 15.0,
@@ -196,14 +193,14 @@ class MainPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    posts[index]['username'],
+                                    posts[index]['username'] as String,
                                     style: TextStyle(
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ),
                                   Text(
-                                    posts[index]['time'],
+                                    posts[index]['time'] as String,
                                     style: TextStyle(color: Colors.black54),
                                   ),
                                 ],
@@ -211,7 +208,7 @@ class MainPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        posts[index]['bookmarked']
+                        posts[index]['bookmarked'] != null
                             ? Icon(
                           Icons.bookmark,
                           size: 32.0,
@@ -228,7 +225,7 @@ class MainPage extends StatelessWidget {
                       height: 10.0,
                     ),
                     Text(
-                      posts[index]['title'],
+                      posts[index]['title'] as String,
                       style: TextStyle(
                           fontSize: 22.0, fontWeight: FontWeight.w500),
                     ),
@@ -243,7 +240,7 @@ class MainPage extends StatelessWidget {
                           height: 10.0,
                         ),
                         Text(
-                          posts[index]['description'],
+                          posts[index]['description'] as String,
                           style: TextStyle(color: Colors.black54),
                         )
                       ],
