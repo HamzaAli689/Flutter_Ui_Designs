@@ -71,9 +71,11 @@ class _DetailsPageState extends State<DetailsPage>
       body: TabBarView(
         controller: controller,
         children: <Widget>[
-          MainDetailsTab(
-            image: widget.image,
-            title: widget.title,
+          SingleChildScrollView(
+            child: MainDetailsTab(
+              image: widget.image,
+              title: widget.title,
+            ),
           ),
           OtherTabPage(
             title: "Comments",

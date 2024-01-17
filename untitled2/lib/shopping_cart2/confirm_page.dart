@@ -30,21 +30,23 @@ class _ConfirmPageState extends State<ConfirmPage> {
                   fontSize: 28.0,
                   letterSpacing: 1.2)),
         ),
-        body: Container(
-          margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              ShoppingBag(),
-              SizedBox(height: 10.0),
-              Divider(),
-              SizedBox(height: 10.0),
-              PaymentInfo(),
-              SizedBox(height: 10.0),
-              Divider(),
-              SizedBox(height: 10.0),
-              PriceSection()
-            ],
+        body: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                ShoppingBag(),
+                SizedBox(height: 10.0),
+                Divider(),
+                SizedBox(height: 10.0),
+                PaymentInfo(),
+                SizedBox(height: 10.0),
+                Divider(),
+                SizedBox(height: 10.0),
+                PriceSection()
+              ],
+            ),
           ),
         ));
   }
