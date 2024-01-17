@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './custom_icons.dart';
+import 'custom_icons.dart';
 import 'confirm_page.dart';
 
 
