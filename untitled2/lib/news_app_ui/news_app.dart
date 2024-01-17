@@ -53,14 +53,13 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
 
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-  TabController controller;
+  late TabController controller;
 
   @override
   void initState() {
@@ -153,7 +152,6 @@ class _HomePageState extends State<HomePage>
 }
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
