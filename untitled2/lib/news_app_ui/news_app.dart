@@ -86,6 +86,7 @@ class _HomePageState extends State<HomePage>
             )
           ]),
           child: AppBar(
+            backgroundColor: Colors.indigo,
             title: Text("Home"),
             centerTitle: false,
             elevation: 0.0,
