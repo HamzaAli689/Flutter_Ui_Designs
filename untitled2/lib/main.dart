@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/shopping_cart_ui/shopping_cart2/home_page.dart';
-
 import 'news_app_ui/news_app.dart';
-
 
 const linearColor = LinearGradient(
     colors: [Color(0xFFC60447), Color(0xFFA40053)],
