@@ -80,9 +80,7 @@ flutter:
   # example:
   fonts:
     - family: worksans
-    - family: CustomIcon
       fonts:
-        - asset: fonts/CustomIcon.ttf
         - asset: fonts/WorkSans-Regular.ttf
         - asset: fonts/WorkSans-Medium.ttf
           weight: 600
