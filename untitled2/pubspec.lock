@@ -70,6 +70,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_gif:
+    dependency: "direct main"
+    description:
+      name: flutter_gif
+      sha256: b13d7e484e40685e9236ffbaddf012c2448a2e2c1ac48bed345184dd7bc87f88
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -194,3 +202,4 @@ packages:
     version: "0.3.0"
 sdks:
   dart: ">=3.2.0-194.0.dev <4.0.0"
+  flutter: ">=2.5.0"

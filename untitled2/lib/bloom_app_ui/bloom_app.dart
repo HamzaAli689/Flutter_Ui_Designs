@@ -2,11 +2,10 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_gifimage/flutter_gifimage.dart';
+import 'package:flutter_gif/flutter_gif.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class BloomApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +20,6 @@ class MyApp extends StatelessWidget {
 }
 
 class Home extends StatefulWidget {
-  Home({Key key}) : super(key: key);
 
   @override
   _HomeState createState() => _HomeState();
@@ -30,16 +28,16 @@ class Home extends StatefulWidget {
 enum Direction { up, down }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
-  ScrollController _scrollController;
-  Direction _direction;
-  GifController _gifController;
+  late ScrollController _scrollController;
+  late Direction _direction;
+  late FlutterGifController _gifController;
   double _frame = 0.0;
 
   @override
   void initState() {
     super.initState();
 
-    _gifController = GifController(vsync: this);
+    _gifController = FlutterGifController(vsync: this);
     _gifController.value = _frame;
 
     _scrollController = ScrollController();

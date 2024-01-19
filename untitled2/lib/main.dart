@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/shopping_cart_ui/shopping_cart2/home_page.dart';
+import 'bloom_app_ui/bloom_app.dart';
 import 'news_app_ui/news_app.dart';
 
 const linearColor = LinearGradient(
@@ -19,7 +20,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'News app',
-      home: MyApp(),
+      home: BloomApp(),
       debugShowCheckedModeBanner: false,
     );
   }
