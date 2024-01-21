@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:wallart/typography.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
+import '../typography.dart';
+
 class FavouritesPage extends StatefulWidget {
-  FavouritesPage({Key key}) : super(key: key);
+
 
   @override
   _FavouritesPageState createState() => _FavouritesPageState();
@@ -25,7 +26,7 @@ class _FavouritesPageState extends State<FavouritesPage> {
   fetchImages() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      images = prefs.getStringList("images");
+      images = prefs.getStringList("images")!;
       loaded = true;
     });
   }

@@ -1,6 +1,5 @@
 import 'dart:convert' show jsonDecode;
 import 'package:flutter/material.dart';
-import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:wallart/pages/favs.dart';
 import 'package:wallart/pages/fullpage.dart';
 import 'package:wallart/ripple_effect.dart';
@@ -8,7 +7,6 @@ import 'package:wallart/typography.dart';
 import 'package:http/http.dart' as http;
 import 'package:wallart/urlbuilder.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:rect_getter/rect_getter.dart';
 

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:wallart/typography.dart';
+
+import '../typography.dart';
+
 
 class FullPage extends StatefulWidget {
   final String image;
-  FullPage({Key key, this.image}) : super(key: key);
+  FullPage({ required this.image});
 
   @override
   _FullPageState createState() => _FullPageState();
