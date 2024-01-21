@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SlidePageRoute extends MaterialPageRoute {
-  SlidePageRoute({WidgetBuilder builder, RouteSettings settings})
+  SlidePageRoute({required WidgetBuilder builder, required RouteSettings settings})
       : super(builder: builder, settings: settings);
 
   @override

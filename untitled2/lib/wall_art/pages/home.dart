@@ -1,17 +1,18 @@
 import 'dart:convert' show jsonDecode;
 import 'package:flutter/material.dart';
-import 'package:wallart/pages/favs.dart';
-import 'package:wallart/pages/fullpage.dart';
-import 'package:wallart/ripple_effect.dart';
-import 'package:wallart/typography.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:http/http.dart' as http;
-import 'package:wallart/urlbuilder.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:rect_getter/rect_getter.dart';
 
+import '../ripple_effect.dart';
+import '../typography.dart';
+import '../urlbuilder.dart';
+import 'favs.dart';
+import 'fullpage.dart';
+
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -20,14 +21,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   GlobalKey rectGetterKey = RectGetter.createGlobalKey();
-  Rect rect;
+  late Rect rect;
   final Duration animationDuration = Duration(milliseconds: 300);
   final Duration delay = Duration(milliseconds: 300);
 
   @override
   bool get wantKeepAlive => true;
 
-  TabController tabController;
+  late TabController tabController;
   List<String> content = [
     "Random",
     "Animals",
@@ -73,7 +74,7 @@ class _HomePageState extends State<HomePage>
   }
 
   void _onTap() async {
-    setState(() => rect = RectGetter.getRectFromKey(rectGetterKey));
+    setState(() => rect = RectGetter.getRectFromKey(rectGetterKey)!);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() =>
           rect = rect.inflate(1.3 * MediaQuery.of(context).size.longestSide));
@@ -149,7 +150,7 @@ class _HomePageState extends State<HomePage>
 
 class RenderTab extends StatefulWidget {
   final String queryText;
-  RenderTab({Key key, this.queryText}) : super(key: key);
+  RenderTab({required this.queryText});
 
   @override
   _RenderTabState createState() => _RenderTabState();
@@ -158,7 +159,7 @@ class RenderTab extends StatefulWidget {
 class _RenderTabState extends State<RenderTab>
     with AutomaticKeepAliveClientMixin {
   bool loaded = false;
-  List<dynamic> images;
+  late List<dynamic> images;
 
   @override
   bool get wantKeepAlive => true;
@@ -170,7 +171,7 @@ class _RenderTabState extends State<RenderTab>
     String url = cond
         ? fetchRandoms(limit: 30, page: 1)
         : fetchQuery(limit: 30, page: 1, q: widget.queryText);
-    http.get(url).then((response) {
+    http.get(url as Uri).then((response) {
       setState(() {
         images = cond
             ? jsonDecode(response.body)

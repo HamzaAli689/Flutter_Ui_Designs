@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:wallart/pages/home.dart';
-import 'package:wallart/slide_route.dart';
-import 'package:wallart/typography.dart';
-import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+
+import '../../news_app_ui/news_app.dart';
+import '../slide_route.dart';
+import '../typography.dart';
 
 class WelcomePage extends StatefulWidget {
-  const WelcomePage({Key key}) : super(key: key);
 
   @override
   _WelcomePageState createState() => _WelcomePageState();
@@ -14,9 +14,9 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage>
     with SingleTickerProviderStateMixin {
-  AnimationController animationController;
-  Animation arrowAnimation;
-  Animation opacity;
+  late AnimationController animationController;
+  late Animation arrowAnimation;
+  late Animation opacity;
 
   @override
   void initState() {
