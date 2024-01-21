@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wallart/pages/welcome.dart';
+import 'package:flutter/services.dart';
+import 'package:untitled2/wall_art/pages/welcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,14 +14,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
-            brightness: Brightness.light,
             textTheme: TextTheme(title: TextStyle(color: Colors.white)),
             iconTheme: IconThemeData(
               color: Colors.black,
             ),
             actionsIconTheme: IconThemeData(
               color: Colors.black,
-            ),
+            ), systemOverlayStyle: SystemUiOverlayStyle.dark,
           )),
       initialRoute: "/",
       routes: {'/': (context) => WelcomePage()},
