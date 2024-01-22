@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-
 import 'blurred.dart';
 import 'home_screen.dart';
 
@@ -19,7 +18,7 @@ class _UnlockScreenState extends State<UnlockScreen> {
     final double textGapHeight = 10.0;
     final TextStyle clockStyle = Theme.of(context)
         .primaryTextTheme
-        .headline1!
+        .displayLarge!
         .copyWith(fontSize: 62, color: Colors.white);
     final TextStyle dateStyle = clockStyle.copyWith(fontSize: 16);
 
