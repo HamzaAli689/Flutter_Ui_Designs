@@ -1,14 +1,11 @@
 import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
-import 'package:iosunlock/unlock/home_screen.dart';
 import 'package:shimmer/shimmer.dart';
 
 import 'blurred.dart';
+import 'home_screen.dart';
 
 class UnlockScreen extends StatefulWidget {
-  UnlockScreen({Key key}) : super(key: key);
-
   @override
   _UnlockScreenState createState() => _UnlockScreenState();
 }
@@ -22,13 +19,14 @@ class _UnlockScreenState extends State<UnlockScreen> {
     final double textGapHeight = 10.0;
     final TextStyle clockStyle = Theme.of(context)
         .primaryTextTheme
-        .headline
+        .headline1!
         .copyWith(fontSize: 62, color: Colors.white);
     final TextStyle dateStyle = clockStyle.copyWith(fontSize: 16);
 
     return Blurred(
       width: fullWidth,
       height: height,
+      color: Colors.transparent,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -106,7 +104,7 @@ class _UnlockScreenState extends State<UnlockScreen> {
 
   Widget _animatedText() {
     final TextStyle textStyle =
-        Theme.of(context).primaryTextTheme.headline.copyWith(fontSize: 16);
+        Theme.of(context).primaryTextTheme.displayLarge!.copyWith(fontSize: 16);
 
     return Center(
       child: Shimmer.fromColors(
@@ -127,6 +125,7 @@ class _UnlockScreenState extends State<UnlockScreen> {
     return Blurred(
       width: fullWidth,
       height: height,
+      color: Colors.transparent,
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 80.0),
         child: LayoutBuilder(
@@ -136,6 +135,8 @@ class _UnlockScreenState extends State<UnlockScreen> {
                   child: Blurred(
                 color: Colors.white.withOpacity(0.2),
                 radius: 100.0,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height, child: Text("Hamza"),
               )),
               _animatedText(),
               Positioned(

@@ -9,8 +9,12 @@ class Blurred extends StatelessWidget {
   final Widget child;
   final double radius;
 
-  const Blurred({Key key, this.width, this.height, this.color, this.child, this.radius = 0.0})
-      : super(key: key);
+  const Blurred(
+      {required this.width,
+      required this.height,
+      required this.color,
+      required this.child,
+      this.radius = 0.0});
 
   @override
   Widget build(BuildContext context) {
