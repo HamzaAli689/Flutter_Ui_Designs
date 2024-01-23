@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:day15_shoes/Shoes.dart';
 import 'package:flutter/material.dart';
+
+import 'Shoes.dart';
 
 void main() => runApp(
     MaterialApp(
