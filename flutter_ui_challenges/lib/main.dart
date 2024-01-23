@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_ui_challenges/shoes_shop_app_ui/home_page.dart';
 import 'ios_unlock/unlock/unlock_screen.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
               )
           )
       ),
-      home: UnlockScreen(),
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
