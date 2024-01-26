@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {},
             icon: Icon(
               Icons.notifications_none,
-              color: Colors.black,
+              color: Colors.amber,
             ),
           ),
           IconButton(
