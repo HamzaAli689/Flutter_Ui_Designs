@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../component/dots_indicator.dart';
+import '../../component/progress_chart.dart';
+import '../../component/triangle_top_blue_header.dart';
+import '../../component/triangle_top_header.dart';
+import '../../model/graph_entry.dart';
+import 'onboarding_animation.dart';
+
 
 class OnBoardingPage extends StatefulWidget {
   @override
@@ -8,8 +15,8 @@ class OnBoardingPage extends StatefulWidget {
 
 class _OnBoardingPageState extends State<OnBoardingPage>
     with TickerProviderStateMixin {
-  AnimationController animationController;
-  OnBoardingEnterAnimation onBoardingEnterAnimation;
+  late AnimationController animationController;
+  late OnBoardingEnterAnimation onBoardingEnterAnimation;
 
   final _controller = new PageController();
 
@@ -262,7 +269,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
           children: <Widget>[
             Text(
               "active\nhours",
-              style: textTheme.headline.copyWith(color: Colors.black87),
+              style: textTheme.displayLarge?.copyWith(color: Colors.black87),
             ),
             SizedBox(
               width: 12,
@@ -390,7 +397,7 @@ Widget _textValueUnitContainer(
                       child: Text(
                         "${value.unit}",
                         style:
-                            textTheme.caption.copyWith(color: Colors.black54),
+                            textTheme.bodySmall?.copyWith(color: Colors.black54),
                       ),
                     ),
                     SizedBox(
@@ -402,7 +409,7 @@ Widget _textValueUnitContainer(
           : Offstage(),
       Text(
         dailyActivityModel.label,
-        style: textTheme.caption.copyWith(color: Colors.black54),
+        style: textTheme.bodySmall?.copyWith(color: Colors.black54),
       )
     ],
   );
@@ -410,8 +417,8 @@ Widget _textValueUnitContainer(
 
 class UnitValueModel {
   UnitValueModel({
-    @required this.value,
-    @required this.unit,
+    required this.value,
+    required this.unit,
   });
 
   final String value;
@@ -420,8 +427,8 @@ class UnitValueModel {
 
 class DailyActivityModel {
   DailyActivityModel({
-    @required this.label,
-    @required this.valueUnitList,
+    required this.label,
+    required this.valueUnitList,
   });
 
   final String label;
