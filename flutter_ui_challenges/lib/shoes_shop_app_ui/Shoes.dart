@@ -89,7 +89,7 @@ class _ShoesState extends State<Shoes> {
                               child: Text(
                                 "Sneakers",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: Colors.white70,
                                     fontSize: 50,
                                     fontWeight: FontWeight.bold),
                               )),
