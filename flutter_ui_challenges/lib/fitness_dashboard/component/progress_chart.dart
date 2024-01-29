@@ -1,10 +1,10 @@
 import 'dart:math' as math;
 import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
-import 'package:flutter_login_dribble_app/model/graph_entry.dart';
 import 'package:intl/intl.dart';
 import 'package:tuple/tuple.dart';
+
+import '../model/graph_entry.dart';
 
 class ProgressChart extends StatelessWidget {
   static const int NUMBER_OF_DAYS = 5;
@@ -46,7 +46,7 @@ class ProgressChart extends StatelessWidget {
         beginningDate,
         _calculateWeightOnBeginningDate(
             lastEntryBeforeBeginning, firstEntryAfterBeginning, beginningDate),
-        null);
+        "");
     entries.add(fakeEntry);
   }
 
@@ -89,14 +89,14 @@ class ProgressChart extends StatelessWidget {
 }
 
 class ChartPainter extends CustomPainter {
-  final List<GraphEntry> entries;
+  late final List<GraphEntry> entries;
 
   ChartPainter(this.entries);
 
-  double leftOffsetStart;
-  double topOffsetEnd;
-  double drawingWidth;
-  double drawingHeight;
+  late double leftOffsetStart;
+  late double topOffsetEnd;
+  late double drawingWidth;
+  late double drawingHeight;
 
   static const int NUMBER_OF_HORIZONTAL_LINES = 5;
 
@@ -124,7 +124,7 @@ class ChartPainter extends CustomPainter {
   ///draws actual chart
   void _drawLines(ui.Canvas canvas, int minLineValue, int maxLineValue) {
     final paint = new Paint()
-      ..color = Colors.blue[400]
+      ..color = Colors.blue[400]!
       ..strokeWidth = 3.0;
     DateTime beginningOfChart = _getStartDateOfChart();
     for (int i = 0; i < entries.length - 1; i++) {
@@ -145,7 +145,7 @@ class ChartPainter extends CustomPainter {
   /// Draws horizontal lines and labels informing about weight values attached to those lines
   void _drawHorizontalLinesAndLabels(
       Canvas canvas, Size size, int minLineValue, int maxLineValue) {
-    final paint = new Paint()..color = Colors.grey[300];
+    final paint = new Paint()..color = Colors.grey[300]!;
     int lineStep = _calculateHorizontalLineStep(maxLineValue, minLineValue);
     double offsetStep = _calculateHorizontalOffsetStep;
     for (int line = 0; line < NUMBER_OF_HORIZONTAL_LINES; line++) {

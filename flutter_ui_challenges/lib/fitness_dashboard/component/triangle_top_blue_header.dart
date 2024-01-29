@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
 class TriangleTopBlueHeader extends StatelessWidget {
-    TriangleTopBlueHeader({@required this.child});
+    TriangleTopBlueHeader({required this.child});
 
   final Widget child;
 
