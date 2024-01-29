@@ -269,7 +269,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
           children: <Widget>[
             Text(
               "active\nhours",
-              style: textTheme.displayLarge?.copyWith(color: Colors.black87),
+              style: textTheme.headlineSmall?.copyWith(color: Colors.black87),
             ),
             SizedBox(
               width: 12,
@@ -389,7 +389,7 @@ Widget _textValueUnitContainer(
                   children: <Widget>[
                     Text(
                       "${value.value}",
-                      style: textTheme.displayLarge
+                      style: textTheme.headlineSmall
                           ?.copyWith(color: Colors.black.withOpacity(0.7)),
                     ),
                     Padding(
