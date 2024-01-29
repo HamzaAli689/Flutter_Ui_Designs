@@ -161,7 +161,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
             ),
             onPressed: () {
               animationController.reverse();
-              Scaffold.of(context).showSnackBar(
+              ScaffoldMessenger.of(context).showSnackBar(
                   new SnackBar(content: new Text('Button Clicked')));
             },
           ),
@@ -292,7 +292,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
               padding: const EdgeInsets.only(bottom: 2.0),
               child: Text(
                 "weekly",
-                style: textTheme.subhead.copyWith(color: Colors.blue),
+                style: textTheme.bodyLarge?.copyWith(color: Colors.blue),
               ),
             ),
             SizedBox(
@@ -316,7 +316,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
               padding: const EdgeInsets.only(bottom: 2.0),
               child: Text(
                 "avg",
-                style: textTheme.subhead.copyWith(color: Colors.red),
+                style: textTheme.bodyLarge?.copyWith(color: Colors.red),
               ),
             )
           ],
@@ -389,8 +389,8 @@ Widget _textValueUnitContainer(
                   children: <Widget>[
                     Text(
                       "${value.value}",
-                      style: textTheme.title
-                          .copyWith(color: Colors.black.withOpacity(0.7)),
+                      style: textTheme.displayLarge
+                          ?.copyWith(color: Colors.black.withOpacity(0.7)),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 2.0),

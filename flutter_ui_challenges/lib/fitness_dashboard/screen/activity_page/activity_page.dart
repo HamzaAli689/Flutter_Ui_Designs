@@ -95,7 +95,7 @@ class _ActivityPageState extends State<ActivityPage>
             ),
             Text(
               label,
-              style: textTheme.subhead.copyWith(color: Colors.white),
+              style: textTheme.bodyLarge?.copyWith(color: Colors.white),
             )
           ],
         ),
@@ -112,7 +112,7 @@ class _ActivityPageState extends State<ActivityPage>
           ),
           onPressed: () {
             animationController.reverse();
-            Scaffold.of(context).showSnackBar(
+            ScaffoldMessenger.of(context).showSnackBar(
                 new SnackBar(content: new Text('Button Clicked')));
           },
         ),
