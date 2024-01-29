@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_dribble_app/component/dots_indicator.dart';
-import 'package:flutter_login_dribble_app/component/progress_chart.dart';
-import 'package:flutter_login_dribble_app/component/triangle_top_blue_header.dart';
-import 'package:flutter_login_dribble_app/component/triangle_top_header.dart';
-import 'package:flutter_login_dribble_app/model/graph_entry.dart';
-import 'package:flutter_login_dribble_app/screen/onboarding/onboarding_animation.dart';
+
 
 class OnBoardingPage extends StatefulWidget {
   @override

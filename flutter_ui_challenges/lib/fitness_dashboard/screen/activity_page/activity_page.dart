@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_dribble_app/screen/activity_page/activity_page_animation.dart';
+
+import 'activity_page_animation.dart';
+
 
 class ActivityPage extends StatefulWidget {
   @override
@@ -8,8 +10,8 @@ class ActivityPage extends StatefulWidget {
 
 class _ActivityPageState extends State<ActivityPage>
     with TickerProviderStateMixin {
-  AnimationController animationController;
-  ActivityEnterAnimation activityEnterAnimation;
+  late AnimationController animationController;
+  late ActivityEnterAnimation activityEnterAnimation;
 
   @override
   void initState() {
@@ -123,7 +125,7 @@ class _ActivityPageState extends State<ActivityPage>
               -activityEnterAnimation.labelXtranslation.value, 0, 0),
           child: Text(
             "Select your activity",
-            style: textTheme.caption.copyWith(color: Colors.white),
+            style: textTheme.bodySmall?.copyWith(color: Colors.white),
             textAlign: TextAlign.left,
           ),
         ),

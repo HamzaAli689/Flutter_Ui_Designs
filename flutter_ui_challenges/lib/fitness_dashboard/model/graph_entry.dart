@@ -1,9 +1,9 @@
 
 class GraphEntry {
-  String key;
-  DateTime dateTime;
-  double weight;
-  String note;
+  late String key;
+  late DateTime dateTime;
+  late double weight;
+  late String note;
 
   GraphEntry(this.dateTime, this.weight, this.note);
 }
