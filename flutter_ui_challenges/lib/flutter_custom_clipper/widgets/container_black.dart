@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 
 class ContainerBlack extends StatelessWidget {
   const ContainerBlack({
-    Key key,
-    @required this.heightScreen,
-  }) : super(key: key);
+    required this.heightScreen,
+  });
 
   final double heightScreen;
 

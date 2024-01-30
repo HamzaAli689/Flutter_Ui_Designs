@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_meditation_app/clipper/wavy_image_clipper.dart';
-import 'package:flutter_meditation_app/widgets/container_black.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../clipper/wavy_image_clipper.dart';
+import '../widgets/container_black.dart';
 
 class WavyImage extends StatelessWidget {
   final String img;

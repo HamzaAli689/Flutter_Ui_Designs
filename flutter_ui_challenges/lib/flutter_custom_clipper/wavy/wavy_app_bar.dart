@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_meditation_app/clipper/wavy_app_bar_clipper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../clipper/wavy_app_bar_clipper.dart';
 
 class WavyAppBar extends StatelessWidget {
   @override
@@ -9,7 +9,7 @@ class WavyAppBar extends StatelessWidget {
     return ClipPath(
       child: Container(
         color: Color(0xFFC3B7AB),
-        height: ScreenUtil.statusBarHeight + 100.w,
+        height: MediaQuery.of(context).padding.top + 100.w,
       ),
       clipper: WavyAppBarClipper(),
     );

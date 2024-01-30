@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_meditation_app/clipper/wavy_bottom_navigation_bar_clipper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../clipper/wavy_bottom_navigation_bar_clipper.dart';
 
 class WavyBottomNavigationBar extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class WavyBottomNavigationBar extends StatelessWidget {
     return ClipPath(
       child: Container(
         color: Colors.black.withOpacity(0.5),
-        height: 180.w + ScreenUtil.bottomBarHeight,
+        height: MediaQuery.of(context).padding.top + 180.w,
       ),
       clipper: WavyBottomNavigationBarClipper(),
     );
