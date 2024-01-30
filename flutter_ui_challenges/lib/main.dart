@@ -1,11 +1,10 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_meditation_app/wavy/wavy_app_bar.dart';
-import 'package:flutter_meditation_app/wavy/wavy_bottom_navigation_bar.dart';
-import 'package:flutter_meditation_app/wavy/wavy_image.dart';
-import 'package:flutter_meditation_app/widgets/container_black.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'flutter_custom_clipper/wavy/wavy_app_bar.dart';
+import 'flutter_custom_clipper/wavy/wavy_bottom_navigation_bar.dart';
+import 'flutter_custom_clipper/wavy/wavy_image.dart';
+import 'flutter_custom_clipper/widgets/container_black.dart';
 
 void main() => runApp(MyApp());
 
@@ -73,7 +72,7 @@ class MyHomePage extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: EdgeInsets.only(bottom: 100.w + ScreenUtil.bottomBarHeight),
+                padding: EdgeInsets.only(bottom: 100.w + ScreenUtil().bottomBarHeight),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
@@ -88,7 +87,7 @@ class MyHomePage extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: EdgeInsets.only(
-                  bottom: ScreenUtil.bottomBarHeight > 0 ? ScreenUtil.bottomBarHeight : 24.w,
+                  bottom: ScreenUtil().bottomBarHeight > 0 ? ScreenUtil().bottomBarHeight : 24.w,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -107,7 +106,7 @@ class MyHomePage extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: EdgeInsets.only(top: ScreenUtil.statusBarHeight + 50.w),
+                padding: EdgeInsets.only(top: ScreenUtil().statusBarHeight + 50.w),
                 child: Container(
                   width: 128.w,
                   height: 128.w,
@@ -130,7 +129,7 @@ class MyHomePage extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: EdgeInsets.only(top: ScreenUtil.statusBarHeight),
+                padding: EdgeInsets.only(top: ScreenUtil().statusBarHeight),
                 child: Container(
                   width: double.infinity,
                   height: 100.w,
@@ -212,7 +211,7 @@ class MyHomePage extends StatelessWidget {
         shape: BoxShape.circle,
         border: isActive
             ? Border.all(
-          color: Colors.grey[800],
+          color: Colors.grey.shade800,
           width: 2,
         )
             : null,
@@ -232,7 +231,7 @@ class MyHomePage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(top: ScreenUtil.statusBarHeight + 40.w),
+              padding: EdgeInsets.only(top: ScreenUtil().statusBarHeight + 40.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -253,7 +252,7 @@ class MyHomePage extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(bottom: ScreenUtil.bottomBarHeight + 200.w),
+              padding: EdgeInsets.only(bottom: ScreenUtil().bottomBarHeight + 200.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
