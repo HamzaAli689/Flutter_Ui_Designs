@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Text(
                         "Gradients",
-                        style: style.copyWith(fontSize: style.fontSize + 8),
+                        style: style.copyWith(fontSize: style.fontSize! + 8),
                       ),
                     ],
                   ),

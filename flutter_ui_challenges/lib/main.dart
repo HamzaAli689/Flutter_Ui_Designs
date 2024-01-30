@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'fitness_dashboard/screen/activity_page/activity_page.dart';
 import 'fitness_dashboard/screen/onboarding/onboarding_page.dart';
 
