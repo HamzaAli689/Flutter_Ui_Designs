@@ -40,6 +40,7 @@ dependencies:
   charts_flutter:
   tuple:
   intl:
+  aurora:   
 
 dev_dependencies:
   flutter_test:
