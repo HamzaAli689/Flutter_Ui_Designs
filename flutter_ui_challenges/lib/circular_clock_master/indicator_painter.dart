@@ -1,7 +1,8 @@
-import 'package:analog_clock/utils.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
+
+import 'package:flutter_ui_challenges/circular_clock_master/utils.dart';
 
 /// Draws small indicators for every minute, starting at [circleExpand] to the end of the circle (360°, e.g.  60 minutes).
 class IndicatorPainter extends CustomPainter {
@@ -9,8 +10,8 @@ class IndicatorPainter extends CustomPainter {
   ///
   /// All of the parameters are required and must not be null.
   const IndicatorPainter({
-    @required this.circleExpand,
-    @required this.color,
+    required this.circleExpand,
+    required this.color,
   })  : assert(circleExpand != null),
         assert(color != null);
 

@@ -10,18 +10,13 @@ class TimeCircle extends StatelessWidget {
   ///
   /// All of the parameters are required and must not be null.
   const TimeCircle({
-    @required this.gradient,
-    @required this.width,
-    @required this.height,
-    @required this.text,
-    @required this.value,
-    @required this.textColor,
-  })  : assert(gradient != null),
-        assert(width != null),
-        assert(height != null),
-        assert(text != null),
-        assert(value != null),
-        assert(textColor != null);
+    required this.gradient,
+    required this.width,
+    required this.height,
+    required this.text,
+    required this.value,
+    required this.textColor,
+  });
 
   /// The vertical diameter of the circle.
   final double height;
@@ -59,14 +54,11 @@ class TimeCircle extends StatelessWidget {
 class _CirclePainter extends CustomPainter {
   /// Create a const [CustomPainter].
   const _CirclePainter({
-    @required this.value,
-    @required this.gradient,
-    @required this.text,
-    @required this.textColor,
-  })  : assert(gradient != null),
-        assert(text != null),
-        assert(value != null),
-        assert(textColor != null);
+    required this.value,
+    required this.gradient,
+    required this.text,
+    required this.textColor,
+  });
 
   final LinearGradient gradient;
   final double value;
