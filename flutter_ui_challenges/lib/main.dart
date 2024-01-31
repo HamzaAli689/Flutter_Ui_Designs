@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'flutter_custom_clipper/wavy/wavy_app_bar.dart';
@@ -22,11 +21,12 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
-    double heightScreen = MediaQuery.of(context).size.height;
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double heightScreen = mediaQueryData.size.height;
     return Scaffold(
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        width: double.infinity,
+        height: double.infinity,
         child: Stack(
           children: <Widget>[
             Column(
@@ -60,7 +60,7 @@ class MyHomePage extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: WavyImage(
-                'assets/images/img_peaceful_piano.jpg',
+                image: 'assets/images/img_peaceful_piano.jpg', // Provide image path
               ),
             ),
             _buildWidgetColumnText(),
@@ -71,7 +71,7 @@ class MyHomePage extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: EdgeInsets.only(bottom: 10.w + ScreenUtil().bottomBarHeight),
+                padding: EdgeInsets.only(bottom: 100.w + ScreenUtil().bottomBarHeight),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
@@ -82,7 +82,6 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -132,7 +131,7 @@ class MyHomePage extends StatelessWidget {
                 padding: EdgeInsets.only(top: ScreenUtil().statusBarHeight),
                 child: Container(
                   width: double.infinity,
-                  height: 100.w,
+                  height: 100.w + ScreenUtil().statusBarHeight,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -216,8 +215,8 @@ class MyHomePage extends StatelessWidget {
         )
             : null,
       ),
-      width: 30.w,
-      height: 30.w,
+      width: 150.w,
+      height: 150.w,
       child: Icon(
         iconData,
         color: isActive ? Colors.grey[900] : Colors.white.withOpacity(0.5),
@@ -273,7 +272,7 @@ class MyHomePage extends StatelessWidget {
       style: TextStyle(
         color: Colors.white,
         fontFamily: 'MazzardSemiBold',
-        fontSize: ScreenUtil().setSp(5),
+        fontSize: ScreenUtil().setSp(128),
       ),
     );
   }
@@ -284,13 +283,12 @@ class MyHomePage extends StatelessWidget {
       style: TextStyle(
         color: Colors.white70,
         fontFamily: 'MazzardSemiBold',
-        fontSize: ScreenUtil().setSp(4),
+        fontSize: ScreenUtil().setSp(42),
         height: ScreenUtil().setHeight(1),
       ),
     );
   }
 }
-
 
 
 
