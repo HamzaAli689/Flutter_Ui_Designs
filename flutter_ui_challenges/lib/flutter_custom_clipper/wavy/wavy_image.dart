@@ -6,7 +6,7 @@ import '../widgets/container_black.dart';
 class WavyImage extends StatelessWidget {
   final String img;
 
-  WavyImage(this.img, {required image});
+  WavyImage(this.img, {required String image});
 
   @override
   Widget build(BuildContext context) {
