@@ -1,7 +1,7 @@
-import 'package:analog_clock/date_circle.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import 'date_circle.dart';
 import 'utils.dart';
 
 /// A widget which maintains and shows date information based on [date]
@@ -12,18 +12,12 @@ class DateWidget extends StatelessWidget {
   ///
   /// All of the parameters are required and must not be null.
   const DateWidget({
-    Key key,
-    @required this.date,
-    @required this.height,
-    @required this.width,
-    @required this.textColor,
-    @required this.circleColor,
-  })  : assert(date != null),
-        assert(height != null),
-        assert(width != null),
-        assert(textColor != null),
-        assert(circleColor != null),
-        super(key: key);
+    required this.date,
+    required this.height,
+    required this.width,
+    required this.textColor,
+    required this.circleColor,
+  });
 
   /// The vertical diameter of the circle.
   final double height;

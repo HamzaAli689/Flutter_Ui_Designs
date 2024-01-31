@@ -11,20 +11,15 @@ class DateCircle extends StatelessWidget {
   /// [value] must be between [min] and [max].
   /// [color], [width], [height], [min], [max], [value] must not be null.
   const DateCircle({
-    @required this.color,
-    @required this.textColor,
-    @required this.width,
-    @required this.height,
-    @required this.text,
-    @required this.min,
-    @required this.max,
-    @required this.value,
-  })  : assert(color != null),
-        assert(width != null),
-        assert(height != null),
-        assert(min != null),
-        assert(max != null),
-        assert(value != null),
+    required this.color,
+    required this.textColor,
+    required this.width,
+    required this.height,
+    required this.text,
+    required this.min,
+    required this.max,
+    required this.value,
+  })  :
         assert(value <= max, "value out of range!"),
         assert(value >= min, "value out of range!");
 
@@ -72,16 +67,13 @@ class DateCircle extends StatelessWidget {
 class _StaticCirclePainter extends CustomPainter {
   /// Create a const [CustomPainter].
   const _StaticCirclePainter({
-    @required this.color,
-    @required this.text,
-    @required this.min,
-    @required this.max,
-    @required this.value,
-    @required this.textColor,
-  })  : assert(color != null),
-        assert(min != null),
-        assert(max != null),
-        assert(value != null),
+    required this.color,
+    required this.text,
+    required this.min,
+    required this.max,
+    required this.value,
+    required this.textColor,
+  })  :
         assert(value <= max, "value out of range!"),
         assert(value >= min, "value out of range!");
 

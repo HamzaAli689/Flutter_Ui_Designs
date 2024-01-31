@@ -1,8 +1,9 @@
-import 'package:analog_clock/indicator_painter.dart';
-import 'package:analog_clock/time_circle.dart';
-import 'package:analog_clock/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clock_helper/model.dart';
+import 'package:flutter_ui_challenges/circular_clock_master/time_circle.dart';
+import 'package:flutter_ui_challenges/circular_clock_master/utils.dart';
+
+import 'indicator_painter.dart';
+
 
 /// A widget that maintains and shows the main clock with information based on [date]
 ///
@@ -12,22 +13,14 @@ class ClockWidget extends StatelessWidget {
   ///
   ///
   const ClockWidget({
-    Key key,
-    @required this.height,
-    @required this.width,
-    @required this.date,
-    @required this.gradient,
-    @required this.model,
-    @required this.textColor,
-    @required this.indicatorsColor,
-  })  : assert(height != null),
-        assert(width != null),
-        assert(date != null),
-        assert(gradient != null),
-        assert(model != null),
-        assert(textColor != null),
-        assert(indicatorsColor != null),
-        super(key: key);
+    required this.height,
+    required this.width,
+    required this.date,
+    required this.gradient,
+    required this.model,
+    required this.textColor,
+    required this.indicatorsColor,
+  });
 
   /// The vertical diameter of the circle.
   final double height;
@@ -118,3 +111,5 @@ class ClockWidget extends StatelessWidget {
     );
   }
 }
+
+

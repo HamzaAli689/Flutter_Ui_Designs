@@ -1,16 +1,12 @@
-// Copyright 2019 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'dart:async';
-
-import 'package:analog_clock/clock_widget.dart';
-import 'package:analog_clock/date_widget.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_clock_helper/model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:intl/intl.dart';
+
+import 'clock_widget.dart';
+import 'date_widget.dart';
+import 'clock_model.dart'; // Assuming ClockModel is defined in clock_model.dart
 
 class CircleClock extends StatefulWidget {
   const CircleClock(this.model);
@@ -22,12 +18,13 @@ class CircleClock extends StatefulWidget {
 }
 
 class _CircleClockState extends State<CircleClock> {
-  var _now = DateTime.now();
-  Timer _timer;
+  late DateTime _now;
+  late Timer _timer;
 
   @override
   void initState() {
     super.initState();
+    _now = DateTime.now();
     _updateTime();
   }
 
@@ -38,7 +35,7 @@ class _CircleClockState extends State<CircleClock> {
 
   @override
   void dispose() {
-    _timer?.cancel();
+    _timer.cancel();
     super.dispose();
   }
 
@@ -50,6 +47,7 @@ class _CircleClockState extends State<CircleClock> {
         Duration(seconds: 1) - Duration(milliseconds: _now.millisecond),
         _updateTime,
       );
+      _now = DateTime.now();
     });
   }
 
@@ -57,13 +55,13 @@ class _CircleClockState extends State<CircleClock> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context).brightness == Brightness.light
         ? Theme.of(context).copyWith(
-            canvasColor: Color(0xff757575),
-          )
+      canvasColor: Color(0xff757575),
+    )
         : Theme.of(context).copyWith(
-            canvasColor: Color(0xff8a8a8a),
-          );
+      canvasColor: Color(0xff8a8a8a),
+    );
 
-    final time = DateFormat.Hms().format(DateTime.now());
+    final time = DateFormat.Hms().format(_now);
 
     return Semantics.fromProperties(
       properties: SemanticsProperties(
@@ -89,13 +87,13 @@ class _CircleClockState extends State<CircleClock> {
                 width: MediaQuery.of(context).size.height * 0.5,
                 model: widget.model,
                 indicatorsColor: theme.canvasColor,
-                textColor: theme.textTheme.body1.color,
+                textColor: theme.textTheme.bodyText1!.color, // Updated
               ),
               DateWidget(
                 date: _now,
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.height * 0.25,
-                textColor: theme.textTheme.body1.color,
+                textColor: theme.textTheme.bodyText1!.color, // Updated
                 circleColor: theme.canvasColor,
               )
             ],
