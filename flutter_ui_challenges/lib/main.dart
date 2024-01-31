@@ -22,12 +22,11 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
-    MediaQueryData mediaQueryData = MediaQuery.of(context);
-    double heightScreen = mediaQueryData.size.height;
+    double heightScreen = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         child: Stack(
           children: <Widget>[
             Column(
@@ -72,7 +71,7 @@ class MyHomePage extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: EdgeInsets.only(bottom: 100.w + ScreenUtil().bottomBarHeight),
+                padding: EdgeInsets.only(bottom: 10.w + ScreenUtil().bottomBarHeight),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
@@ -83,6 +82,7 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 10),
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -216,8 +216,8 @@ class MyHomePage extends StatelessWidget {
         )
             : null,
       ),
-      width: 150.w,
-      height: 150.w,
+      width: 30.w,
+      height: 30.w,
       child: Icon(
         iconData,
         color: isActive ? Colors.grey[900] : Colors.white.withOpacity(0.5),
@@ -273,7 +273,7 @@ class MyHomePage extends StatelessWidget {
       style: TextStyle(
         color: Colors.white,
         fontFamily: 'MazzardSemiBold',
-        fontSize: ScreenUtil().setSp(128),
+        fontSize: ScreenUtil().setSp(5),
       ),
     );
   }
@@ -284,7 +284,7 @@ class MyHomePage extends StatelessWidget {
       style: TextStyle(
         color: Colors.white70,
         fontFamily: 'MazzardSemiBold',
-        fontSize: ScreenUtil().setSp(42),
+        fontSize: ScreenUtil().setSp(4),
         height: ScreenUtil().setHeight(1),
       ),
     );
