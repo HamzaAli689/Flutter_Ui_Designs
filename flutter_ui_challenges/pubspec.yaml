@@ -42,7 +42,6 @@ dependencies:
   intl:
   aurora:
   flutter_screenutil:
-  rive:
 
 
 dev_dependencies:
