@@ -48,7 +48,6 @@ class _CircleClockState extends State<CircleClock> {
       _now = DateTime.now();
     });
   }
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).brightness == Brightness.light
@@ -61,6 +60,7 @@ class _CircleClockState extends State<CircleClock> {
 
     final time = DateFormat.Hms().format(_now);
 
+    
     return Semantics.fromProperties(
       properties: SemanticsProperties(
         label: 'Circle clock with time $time',
