@@ -3,10 +3,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:intl/intl.dart';
-
 import 'clock_widget.dart';
 import 'date_widget.dart';
-import 'clock_model.dart'; // Assuming ClockModel is defined in clock_model.dart
 
 class CircleClock extends StatefulWidget {
   const CircleClock(this.model);
@@ -87,13 +85,13 @@ class _CircleClockState extends State<CircleClock> {
                 width: MediaQuery.of(context).size.height * 0.5,
                 model: widget.model,
                 indicatorsColor: theme.canvasColor,
-                textColor: theme.textTheme.bodyText1!.color, // Updated
+                textColor: Colors.amberAccent, // Updated
               ),
               DateWidget(
                 date: _now,
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.height * 0.25,
-                textColor: theme.textTheme.bodyText1!.color, // Updated
+                textColor: Colors.white, // Updated
                 circleColor: theme.canvasColor,
               )
             ],
