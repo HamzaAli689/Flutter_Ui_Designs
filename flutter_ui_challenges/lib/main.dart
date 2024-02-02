@@ -6,7 +6,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'circular_clock_master/circle_clock.dart';
 
-
 void main() {
   if (!kIsWeb && Platform.isMacOS) {
     // TODO(gspencergoog): Update this when TargetPlatform includes macOS.
