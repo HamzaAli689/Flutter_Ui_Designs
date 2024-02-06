@@ -31,10 +31,45 @@ class _MyScreenAppState extends State<MyScreenApp> {
                     color: Colors.greenAccent,
                   ),
                   SizedBox(height: 10,),
-                  Container(
-                    height: 200,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.greenAccent,
+                  SingleChildScrollView(
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 200,
+                          width: 100,
+                          color: Colors.greenAccent,
+                        ),SizedBox(width: 10,),
+                        Container(
+                          height: 200,
+                          width: 100,
+                          color: Colors.greenAccent,
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          height: 200,
+                          width: 100,
+                          color: Colors.greenAccent,
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          height: 200,
+                          width: 100,
+                          color: Colors.greenAccent,
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          height: 200,
+                          width: 100,
+                          color: Colors.greenAccent,
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          height: 200,
+                          width: 100,
+                          color: Colors.greenAccent,
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
                   Container(
