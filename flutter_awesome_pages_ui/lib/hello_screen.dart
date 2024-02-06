@@ -31,7 +31,7 @@ class _MyScreenAppState extends State<MyScreenApp> {
                     color: Colors.greenAccent,
                   ),
                   SizedBox(height: 10,),
-                  SingleChildScrollView(
+                  SingleChildScrollView(scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
                         Container(
