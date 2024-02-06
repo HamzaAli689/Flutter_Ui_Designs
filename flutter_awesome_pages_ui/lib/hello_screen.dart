@@ -19,12 +19,20 @@ class _MyScreenAppState extends State<MyScreenApp> {
             color: Colors.black,
           )),
         ),
-        backgroundColor: Colors.greenAccent,
         body: Expanded(
-          child: Column(
-            children: [
-              Container()
-            ],
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.greenAccent,
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       ),
