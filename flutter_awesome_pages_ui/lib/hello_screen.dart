@@ -13,7 +13,10 @@ class _MyScreenAppState extends State<MyScreenApp> {
     return  MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Hamza Ali"),
+          backgroundColor: Colors.green,
+          title: Text("Hamza Ali",style: TextStyle(
+            color: Colors.black,
+          )),
         ),
       ),
     );
