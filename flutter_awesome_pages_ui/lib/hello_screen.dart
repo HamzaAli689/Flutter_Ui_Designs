@@ -29,7 +29,37 @@ class _MyScreenAppState extends State<MyScreenApp> {
                     height: 200,
                     width: MediaQuery.of(context).size.width,
                     color: Colors.greenAccent,
-                  )
+                  ),
+                  SizedBox(height: 10,),
+                  Container(
+                    height: 200,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.greenAccent,
+                  ),
+                  SizedBox(height: 10,),
+                  Container(
+                    height: 200,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.greenAccent,
+                  ),
+                  SizedBox(height: 10,),
+                  Container(
+                    height: 200,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.greenAccent,
+                  ),
+                  SizedBox(height: 10,),
+                  Container(
+                    height: 200,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.greenAccent,
+                  ),
+                  SizedBox(height: 10,),
+                  Container(
+                    height: 200,
+                    width: MediaQuery.of(context).size.width,
+                    color: Colors.greenAccent,
+                  ),
                 ],
               ),
             ),
