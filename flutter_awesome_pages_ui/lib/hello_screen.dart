@@ -34,7 +34,47 @@ class _MyScreenAppState extends State<MyScreenApp> {
                   SingleChildScrollView(scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        
+                        SingleChildScrollView(
+                          child: Stack(
+                            children: [
+                              Container(
+                                height: 200,
+                                width: 100,
+                                color: Colors.greenAccent,
+                              ),SizedBox(width: 10,),
+                              Container(
+                                height: 200,
+                                width: 100,
+                                color: Colors.greenAccent,
+                              ),
+                              SizedBox(width: 10,),
+                              Container(
+                                height: 200,
+                                width: 100,
+                                color: Colors.greenAccent,
+                              ),
+                              SizedBox(width: 10,),
+                              Container(
+                                height: 200,
+                                width: 100,
+                                color: Colors.greenAccent,
+                              ),
+                              SizedBox(width: 10,),
+                              Container(
+                                height: 200,
+                                width: 100,
+                                color: Colors.greenAccent,
+                              ),
+                              SizedBox(width: 10,),
+                              Container(
+                                height: 200,
+                                width: 100,
+                                color: Colors.greenAccent,
+                              ),
+                            ],
+                          ),
+                          scrollDirection: Axis.horizontal,
+                        )
                       ],
                     ),
                   ),
