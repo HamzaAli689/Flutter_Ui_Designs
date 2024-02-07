@@ -35,6 +35,7 @@ class _MyScreenAppState extends State<MyScreenApp> {
                     child: Row(
                       children: [
                         SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
                           child: Stack(
                             children: [
                               Container(
@@ -73,7 +74,6 @@ class _MyScreenAppState extends State<MyScreenApp> {
                               ),
                             ],
                           ),
-                          scrollDirection: Axis.horizontal,
                         )
                       ],
                     ),
