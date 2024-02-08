@@ -36,7 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   page_transition:
-  flutter_swiper_null_safety: 
+  flutter_swiper_null_safety:
   flutter_lock_screen:
   local_auth:
 
