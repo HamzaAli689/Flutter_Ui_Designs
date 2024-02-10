@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/animated_wave_card.dart';
-import 'package:testapp/circle_progress_bar_page.dart';
-import 'package:testapp/colored_card_page.dart';
-import 'package:testapp/credit_card_page.dart';
-import 'package:testapp/custom_gift_card.dart';
-import 'package:testapp/energy_card.dart';
-import 'package:testapp/first_page.dart';
-import 'package:testapp/login/otp_login.dart';
-import 'package:testapp/onboarding_page.dart';
-import 'package:testapp/pass_code_page.dart';
+import 'package:flutter_awesome_pages_ui/pass_code_page.dart';
+
+import 'animated_wave_card.dart';
+import 'circle_progress_bar_page.dart';
+import 'colored_card_page.dart';
+import 'credit_card_page.dart';
+import 'custom_gift_card.dart';
+import 'energy_card.dart';
+import 'first_page.dart';
+import 'login/otp_login.dart';
+import 'onboarding_page.dart';
+
 
 class HomePage extends StatelessWidget {
   @override

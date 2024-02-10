@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:testapp/energy_card.dart';
-import 'package:testapp/pass_code_page.dart';
+import 'package:flutter_awesome_pages_ui/pass_code_page.dart';
+import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
+
+import 'energy_card.dart';
+
 
 class FirstLoginPage extends StatefulWidget {
   @override
