@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/widgets/general_wave_card.dart';
+import 'package:flutter_awesome_pages_ui/widgets/general_wave_card.dart';
 
 class AnimatedWaveCard extends StatefulWidget {
   @override

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class AnimatedFab extends StatefulWidget {
   final VoidCallback onClick;
 
-  const AnimatedFab({Key key, this.onClick}) : super(key: key);
+  const AnimatedFab({ required this.onClick}) ;
 
   @override
   _AnimatedFabState createState() => new _AnimatedFabState();
@@ -13,8 +13,8 @@ class AnimatedFab extends StatefulWidget {
 
 class _AnimatedFabState extends State<AnimatedFab>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  Animation<Color> _colorAnimation;
+  late AnimationController _animationController;
+  late Animation<Color> _colorAnimation;
 
   final double expandedSize = 120.0;
   final double hiddenSize = 5.0;
@@ -24,8 +24,7 @@ class _AnimatedFabState extends State<AnimatedFab>
     super.initState();
     _animationController = new AnimationController(
         vsync: this, duration: Duration(milliseconds: 200));
-    _colorAnimation =
-        new ColorTween(begin: Colors.deepOrange, end: Colors.deepOrange[800])
+    _colorAnimation = new ColorTween(begin: Colors.deepOrange, end: Colors.deepOrange[800])
             .animate(_animationController);
   }
 
@@ -42,7 +41,7 @@ class _AnimatedFabState extends State<AnimatedFab>
       height: expandedSize,
       child: new AnimatedBuilder(
         animation: _animationController,
-        builder: (BuildContext context, Widget child) {
+        builder: (BuildContext context, Widget? child) {
           return new Stack(
             alignment: Alignment.center,
             children: <Widget>[

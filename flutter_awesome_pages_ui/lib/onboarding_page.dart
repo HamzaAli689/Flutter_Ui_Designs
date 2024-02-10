@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 
 class OnboardingPage extends StatefulWidget {
   @override
@@ -7,7 +7,7 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
-  SwiperController _swiperController;
+  late SwiperController _swiperController;
   double prevOpacity = 1.0;
 
   @override

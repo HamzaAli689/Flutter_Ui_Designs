@@ -19,24 +19,22 @@ class ColoredCard extends StatefulWidget {
   final double borderRadius;
 
   ColoredCard(
-      {Key key,
+      {
       this.showHeader = false,
       this.showFooter = false,
-      this.bodyContent,
-      this.bodyGradient,
-      this.headerBar,
-      this.footerBar,
-      this.bottomContent,
-      this.headerColor,
-      this.bodyColor,
-      this.footerColor,
+      required this.bodyContent,
+      required this.bodyGradient,
+      required this.headerBar,
+      required this.footerBar,
+      required this.bottomContent,
+      required this.headerColor,
+      required this.bodyColor,
+      required this.footerColor,
       this.borderRadius = 0.0,
       this.elevation = 0.0,
       this.cardHeight = 200,
-      this.padding = 10})
-      : super(
-          key: key,
-        );
+      this.padding = 10});
+
   @override
   _ColoredCardState createState() => _ColoredCardState();
 }
@@ -120,15 +118,14 @@ class HeaderBar extends StatelessWidget implements PreferredSizeWidget {
   final double padding;
 
   HeaderBar({
-    Key key,
-    this.leading,
-    this.title,
-    this.action,
+    required this.leading,
+    required this.title,
+    required this.action,
     this.centerMiddle = true,
-    this.backgroundColor,
-    this.borderRadius,
-    this.padding,
-    this.gradient,
+    required this.backgroundColor,
+    required this.borderRadius,
+    required this.padding,
+    required this.gradient,
   });
   @override
   Widget build(BuildContext context) {

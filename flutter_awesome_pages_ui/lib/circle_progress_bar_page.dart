@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/widgets/progress_bar.dart';
+import 'package:flutter_awesome_pages_ui/widgets/progress_bar.dart';
 
 class ProgressBarPage extends StatefulWidget {
   @override

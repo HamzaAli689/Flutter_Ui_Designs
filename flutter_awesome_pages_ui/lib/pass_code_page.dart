@@ -1,13 +1,12 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:testapp/empty_page.dart';
 import 'package:flutter_lock_screen/flutter_lock_screen.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:flutter/services.dart';
+import 'empty_page.dart';
 
 class PassCodeScreen extends StatefulWidget {
-  PassCodeScreen({Key key, this.title}) : super(key: key);
+  PassCodeScreen({ required this.title}) ;
 
   final String title;
 

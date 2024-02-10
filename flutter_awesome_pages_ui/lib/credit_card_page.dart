@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/widgets/credit_card_clipper.dart';
+import 'package:flutter_awesome_pages_ui/widgets/credit_card_clipper.dart';
 
 class CreditCardPage extends StatefulWidget {
   @override

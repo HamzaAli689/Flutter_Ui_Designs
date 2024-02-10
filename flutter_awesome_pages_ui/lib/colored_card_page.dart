@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/widgets/colored_card.dart';
+import 'package:flutter_awesome_pages_ui/widgets/colored_card.dart';
 
 class ColoredCardPage extends StatefulWidget {
   @override
