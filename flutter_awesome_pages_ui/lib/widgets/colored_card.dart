@@ -174,15 +174,15 @@ class FooterBar extends StatelessWidget implements PreferredSizeWidget {
   final Gradient gradient;
 
   FooterBar(
-      {Key key,
-      this.leading,
-      this.title,
-      this.action,
+      {
+      required this.leading,
+      required this.title,
+      required this.action,
       this.centerMiddle = true,
-      this.backgroundColor,
-      this.borderRadius,
-      this.padding,
-      this.gradient});
+      required this.backgroundColor,
+      required this.borderRadius,
+      required this.padding,
+      required this.gradient});
   @override
   Widget build(BuildContext context) {
     const double _kLeadingWidth = kToolbarHeight;

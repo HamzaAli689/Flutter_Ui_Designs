@@ -21,17 +21,17 @@ class CircleProgressBar extends StatefulWidget {
   final ProgressChanged progressChanged;
 
   const CircleProgressBar({
-    Key key,
-    @required this.radius,
-    @required this.dotRadius,
-    @required this.dotColor,
+
+    required this.radius,
+    required this.dotRadius,
+    required this.dotColor,
     this.shadowWidth = 2.0,
     this.shadowColor = Colors.black12,
     this.ringColor = const Color(0XFFF7F7FC),
     this.dotEdgeColor = const Color(0XFFF5F5FA),
-    this.progress,
-    this.progressChanged,
-  }) : super(key: key);
+    required this.progress,
+    required this.progressChanged,
+  });
 
   @override
   State<StatefulWidget> createState() => _CircleProgressState();
@@ -39,7 +39,7 @@ class CircleProgressBar extends StatefulWidget {
 
 class _CircleProgressState extends State<CircleProgressBar>
     with SingleTickerProviderStateMixin {
-  AnimationController progressController;
+  late AnimationController progressController;
   bool isValidTouch = false;
   final GlobalKey paintKey = GlobalKey();
 
@@ -89,8 +89,8 @@ class _CircleProgressState extends State<CircleProgressBar>
   }
 
   void _onPanStart(DragStartDetails details) {
-    RenderBox getBox = paintKey.currentContext.findRenderObject();
-    Offset local = getBox.globalToLocal(details.globalPosition);
+    RenderObject? getBox = paintKey.currentContext?.findRenderObject();
+    Offset local = getBox?.globalToLocal(details.globalPosition);
     isValidTouch = _checkValidTouch(local);
     if (!isValidTouch) {
       return;
@@ -101,8 +101,8 @@ class _CircleProgressState extends State<CircleProgressBar>
     if (!isValidTouch) {
       return;
     }
-    RenderBox getBox = paintKey.currentContext.findRenderObject();
-    Offset local = getBox.globalToLocal(details.globalPosition);
+    RenderObject? getBox = paintKey.currentContext?.findRenderObject();
+    Offset local = getBox?.globalToLocal(details.globalPosition);
     final double x = local.dx;
     final double y = local.dy;
     final double center = widget.radius;
@@ -145,13 +145,13 @@ class ProgressPainter extends CustomPainter {
   final double progress;
 
   ProgressPainter({
-    this.dotRadius,
+    required this.dotRadius,
     this.shadowWidth = 2.0,
     this.shadowColor = Colors.black12,
     this.ringColor = const Color(0XFFF7F7FC),
-    this.dotColor,
+    required this.dotColor,
     this.dotEdgeColor = const Color(0XFFF5F5FA),
-    this.progress,
+    required this.progress,
   });
 
   @override
@@ -160,7 +160,7 @@ class ProgressPainter extends CustomPainter {
     final Offset offsetCenter = Offset(center, center);
     final double drawRadius = size.width * 0.5 - dotRadius;
     final angle = 360.0 * progress;
-    final double radians = degToRad(angle);
+    final num radians = degToRad(angle);
 
     final double radiusOffset = dotRadius * 0.4;
     final double outerRadius = center - radiusOffset;

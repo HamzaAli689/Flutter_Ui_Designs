@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/widgets/animated_fab.dart';
-import 'package:testapp/widgets/energy_clipper.dart';
+
+import 'animated_fab.dart';
+import 'energy_clipper.dart';
+
 
 class GeneralCard extends StatefulWidget {
   final String title;
   final String date;
   final double kw;
 
-  GeneralCard({this.title, this.date, this.kw});
+  GeneralCard({required this.title, required this.date, required this.kw});
   @override
   _GeneralCardState createState() => new _GeneralCardState();
 }

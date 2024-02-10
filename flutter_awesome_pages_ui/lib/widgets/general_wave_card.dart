@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/widgets/wave_clipper.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_awesome_pages_ui/widgets/wave_clipper.dart';
 
 class AnimatedWaveGeneralCard extends StatefulWidget {
   final int goal;
@@ -13,14 +13,14 @@ class AnimatedWaveGeneralCard extends StatefulWidget {
   final timeDilation;
 
   AnimatedWaveGeneralCard({
-    this.actual,
-    this.goal,
-    this.width,
-    this.height,
+    required this.actual,
+    required this.goal,
+    required this.width,
+    required this.height,
     this.boxColor = Colors.white24,
-    this.waveColor,
+    required this.waveColor,
     this.timeDilation = 2.0,
-    this.cardBackgroundImage,
+    required this.cardBackgroundImage,
   })  : assert(width != null),
         assert(height != null),
         assert(goal != null),
@@ -74,7 +74,7 @@ class _AnimatedWaveGeneralCardState extends State<AnimatedWaveGeneralCard> {
               ColorCurveBody(
                 size: size,
                 xOffset: 0,
-                yOffset: yOfset,
+                yOffset: y0fset,
                 color: widget.waveColor,
               ),
               Column(
