@@ -11,12 +11,11 @@ class ColorCurveBody extends StatefulWidget {
   final double yOffset;
   final Color color;
   ColorCurveBody({
-    Key key,
-    @required this.size,
-    this.xOffset,
-    this.yOffset,
-    this.color,
-  }) : super(key: key);
+    required this.size,
+    required this.xOffset,
+    required this.yOffset,
+    required this.color,
+  });
 
   @override
   State<StatefulWidget> createState() {
@@ -26,7 +25,7 @@ class ColorCurveBody extends StatefulWidget {
 
 class _ColorCurveBodyState extends State<ColorCurveBody>
     with TickerProviderStateMixin {
-  AnimationController animationController;
+  late AnimationController animationController;
   List<Offset> animList1 = [];
 
   @override
