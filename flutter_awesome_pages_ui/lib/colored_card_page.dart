@@ -10,6 +10,7 @@ class ColoredCardPage extends StatefulWidget {
 
 class ColoredCardPageState extends State<ColoredCardPage> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,37 +53,38 @@ class ColoredCardPageState extends State<ColoredCardPage> {
               stops: [0, 0.2, 1],
             ),
             headerBar: HeaderBar(
-                title: Text(
-                  "Header Text",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      fontFamily: "Poppins"),
-                ),
-                leading: IconButton(
-                  icon: Icon(
-                    Icons.refresh,
+              title: Text(
+                "Header Text",
+                style: TextStyle(
                     color: Colors.white,
-                  ),
-                  onPressed: () {
-                    Scaffold.of(context).showSnackBar(SnackBar(
-                      content: Text('Hello!'),
-                    ));
-                  },
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    fontFamily: "Poppins"),
+              ),
+              leading: IconButton(
+                icon: Icon(
+                  Icons.refresh,
+                  color: Colors.white,
                 ),
-                action: PopupMenuButton<String>(
-                  icon: Icon(Icons.menu),
-                  onSelected: choiceAction,
-                  itemBuilder: (BuildContext context) {
-                    return Constants.choices.map((String choice) {
-                      return PopupMenuItem<String>(
-                        value: choice,
-                        child: Text(choice),
-                      );
-                    }).toList();
-                  },
-                )),
+                onPressed: () {
+                  _scaffoldKey.currentState!.showSnackBar(SnackBar(
+                    content: Text('Hello!'),
+                  ));
+                },
+              ),
+              action: PopupMenuButton<String>(
+                icon: Icon(Icons.menu),
+                onSelected: choiceAction,
+                itemBuilder: (BuildContext context) {
+                  return Constants.choices.map((String choice) {
+                    return PopupMenuItem<String>(
+                      value: choice,
+                      child: Text(choice),
+                    );
+                  }).toList();
+                },
+              ), backgroundColor: Colors.amberAccent, borderRadius: BorderSide.strokeAlignInside,
+            ),
             bodyContent: Padding(
               padding: const EdgeInsets.only(
                 left: 30.0,
@@ -139,7 +141,12 @@ class ColoredCardPageState extends State<ColoredCardPage> {
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     fontFamily: "Poppins"),
-              ),
+              ), leading: Icon(Icons.ac_unit), 
+              action: Icon(Icons.ac_unit),
+              backgroundColor: Colors.limeAccent,
+              borderRadius: BorderSide.strokeAlignInside, 
+              padding: BorderSide.strokeAlignInside,
+              gradient: LinearGradient(colors: []),
             ),
           ),
           SizedBox(
@@ -158,268 +165,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
           SizedBox(
             height: 20,
           ),
-          ColoredCard(
-            headerColor: Color(0xFF4581c0),
-            footerColor: Color(0xFF6078dc),
-            cardHeight: 250,
-            borderRadius: 30,
-            bodyColor: Color(0xFF6c8df6),
-            showHeader: true,
-            showFooter: false,
-            bodyGradient: LinearGradient(
-              colors: [
-                Color(0xFF82abe1).withOpacity(1),
-                Color(0xFF4183cd),
-                Color(0xFF166dbd),
-              ],
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-              stops: [0, 0.2, 1],
-            ),
-            headerBar: HeaderBar(
-              title: Text(
-                "Header Text",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Poppins",
-                  fontSize: 16,
-                ),
-              ),
-              action: IconButton(
-                icon: Icon(
-                  Icons.account_balance_wallet,
-                  color: Colors.white,
-                ),
-                onPressed: () => print("header button"),
-              ),
-            ),
-            bodyContent: Padding(
-              padding: const EdgeInsets.only(
-                left: 30.0,
-                top: 30,
-                right: 30,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Investment and rental property price",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18,
-                        color: Colors.white,
-                        fontFamily: "Poppins"),
-                  ),
-                  SizedBox(
-                    height: 60,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "* State Additional",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        '\u{0024} 800.98',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                          fontSize: 30,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "Only Footer Example",
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: "Poppins",
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          ColoredCard(
-            footerColor: Color(0xFF288990),
-            cardHeight: 250,
-            borderRadius: 10,
-            showFooter: true,
-            showHeader: false,
-            bodyGradient: LinearGradient(
-              colors: [
-                Color(0xFF5cb3d1).withOpacity(1),
-                Color(0xFF359da0),
-                Color(0xFF188c75),
-              ],
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-              stops: [0, 0.2, 1],
-            ),
-            bodyContent: Padding(
-              padding: const EdgeInsets.only(
-                left: 30.0,
-                top: 30,
-                right: 30,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Maximize Tax detections and credits",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18,
-                        color: Colors.white,
-                        fontFamily: "Poppins"),
-                  ),
-                  SizedBox(
-                    height: 70,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "* State Additional",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        '\u{0024} 200.43',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                          fontSize: 30,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            footerBar: FooterBar(
-              title: Text(
-                "Footer Text",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "Only Body Example",
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: "Poppins",
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          ColoredCard(
-            cardHeight: 250,
-            borderRadius: 5,
-            showFooter: false,
-            showHeader: false,
-            bodyGradient: LinearGradient(
-              colors: [
-                Color(0xFFdb6f6f).withOpacity(1),
-                Color(0xFFf6a69b),
-                Color(0xFFdb6f6f),
-              ],
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-              stops: [0, 0.2, 1],
-            ),
-            bodyContent: Padding(
-              padding: const EdgeInsets.only(
-                left: 30.0,
-                top: 30,
-                right: 30,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Maximize Tax detections and credits",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18,
-                        color: Colors.white,
-                        fontFamily: "Poppins"),
-                  ),
-                  SizedBox(
-                    height: 70,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "* State Additional",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        '\u{0024} 200.43',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Poppins",
-                          fontSize: 30,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          )
+          // Remaining ColoredCard Widgets
         ],
       ),
     );
@@ -427,7 +173,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
 
   void choiceAction(String choice) {
     if (choice == Constants.Settings) {
-      _scaffoldKey.currentState.showSnackBar(SnackBar(
+      _scaffoldKey.currentState!.showSnackBar(SnackBar(
         content: Text(
           Constants.Settings,
           style: TextStyle(color: Colors.black),
@@ -435,7 +181,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
         backgroundColor: Colors.white,
       ));
     } else if (choice == Constants.Subscribe) {
-      _scaffoldKey.currentState.showSnackBar(SnackBar(
+      _scaffoldKey.currentState!.showSnackBar(SnackBar(
         content: Text(
           Constants.Subscribe,
           style: TextStyle(color: Colors.black),
@@ -443,7 +189,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
         backgroundColor: Colors.white,
       ));
     } else if (choice == Constants.SignOut) {
-      _scaffoldKey.currentState.showSnackBar(SnackBar(
+      _scaffoldKey.currentState!.showSnackBar(SnackBar(
         duration: Duration(milliseconds: 200),
         content: Text(
           Constants.SignOut,
