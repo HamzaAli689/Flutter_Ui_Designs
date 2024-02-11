@@ -10,7 +10,6 @@ class ColoredCardPage extends StatefulWidget {
 
 class ColoredCardPageState extends State<ColoredCardPage> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-  final scaffold = Scaffold.of(context);
   //final scaffoldState = _scaffoldKey.currentState;
 
   @override
@@ -69,7 +68,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
                   color: Colors.white,
                 ),
                 onPressed: () {
-                  scaffold.currentState?.showSnackBar(SnackBar(
+                  _scaffoldKey.currentState?.showSnackBar(SnackBar(
                     content: Text('Hello!'),
                   ));
                 },
