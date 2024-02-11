@@ -84,6 +84,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
                   }).toList();
                 },
               ), backgroundColor: Colors.amberAccent, borderRadius: BorderSide.strokeAlignInside,
+              padding: BorderSide.strokeAlignInside,
             ),
             bodyContent: Padding(
               padding: const EdgeInsets.only(
