@@ -175,7 +175,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
 
   void choiceAction(String choice) {
     if (choice == Constants.Settings) {
-      _scaffoldKey.currentState!.showSnackBar(SnackBar(
+      _scaffoldKey.currentState!.(SnackBar(
         content: Text(
           Constants.Settings,
           style: TextStyle(color: Colors.black),

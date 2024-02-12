@@ -90,7 +90,7 @@ class _CircleProgressState extends State<CircleProgressBar>
 
   void _onPanStart(DragStartDetails details) {
     RenderObject? getBox = paintKey.currentContext?.findRenderObject();
-    Offset local = getBox?.globalToLocal(details.globalPosition);
+    Offset local = getBox as Offset;//?.globalToLocal(details.globalPosition)
     isValidTouch = _checkValidTouch(local);
     if (!isValidTouch) {
       return;
@@ -102,7 +102,7 @@ class _CircleProgressState extends State<CircleProgressBar>
       return;
     }
     RenderObject? getBox = paintKey.currentContext?.findRenderObject();
-    Offset local = getBox?.globalToLocal(details.globalPosition);
+    Offset local = getBox as Offset;//?.globalToLocal(details.globalPosition)
     final double x = local.dx;
     final double y = local.dy;
     final double center = widget.radius;
@@ -201,9 +201,9 @@ class ProgressPainter extends CustomPainter {
       if (radians > offset) {
         canvas.save();
         canvas.translate(0.0, size.width);
-        canvas.rotate(degToRad(-90.0));
+        canvas.rotate;//(degToRad(-90.0))
         final Gradient gradient = new SweepGradient(
-          endAngle: radians,
+          endAngle: radiusOffset,
           colors: [
             Colors.white,
             currentDotColor,

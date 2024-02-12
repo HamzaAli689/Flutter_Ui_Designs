@@ -74,7 +74,7 @@ class _AnimatedWaveGeneralCardState extends State<AnimatedWaveGeneralCard> {
               ColorCurveBody(
                 size: size,
                 xOffset: 0,
-                yOffset: y0fset,
+                yOffset: maxyOfset,
                 color: widget.waveColor,
               ),
               Column(

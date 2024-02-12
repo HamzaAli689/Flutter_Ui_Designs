@@ -149,7 +149,7 @@ class HeaderBar extends StatelessWidget implements PreferredSizeWidget {
           child: leading,
         ),
         centerMiddle: centerMiddle,
-        middle: title ?= null: title , "null",
+        middle: title ,
         trailing: Container(
           height: kToolbarHeight - 15,
           width: _kLeadingWidth,
@@ -205,7 +205,7 @@ class FooterBar extends StatelessWidget implements PreferredSizeWidget {
           child: leading,
         ),
         centerMiddle: centerMiddle,
-        middle:  title ?= null : title: "null",
+        middle:  title ,
         trailing: Container(
           height: kToolbarHeight - 15,
           width: _kLeadingWidth,
