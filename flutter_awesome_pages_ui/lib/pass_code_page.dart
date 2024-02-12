@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'empty_page.dart';
 
 class PassCodeScreen extends StatefulWidget {
-  PassCodeScreen({ required this.title}) ;
+  PassCodeScreen({required this.title});
 
   final String title;
 
@@ -22,7 +22,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
     bool authenticated = false;
 
     try {
-      authenticated = await auth.authenticateWithBiometrics(
+      authenticated = await auth.authenticate(
           localizedReason: 'Scan your fingerprint to authenticate',
           useErrorDialogs: true,
           stickyAuth: false);
@@ -41,10 +41,10 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
   Widget build(BuildContext context) {
     var myPass = [1, 2, 3, 4];
     return LockScreen(
-        title: "This is Screet",
+        title: "This is Secret",
         passLength: myPass.length,
-        bgImage: "images/pass_code_bg.jpg",
-        fingerPrintImage: "images/fingerprint.png",
+        bgImage: ("images/pass_code_bg.jpg"), // Use AssetImage
+        fingerPrintImage: Text("images/fingerprint.png"), // Use AssetImage
         showFingerPass: true,
         fingerFunction: biometrics,
         fingerVerify: isFingerprint,
@@ -52,7 +52,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
         borderColor: Colors.white,
         showWrongPassDialog: true,
         wrongPassContent: "Wrong pass please try again.",
-        wrongPassTitle: "Opps!",
+        wrongPassTitle: "Oops!",
         wrongPassCancelButtonText: "Cancel",
         passCodeVerify: (List<int> passcode) async {
           for (int i = 0; i < myPass.length; i++) {
@@ -65,8 +65,8 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
         onSuccess: () {
           Navigator.of(context).pushReplacement(
               new MaterialPageRoute(builder: (BuildContext context) {
-            return EmptyPage();
-          }));
+                return EmptyPage();
+              }));
         });
   }
 }
