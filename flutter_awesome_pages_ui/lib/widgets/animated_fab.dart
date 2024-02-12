@@ -14,7 +14,7 @@ class AnimatedFab extends StatefulWidget {
 class _AnimatedFabState extends State<AnimatedFab>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
-  late Animation<Color> _colorAnimation;
+  late Animation<Color?> _colorAnimation;
 
   final double expandedSize = 120.0;
   final double hiddenSize = 5.0;

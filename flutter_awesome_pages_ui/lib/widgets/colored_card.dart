@@ -69,7 +69,7 @@ class _ColoredCardState extends State<ColoredCard> {
                           backgroundColor: widget.headerColor,
                           leading: widget.headerBar.leading,
                           borderRadius: widget.borderRadius,
-                          padding: widget.padding,
+                          padding: widget.padding, gradient: LinearGradient(colors: []),
                         )
                       : Container(),
                   Expanded(
@@ -87,7 +87,7 @@ class _ColoredCardState extends State<ColoredCard> {
                           backgroundColor: widget.footerColor,
                           leading: widget.footerBar.leading,
                           borderRadius: widget.borderRadius,
-                          padding: widget.padding,
+                          padding: widget.padding, gradient: LinearGradient(colors: []),
                         )
                       : Container(),
                 ],
@@ -149,7 +149,7 @@ class HeaderBar extends StatelessWidget implements PreferredSizeWidget {
           child: leading,
         ),
         centerMiddle: centerMiddle,
-        middle: title != null ? title : "null",
+        middle: title ?= null: title , "null",
         trailing: Container(
           height: kToolbarHeight - 15,
           width: _kLeadingWidth,
@@ -205,7 +205,7 @@ class FooterBar extends StatelessWidget implements PreferredSizeWidget {
           child: leading,
         ),
         centerMiddle: centerMiddle,
-        middle: title != null ? title : "null",
+        middle:  title ?= null : title: "null",
         trailing: Container(
           height: kToolbarHeight - 15,
           width: _kLeadingWidth,
