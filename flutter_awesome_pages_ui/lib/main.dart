@@ -1,8 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart'
-    show debugDefaultTargetPlatformOverride;
+import 'package:flutter/foundation.dart' show debugDefaultTargetPlatformOverride;
 
 import 'home_page.dart';
 
@@ -26,7 +25,7 @@ void main() {
 }
 
 void _setTargetPlatformForDesktop() {
-  TargetPlatform targetPlatform;
+  TargetPlatform? targetPlatform; // Declare targetPlatform as nullable
   if (Platform.isMacOS) {
     targetPlatform = TargetPlatform.iOS;
   } else if (Platform.isLinux || Platform.isWindows) {
