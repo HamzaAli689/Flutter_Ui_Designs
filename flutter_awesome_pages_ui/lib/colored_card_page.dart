@@ -68,7 +68,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
                   color: Colors.white,
                 ),
                 onPressed: () {
-                  _scaffoldKey.currentState?.showSnackBar(SnackBar(
+                  _scaffoldKey.currentState!.showSnackBar(SnackBar(
                     content: Text('Hello!'),
                   ));
                 },
