@@ -184,7 +184,7 @@ class _FirstLoginPageState extends State<FirstLoginPage> {
                               GestureDetector(
                                 onTap: () => Navigator.of(context).push(
                                       MaterialPageRoute(
-                                        builder: (context) => PassCodeScreen(),
+                                        builder: (context) => PassCodeScreen(title: '',),
                                       ),
                                     ),
                                 child: Text(

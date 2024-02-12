@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
             context,
             () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return PassCodeScreen();
+                return PassCodeScreen(title: '',);
               }));
             },
             "Pass Code Page",
