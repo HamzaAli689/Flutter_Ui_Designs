@@ -9,7 +9,7 @@ class ColoredCardPage extends StatefulWidget {
 }
 
 class ColoredCardPageState extends State<ColoredCardPage> {
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   //final scaffoldState = _scaffoldKey.currentState;
 
   @override
@@ -175,7 +175,7 @@ class ColoredCardPageState extends State<ColoredCardPage> {
 
   void choiceAction(String choice) {
     if (choice == Constants.Settings) {
-      _scaffoldKey.currentState!.(SnackBar(
+      _scaffoldKey.currentState!.showSnackBar(SnackBar(
         content: Text(
           Constants.Settings,
           style: TextStyle(color: Colors.black),
