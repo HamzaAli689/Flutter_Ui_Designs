@@ -69,9 +69,9 @@ class ColoredCardPageState extends State<ColoredCardPage> {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    _scaffoldKey.currentState!.showSnackBar(SnackBar(
-                      content: Text('Hello!'),
-                    ));
+                    //_scaffoldKey.currentState!.showSnackBar(SnackBar(
+                    //                       content: Text('Hello!'),
+                    //                     ));
                   },
                 ),
                 action: PopupMenuButton<String>(
@@ -177,30 +177,30 @@ class ColoredCardPageState extends State<ColoredCardPage> {
 
   void choiceAction(String choice) {
     if (choice == Constants.Settings) {
-      _scaffoldKey.currentState!.showSnackBar(SnackBar(
-        content: Text(
-          Constants.Settings,
-          style: TextStyle(color: Colors.black),
-        ),
-        backgroundColor: Colors.white,
-      ));
+      //_scaffoldKey.currentState!.showSnackBar(SnackBar(
+      //         content: Text(
+      //           Constants.Settings,
+      //           style: TextStyle(color: Colors.black),
+      //         ),
+      //         backgroundColor: Colors.white,
+      //       ));
     } else if (choice == Constants.Subscribe) {
-      _scaffoldKey.currentState!.showSnackBar(SnackBar(
-        content: Text(
-          Constants.Subscribe,
-          style: TextStyle(color: Colors.black),
-        ),
-        backgroundColor: Colors.white,
-      ));
+     // _scaffoldKey.currentState!.showSnackBar(SnackBar(
+      //         content: Text(
+      //           Constants.Subscribe,
+      //           style: TextStyle(color: Colors.black),
+      //         ),
+      //         backgroundColor: Colors.white,
+      //       ));
     } else if (choice == Constants.SignOut) {
-      _scaffoldKey.currentState!.showSnackBar(SnackBar(
-        duration: Duration(milliseconds: 200),
-        content: Text(
-          Constants.SignOut,
-          style: TextStyle(color: Colors.black),
-        ),
-        backgroundColor: Colors.white,
-      ));
+      //_scaffoldKey.currentState!.showSnackBar(SnackBar(
+      //         duration: Duration(milliseconds: 200),
+      //         content: Text(
+      //           Constants.SignOut,
+      //           style: TextStyle(color: Colors.black),
+      //         ),
+      //         backgroundColor: Colors.white,
+      //       ));
     }
   }
 }
