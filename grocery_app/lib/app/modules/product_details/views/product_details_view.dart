@@ -81,7 +81,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                 children: [
                   Text(
                     controller.product.name,
-                    style: theme.textTheme.displayMedium,
+                    style: theme.textTheme.displaySmall,
                   ).animate().fade().slideX(
                     duration: 300.ms,
                     begin: -1,
@@ -113,7 +113,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: Text(
                 controller.product.description,
-                style: theme.textTheme.bodyLarge,
+                style: theme.textTheme.bodyMedium,
               ).animate().fade().slideX(
                 duration: 300.ms,
                 begin: -1,
