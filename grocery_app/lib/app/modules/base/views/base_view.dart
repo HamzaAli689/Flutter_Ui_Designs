@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:badges/badges.dart';
 import 'package:get/get.dart';
-
 import '../../../../utils/constants.dart';
 import '../../../routes/app_pages.dart';
 import '../../calendar/views/calendar_view.dart';
@@ -77,14 +76,14 @@ class BaseView extends GetView<BaseController> {
               position: BadgePosition.bottomEnd(bottom: -16, end: 13),
               badgeContent: Text(
                 controller.cartItemsCount.toString(),
-                style: theme.textTheme.bodyText2?.copyWith(
+                style: theme.textTheme.bodyMedium?.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               badgeStyle: BadgeStyle(
                 elevation: 2,
-                badgeColor: theme.accentColor,
+                badgeColor: theme.primaryColorDark,
                 borderSide: const BorderSide(color: Colors.white, width: 1),
               ),
               child: CircleAvatar(

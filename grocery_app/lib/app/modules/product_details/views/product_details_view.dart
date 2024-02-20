@@ -3,7 +3,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-
 import '../../../../utils/constants.dart';
 import '../../../../utils/dummy_helper.dart';
 import '../../../components/custom_button.dart';
@@ -82,7 +81,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                 children: [
                   Text(
                     controller.product.name,
-                    style: theme.textTheme.headline2,
+                    style: theme.textTheme.displayMedium,
                   ).animate().fade().slideX(
                     duration: 300.ms,
                     begin: -1,
@@ -100,8 +99,8 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: Text(
                 '1kg, ${controller.product.price}\$',
-                style: theme.textTheme.headline3?.copyWith(
-                  color: theme.accentColor,
+                style: theme.textTheme.displaySmall?.copyWith(
+                  color: theme.primaryColorDark,
                 ),
               ).animate().fade().slideX(
                 duration: 300.ms,
@@ -114,7 +113,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: Text(
                 controller.product.description,
-                style: theme.textTheme.bodyText1,
+                style: theme.textTheme.bodyLarge,
               ).animate().fade().slideX(
                 duration: 300.ms,
                 begin: -1,

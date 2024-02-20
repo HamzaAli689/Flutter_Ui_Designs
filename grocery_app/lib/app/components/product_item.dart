@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
 import '../data/models/product_model.dart';
 import '../routes/app_pages.dart';
 
@@ -54,7 +53,7 @@ class ProductItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(product.name, style: theme.textTheme.headline6)
+                  Text(product.name, style: theme.textTheme.headlineSmall)
                     .animate().fade().slideY(
                       duration: 200.ms,
                       begin: 1, curve: Curves.easeInSine,
@@ -62,8 +61,8 @@ class ProductItem extends StatelessWidget {
                   5.verticalSpace,
                   Text(
                     '1kg, ${product.price}\$',
-                    style: theme.textTheme.headline5?.copyWith(
-                      color: theme.accentColor,
+                    style: theme.textTheme.headlineSmall?.copyWith(
+                      color: theme.primaryColorDark,
                     ),
                   ).animate().fade().slideY(
                     duration: 200.ms,
